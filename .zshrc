@@ -26,3 +26,6 @@ bindkey '^[[B' down-line-or-search
 bindkey '^[[C' forward-char 
 bindkey "^[[H" beginning-of-line
 bindkey "^[[F" end-of-line
+
+# Persistent rehash
+zstyle ':completion:*' rehash true
