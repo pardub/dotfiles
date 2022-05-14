@@ -14,6 +14,7 @@ export PATH="${PATH}:${HOME}/.local/bin"
 
 # Default programs to run.
 export EDITOR="vim"
+export VISUAL="vim"
 export BROWSER="firefox"
 
 export HISTFILE="$ZDOTDIR/.zhistory"    # History filepath
