@@ -1,5 +1,5 @@
 ZDOTDIR=~/.config/zsh
-source -- "$ZDOTDIR"/.zshenv
+# source -- "$ZDOTDIR"/.zshenv
 
 # Set up a few standard directories based on:
 #   https://wiki.archlinux.org/title/XDG_Base_Directory
