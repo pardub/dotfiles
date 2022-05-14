@@ -10,7 +10,7 @@ export XDG_DATA_HOME="${HOME}/.local/share"
 export XDG_STATE_HOME="${HOME}/.local/state"
 
 # Add all local binaries to the system path.
-export PATH="${PATH}:${HOME}/.local/bin"
+#export PATH="${PATH}:${HOME}/.local/bin"
 
 # Default programs to run.
 export EDITOR="vim"
@@ -20,3 +20,7 @@ export BROWSER="firefox"
 export HISTFILE="$ZDOTDIR/.zhistory"    # History filepath
 export HISTSIZE=10000                   # Maximum events for internal history
 export SAVEHIST=10000                   # Maximum events in history file
+
+typeset -U path PATH
+path=(~/.local/bin $path)
+export PATH
