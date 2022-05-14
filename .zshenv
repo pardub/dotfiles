@@ -2,7 +2,7 @@ ZDOTDIR=~/.config/zsh
 # source -- "$ZDOTDIR"/.zshenv
 
 # Set up a few standard directories based on:
-#   https://wiki.archlinux.org/title/XDG_Base_Directory
+# https://wiki.archlinux.org/title/XDG_Base_Directory
 
 export XDG_CONFIG_HOME="${HOME}/.config"
 export XDG_CACHE_HOME="${HOME}/.cache"
