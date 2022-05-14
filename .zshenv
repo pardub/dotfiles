@@ -18,8 +18,8 @@ export VISUAL="vim"
 export BROWSER="firefox"
 
 export HISTFILE="$ZDOTDIR/.zhistory"    # History filepath
-export HISTSIZE=10000                   # Maximum events for internal history
-export SAVEHIST=10000                   # Maximum events in history file
+export HISTSIZE=50000                   # Maximum events for internal history
+export SAVEHIST=50000                   # Maximum events in history file
 
 # Configuring $PATH
 typeset -U path PATH
