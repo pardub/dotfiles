@@ -13,8 +13,8 @@ export ZDOTDIR="${XDG_CONFIG_HOME}/zsh"
 export PATH="${PATH}:${HOME}/.local/bin"
 
 # Default programs to run.
-export EDITOR="vim"
-export VISUAL="vim"
+export EDITOR="nvim"
+export VISUAL="nvim"
 export BROWSER="firefox"
 
 export HISTFILE="$ZDOTDIR/.zhistory"    # History filepath
