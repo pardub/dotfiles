@@ -17,11 +17,11 @@ export EDITOR="nvim"
 export VISUAL="nvim"
 export BROWSER="firefox"
 
-#export HISTFILE="$ZDOTDIR/.zhistory"    # History filepath
-export HISTSIZE=50000                   # Maximum events for internal history
-export SAVEHIST=50000                   # Maximum events in history file
+#export HISTFILE="$ZDOTDIR/.zhistory"          # History filepath
+export HISTSIZE=50000                          # Maximum events for internal history
+export SAVEHIST=50000                          # Maximum events in history file
 #export HISTFILE=~/.cache/zsh/history
-export HISTFILE="${HOME}/.cache/zsh/history"
+export HISTFILE="${HOME}/.cache/zsh/history"   # History filepath
 
 # Configuring $PATH
 typeset -U path PATH
