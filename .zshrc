@@ -43,4 +43,4 @@ export HISTTIMEFORMAT="[%F %T] "
 # Add Timestamp to history
 setopt EXTENDED_HISTORY
 
-PROMPT='%{$fg[yellow]%}[%D{%f/%m/%y} %D{%L:%M:%S}] '$PROMPT
+
