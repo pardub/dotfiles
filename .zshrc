@@ -36,8 +36,11 @@ ENABLE_CORRECTION="true"
 # Open Ranger with CTRL O
 bindkey -s '^o' 'ranger\n'
 
+# Commands are added to the history immediately
 setopt INC_APPEND_HISTORY
 export HISTTIMEFORMAT="[%F %T] "
 
+# Add Timestamp to history
 setopt EXTENDED_HISTORY
 
+PROMPT='%{$fg[yellow]%}[%D{%f/%m/%y} %D{%L:%M:%S}] '$PROMPT
