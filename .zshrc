@@ -36,4 +36,8 @@ ENABLE_CORRECTION="true"
 # Open Ranger with CTRL O
 bindkey -s '^o' 'ranger\n'
 
+setopt INC_APPEND_HISTORY
+export HISTTIMEFORMAT="[%F %T] "
+
+
 
