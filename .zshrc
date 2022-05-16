@@ -39,5 +39,5 @@ bindkey -s '^o' 'ranger\n'
 setopt INC_APPEND_HISTORY
 export HISTTIMEFORMAT="[%F %T] "
 
-
+setopt EXTENDED_HISTORY
 
