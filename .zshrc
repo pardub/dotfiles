@@ -29,3 +29,11 @@ bindkey "^[[F" end-of-line
 
 # Persistent rehash
 zstyle ':completion:*' rehash true
+
+# Auto correction
+ENABLE_CORRECTION="true"
+
+# Open Ranger with CTRL O
+bindkey -s '^o' 'ranger\n'
+
+
