@@ -90,7 +90,7 @@ sudo dnf -y install tldr
 # IRC client
 sudo dnf -y install weechat
 
-# FTP application
+# SFTP application
 sudo dnf -y install filezilla
 
 sudo dnf -y install wireguard-tools
