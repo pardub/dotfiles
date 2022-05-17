@@ -3,8 +3,8 @@
 sudo dnf -y update
 
 ## Setup Visudo
-echo 'marc ALL=(ALL:ALL) ALL' | sudo EDITOR='tee -a' visudo
-echo 'Defaults:marc timestamp_timeout=60' | sudo EDITOR='tee -a' visudo
+echo "$USER ALL=(ALL:ALL) ALL" | sudo EDITOR='tee -a' visudo
+echo "Defaults:$USER timestamp_timeout=60" | sudo EDITOR='tee -a' visudo
 
 # ADD EXTRA REPOS rpm fusion
 sudo dnf -y install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
