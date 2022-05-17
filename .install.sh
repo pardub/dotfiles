@@ -2,6 +2,10 @@
 
 sudo dnf -y update
 
+## Setup Visudo
+echo 'marc ALL=(ALL:ALL) ALL' | sudo EDITOR='tee -a' visudo
+echo 'Defaults:marc timestamp_timeout=60' | sudo EDITOR='tee -a' visudo
+
 # ADD EXTRA REPOS rpm fusion
 sudo dnf -y install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
 sudo dnf -y install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
@@ -201,10 +205,6 @@ code --install-extension ginfuru.ginfuru-better-solarized-dark-theme
 code --install-extension ms-azuretools.vscode-docker	
 code --install-extension dbaeumer.vscode-eslint
 code --install-extension redhat.vscode-yaml
-
-## Setup Visudo
-echo 'marc ALL=(ALL:ALL) ALL' | sudo EDITOR='tee -a' visudo
-echo 'Defaults:marc timestamp_timeout=60' | sudo EDITOR='tee -a' visudo
 
 # ADD https://dns.watch/
 echo 'nameserver='84.200.69.80' | sudo tee -a /etc/hosts
