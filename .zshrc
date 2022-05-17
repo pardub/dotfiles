@@ -16,6 +16,7 @@ zstyle ':completion::complete:*' gain-privileges 1
 [ -f "${XDG_CONFIG_HOME}/zsh/.aliases" ] && . "${XDG_CONFIG_HOME}/zsh/.aliases"
 [ -f "${XDG_CONFIG_HOME}/zsh/.aliases.local" ] && . "${XDG_CONFIG_HOME}/zsh/.aliases.local"
 
+
 bindkey -v
 
 # Use vim keys in tab complete menu:
@@ -41,6 +42,18 @@ zle -N zle-line-init
 echo -ne '\e[5 q' # Use beam shape cursor on startup.
 preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 
+
+# Use Ranger to switch directories and bind it to ctrl-o
+ranger () {
+    tmp="$(mktemp -uq)"
+    trap 'rm -f $tmp >/dev/null 2>&1' HUP INT QUIT TERM PWR EXIT
+    lf -last-dir-path="$tmp" "$@"
+    if [ -f "$tmp" ]; then
+        dir="$(cat "$tmp")"
+        [ -d "$dir" ] && [ "$dir" != "$(pwd)" ] && cd "$dir"
+    fi
+}
+bindkey -s '^o' '^uranger\n'
 
 typeset -g -A key
 bindkey '^?' backward-delete-char
