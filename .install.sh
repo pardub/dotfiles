@@ -255,13 +255,17 @@ gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profi
 # set up minimize/maximize  window
 gsettings set org.gnome.desktop.wm.preferences button-layout ":minimize,maximize,close"
 
+# OPENSNITCH
+cd /usr/share
+sudo mkdir -p opensnitch
+cd /usr/share/opensnitch
+wget https://github.com/evilsocket/opensnitch/releases/download/v1.5.0/opensnitch-1.5.0-1.x86_64.rpm
+wget https://github.com/evilsocket/opensnitch/releases/download/v1.5.0/opensnitch-ui-1.5.0-1.noarch.f29.rpm
+sudo dnf -y localinstall opensnitch-1*.rpm; sudo dnf -y localinstall opensnitch-ui*.rpm
+sudo systemctl enable --now opensnitch
+sudo systemctl start opensnitch
+cd
 
-
-
- 
- 
- 
- 
 # Install pluging zsh-syntax-highlighting
 cd /usr/share/zsh/plugins/
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
