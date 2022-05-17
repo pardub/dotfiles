@@ -274,18 +274,18 @@ cd
 sudo mkdir -p /usr/share/zsh/plugins
 sudo cd /usr/share/zsh/plugins/
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
-echo "# Load zsh-syntax-highlighting; should be last." >> $ZDOTDIR/.zshrc
-echo "source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null" >> $ZDOTDIR/.zshrc
+sudo echo "# Load zsh-syntax-highlighting; should be last." >> $ZDOTDIR/.zshrc
+sudo echo "source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null" >> $ZDOTDIR/.zshrc
 
 # Install pluging zsh-autosuggestions
 sudo cd /usr/share/zsh/plugins/
 git clone https://github.com/zsh-users/zsh-autosuggestions.git
-echo "# Load zsh-autosuggestions; should be last." >> $ZDOTDIR/.zshrc
-echo "source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null" >> $ZDOTDIR/.zshrc
+sudo echo "# Load zsh-autosuggestions; should be last." >> $ZDOTDIR/.zshrc
+sudo echo "source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null" >> $ZDOTDIR/.zshrc
 
 # Install pluging zsh-abbr
 sudo cd /usr/share/zsh/plugins/
 git clone https://github.com/olets/zsh-abbr
-echo "source /usr/share/zsh/plugins/zsh-abbr/zsh-abbr.zsh 2>/dev/null" >> $ZDOTDIR/.zshrc
+sudo echo "source /usr/share/zsh/plugins/zsh-abbr/zsh-abbr.zsh 2>/dev/null" >> $ZDOTDIR/.zshrc
 
 
