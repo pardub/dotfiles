@@ -109,6 +109,7 @@ sudo dnf -y install weechat
 # SFTP application
 sudo dnf -y install filezilla
 
+# Tools for configuring WireGuard
 sudo dnf -y install wireguard-tools
 
 # A cat(1) clone with syntax highlighting and Git integration.
