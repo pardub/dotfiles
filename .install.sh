@@ -2,24 +2,24 @@
 
 sudo dnf -y update
 
-### ADD EXTRA REPOS rpm fusion
+# ADD EXTRA REPOS rpm fusion
 sudo dnf -y install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
 sudo dnf -y install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
-### Fastest mirror and Delta RPM
+# Fastest mirror and Delta RPM
 sudo echo 'fastestmirror=True'             | sudo tee -a /etc/dnf/dnf.conf
 sudo echo 'deltarpm=True'                  | sudo tee -a /etc/dnf/dnf.conf
 sudo echo 'max_parallel_downloads=10'      | sudo tee -a /etc/dnf/dnf.conf
 sudo sudo dnf clean all
 
-### DISABLING SSH
+# DISABLING SSH
 sudo systemctl stop sshd
 sudo systemctl disable sshd
 
-### ADD FLATPAK REPO
+# ADD FLATPAK REPO
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
-### Manage Flatpak permissions
+# Manage Flatpak permissions
 sudo flatpak install flathub com.github.tchx84.Flatseal
 
 ############## INSTALL SOFTWARES ##############
@@ -27,10 +27,10 @@ sudo flatpak install flathub com.github.tchx84.Flatseal
 ### web console for Linux servers
 #sudo dnf -y install cockpit
 
-### Backup system
+# Backup system
 sudo dnf -y install timeshift
 
-#  distributed version control system
+# distributed version control system
 sudo dnf -y install git
 
 # Vim-fork
@@ -96,9 +96,10 @@ sudo dnf -y install exa
 # A command-line fuzzy finder
 sudo dnf -y install fzf
 
+# youtube -cli
 sudo dnf -y install youtube-dl
 
-### Text Calendar
+#Text Calendar
 sudo dnf -y install calcurse
 
 # rsync for cloud storage
@@ -112,9 +113,11 @@ sudo dnf -y install audacity-3.0.2
 
 #sudo dnf -y install dropbox
 sudo dnf -y install chrome-remote-desktop
+
 sudo dnf -y install fuse
-#sudo dnf -y install power-profiles-daemon
+
 sudo dnf -y install pdfarranger
+
 sudo dnf -y install bookworm
 
 # flashcard program using spaced repetition
@@ -137,7 +140,6 @@ sudo dnf -y install ffmpeg
 
 # GnuPG Made Easy
 sudo dnf -y install gpgme
-# sudo dnf -y install claws-mail
 
 # Mail Client Evolution
 sudo dnf -y install evolution
@@ -169,6 +171,13 @@ sudo dnf -y install qtpass
 # Redshift adjusts the color temperature of the screen
 sudo dnf -y install redshift
 
+# Download Vorta backup
+sudo dnf -y copr enable luminoso/vorta
+sudo dnf -y install vorta
+
+# Download Jami Voip client
+sudo dnf -y config-manager --add-repo https://dl.jami.net/nightly/fedora_34/jami-nightly.repo
+sudo dnf -y install jami
 
 # UNINSTALL
 sudo dnf -y remove totem
@@ -181,15 +190,6 @@ sudo dnf -y groupupdate Multimedia
 sudo dnf -y install gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel
 sudo dnf -y install lame\* --exclude=lame-devel
 sudo dnf -y group upgrade --with-optional Multimedia
-
-
-# Download Vorta backup
-sudo dnf -y copr enable luminoso/vorta
-sudo dnf -y install vorta
-
-# Download Jami Voip client
-sudo dnf -y config-manager --add-repo https://dl.jami.net/nightly/fedora_34/jami-nightly.repo
-sudo dnf -y install jami
 
 # Download Visual Studio Code
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
@@ -240,8 +240,8 @@ fc-cache -v
 ##### SET UP GNOME TERMINAL
 # https://ncona.com/2019/11/configuring-gnome-terminal-programmatically/
 # We will need this value later, so let’s save it in a variable:
-GNOME_TERMINAL_PROFILE=$(gsettings get org.gnome.Terminal.ProfilesList default | awk -F \' '{print $2}')
 
+GNOME_TERMINAL_PROFILE=$(gsettings get org.gnome.Terminal.ProfilesList default | awk -F \' '{print $2}')
 #gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:"$GNOME_TERMINAL_PROFILE"/ font 'Monospace 10'
 #gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:"$GNOME_TERMINAL_PROFILE"/ font 'MesloLGS NF 10'
 gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:"$GNOME_TERMINAL_PROFILE"/ font 'JetBrainsMono NF'
@@ -251,6 +251,7 @@ gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profi
 gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:"$GNOME_TERMINAL_PROFILE"/ background-color '#000000'
 gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:"$GNOME_TERMINAL_PROFILE"/ foreground-color '#AFAFAF'
 gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$GNOME_TERMINAL_PROFILE/ cursor-shape 'I-Beam'
+
 # set up minimize/maximize  window
 gsettings set org.gnome.desktop.wm.preferences button-layout ":minimize,maximize,close"
 
