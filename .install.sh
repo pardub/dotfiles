@@ -117,7 +117,7 @@ sudo dnf -y install rclone
 sudo dnf -y install rclone-browser
 
 # audio editor and recorder
-sudo dnf -y install audacity-3.0.2
+#sudo dnf -y install audacity-3.0.2
 
 #sudo dnf -y install dropbox
 sudo dnf -y install chrome-remote-desktop
