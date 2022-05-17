@@ -124,7 +124,7 @@ sudo dnf -y install fzf
 # youtube -cli
 sudo dnf -y install youtube-dl
 
-#Text Calendar
+# Text Calendar
 sudo dnf -y install calcurse
 
 # rsync for cloud storage
