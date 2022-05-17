@@ -6,6 +6,19 @@ echo 'nameserver='84.200.70.40' | sudo tee -a /etc/hosts
 
 sudo dnf -y update
 
+# INSTALL JETBRAINS MONO FONTS IN ~/.local/share/fonts
+mkdir -p ~/.local/share/fonts/nerd-fonts
+cd ~/.local/share/fonts
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/JetBrainsMono.zip
+unzip JetBrainsMono.zip
+rm JetBrainsMono.zip
+fc-cache -v
+
+### SET UP VS CODE TO USE NEW FONTS
+### RECOMMENDED SETTINGS FOR THE FONT
+### Size: 13
+### Line spacing: 1.2
+
 ## Setup Visudo
 echo "$USER ALL=(ALL:ALL) ALL" | sudo EDITOR='tee -a' visudo
 echo "Defaults:$USER timestamp_timeout=60" | sudo EDITOR='tee -a' visudo
@@ -222,18 +235,7 @@ code --install-extension ms-azuretools.vscode-docker
 code --install-extension dbaeumer.vscode-eslint
 code --install-extension redhat.vscode-yaml
 
-# INSTALL JETBRAINS MONO FONTS IN ~/.local/share/fonts
-mkdir -p ~/.local/share/fonts/nerd-fonts
-cd ~/.local/share/fonts
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/JetBrainsMono.zip
-unzip JetBrainsMono.zip
-rm JetBrainsMono.zip
-fc-cache -v
 
-### SET UP VS CODE TO USE NEW FONTS
-### RECOMMENDED SETTINGS FOR THE FONT
-### Size: 13
-### Line spacing: 1.2
 
 ### FIREWALL SET UP OPEN/CLOSED PORTS
 
