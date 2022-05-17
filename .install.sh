@@ -133,7 +133,7 @@ sudo dnf -y install rclone-browser
 #sudo dnf -y install audacity-3.0.2
 
 #sudo dnf -y install dropbox
-sudo dnf -y install chrome-remote-desktop
+#sudo dnf -y install chrome-remote-desktop
 
 sudo dnf -y install fuse
 
