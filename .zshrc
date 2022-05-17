@@ -4,6 +4,9 @@ compinit
 
 # For autocompletion with an arrow-key driven interface
 zstyle ':completion:*' menu select
+zmodload zsh/complist
+compinit
+_comp_options+=(globdots)		# Include hidden files.
 
 # For enabling autocompletion of privileged environments in privileged commands (e.g. if you complete a command starting with sudo
 zstyle ':completion::complete:*' gain-privileges 1
