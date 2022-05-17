@@ -161,7 +161,7 @@ sudo dnf -y install dconf-editor
 sudo dnf -y install macchanger 
 
 # Etesync repo
-sudo dnf copr enable daftaupe/etesync-rs
+sudo dnf -y copr enable daftaupe/etesync-rs
 
 # Etesync add-on for Evolution
 sudo dnf -y install evolution-etesync
