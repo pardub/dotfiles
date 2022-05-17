@@ -4,6 +4,9 @@
 echo 'nameserver='84.200.69.80' | sudo tee -a /etc/hosts
 echo 'nameserver='84.200.70.40' | sudo tee -a /etc/hosts
 
+# CHANGE HOSTNAME
+sudo hostnamectl set-hostname fedora
+
 sudo dnf -y update
 
 # INSTALL JETBRAINS MONO FONTS IN ~/.local/share/fonts
@@ -216,9 +219,6 @@ sudo dnf -y group upgrade --with-optional Multimedia
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
 sudo dnf -y check-update && sudo dnf -y  install code
-
-# CHANGE HOSTNAME
-sudo hostnamectl set-hostname fedora
 
 # Disable Firewalld and Setup iptables ####
 
