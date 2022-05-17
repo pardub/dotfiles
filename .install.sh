@@ -1,5 +1,9 @@
 #!/bin/bash -xev
 
+# ADD https://dns.watch/
+echo 'nameserver='84.200.69.80' | sudo tee -a /etc/hosts
+echo 'nameserver='84.200.70.40' | sudo tee -a /etc/hosts
+
 sudo dnf -y update
 
 ## Setup Visudo
@@ -200,16 +204,6 @@ sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
 sudo dnf -y check-update && sudo dnf -y  install code
 
-### VS CODE INSTALL EXTENSIONS
-code --install-extension ginfuru.ginfuru-better-solarized-dark-theme
-code --install-extension ms-azuretools.vscode-docker	
-code --install-extension dbaeumer.vscode-eslint
-code --install-extension redhat.vscode-yaml
-
-# ADD https://dns.watch/
-echo 'nameserver='84.200.69.80' | sudo tee -a /etc/hosts
-echo 'nameserver='84.200.70.40' | sudo tee -a /etc/hosts
-
 # CHANGE HOSTNAME
 sudo hostnamectl set-hostname fedora
 
@@ -221,6 +215,12 @@ sudo systemctl mask firewalld
 sudo dnf -y install iptables-services
 sudo touch /etc/sysconfig/iptables
 sudo systemctl enable iptables
+
+### VS CODE INSTALL EXTENSIONS
+code --install-extension ginfuru.ginfuru-better-solarized-dark-theme
+code --install-extension ms-azuretools.vscode-docker	
+code --install-extension dbaeumer.vscode-eslint
+code --install-extension redhat.vscode-yaml
 
 # INSTALL JETBRAINS MONO FONTS IN ~/.local/share/fonts
 mkdir -p ~/.local/share/fonts/nerd-fonts
