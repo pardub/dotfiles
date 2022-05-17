@@ -241,6 +241,9 @@ fc-cache -v
 # https://ncona.com/2019/11/configuring-gnome-terminal-programmatically/
 # We will need this value later, so let’s save it in a variable:
 
+# set up minimize/maximize  window
+gsettings set org.gnome.desktop.wm.preferences button-layout ":minimize,maximize,close"
+
 GNOME_TERMINAL_PROFILE=$(gsettings get org.gnome.Terminal.ProfilesList default | awk -F \' '{print $2}')
 #gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:"$GNOME_TERMINAL_PROFILE"/ font 'Monospace 10'
 #gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:"$GNOME_TERMINAL_PROFILE"/ font 'MesloLGS NF 10'
@@ -252,8 +255,7 @@ gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profi
 gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:"$GNOME_TERMINAL_PROFILE"/ foreground-color '#AFAFAF'
 gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$GNOME_TERMINAL_PROFILE/ cursor-shape 'I-Beam'
 
-# set up minimize/maximize  window
-gsettings set org.gnome.desktop.wm.preferences button-layout ":minimize,maximize,close"
+
 
 # OPENSNITCH
 cd /usr/share
