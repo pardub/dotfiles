@@ -1,5 +1,3 @@
-#ZDOTDIR=~/.config/zsh
-
 # Set up a few standard directories based on:
 # https://wiki.archlinux.org/title/XDG_Base_Directory
 
