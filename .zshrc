@@ -29,6 +29,9 @@ zstyle ':completion::complete:*' gain-privileges 1
 
 bindkey -v
 
+# use Ctrl-P to accept suggestion
+bindkey '^P' autosuggest-accept
+
 # Use vim keys in tab complete menu:
 bindkey -M menuselect 'h' vi-backward-char
 bindkey -M menuselect 'k' vi-up-line-or-history
