@@ -1,4 +1,4 @@
-alias update='sudo dnf up -y'
+alias up='sudo dnf up'
 alias ll="ls -alh"
 #alias history="history 1"
 alias h="history"
