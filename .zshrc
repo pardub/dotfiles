@@ -5,6 +5,9 @@ compinit
 # Colors
 autoload -Uz colors && colors
 
+# Useful Functions
+source "$ZDOTDIR/zsh-functions"
+
 # Plugins
 zsh_add_plugin "zsh-users/zsh-autosuggestions"
 zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
@@ -95,5 +98,3 @@ setopt EXTENDED_HISTORY
 #source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 #source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
 
-# Useful Functions
-source "$ZDOTDIR/zsh-functions"
