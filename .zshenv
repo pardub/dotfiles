@@ -8,7 +8,7 @@ export XDG_CACHE_HOME="${HOME}/.cache"
 export XDG_DATA_HOME="${HOME}/.local/share"
 export XDG_STATE_HOME="${HOME}/.local/state"
 export ZDOTDIR="${XDG_CONFIG_HOME}/zsh"
-export ZPLUGINS="/usr/share/zsh/plugins"
+#export ZPLUGINS="/usr/share/zsh/plugins"
 
 # Add all local binaries to the system path.
 export PATH="${PATH}:${HOME}/.local/bin"
