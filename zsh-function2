@@ -1,11 +1,11 @@
 # Function to source files if they exist
 function zsh_add_file() {
-    [ -f "/usr/share/zsh/$1" && source "/usr/share/zsh/$1"
+    [ -f "$ZPLUGINS/$1" && source "$ZPLUGINS/$1"
 }
 
 function zsh_add_plugin() {
     PLUGIN_NAME=$(echo $1 | cut -d "/" -f 2)
-    if [ -d "/usr/share/zsh/plugins/$PLUGIN_NAME" ]; then 
+    if [ -d "$ZPLUGINS/$PLUGIN_NAME" ]; then 
         # For plugins
         zsh_add_file "plugins/$PLUGIN_NAME/$PLUGIN_NAME.plugin.zsh" || \
         zsh_add_file "plugins/$PLUGIN_NAME/$PLUGIN_NAME.zsh"
@@ -16,15 +16,15 @@ function zsh_add_plugin() {
 
 function zsh_add_completion() {
     PLUGIN_NAME=$(echo $1 | cut -d "/" -f 2)
-    if [ -d "/usr/share/zsh/plugins/$PLUGIN_NAME" ]; then 
+    if [ -d "$ZPLUGINS/$PLUGIN_NAME" ]; then 
         # For completions
-		completion_file_path=$(ls /usr/share/zsh/plugins/$PLUGIN_NAME/_*)
+		completion_file_path=$(ls $ZPLUGINS/$PLUGIN_NAME/_*)
 		fpath+="$(dirname "${completion_file_path}")"
         zsh_add_file "plugins/$PLUGIN_NAME/$PLUGIN_NAME.plugin.zsh"
     else
         git clone "https://github.com/$1.git" "$ZDOTDIR/plugins/$PLUGIN_NAME"
 		fpath+=$(ls /usr/share/zsh/plugins/$PLUGIN_NAME/_*)
-        [ -f /usr/share/zsh/.zccompdump ] && /usr/share/zsh/.zccompdump
+        [ -f $ZPLUGINS/.zccompdump ] && $ZPLUGINS/.zccompdump
     fi
 	completion_file="$(basename "${completion_file_path}")"
 	if [ "$2" = true ] && compinit "${completion_file:1}"
