@@ -12,6 +12,8 @@ alias diffy="diff -y --suppress-common-lines --width=250"
 alias gpa="git-pull-all"
 alias untar="tar -zxvf"
 alias c="clear"
+alias vim="nvim"
+alias ls="exa"
 
 # +-----+
 # | Git |
