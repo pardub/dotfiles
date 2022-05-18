@@ -11,7 +11,7 @@ source "$ZDOTDIR/zsh-functions"
 # Plugins
 zsh_add_plugin "zsh-users/zsh-autosuggestions"
 zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
-
+zsh_add_plugin  "junegunn/fzf"
 
 # For autocompletion with an arrow-key driven interface
 zstyle ':completion:*' menu select
