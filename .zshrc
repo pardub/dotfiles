@@ -98,3 +98,6 @@ setopt EXTENDED_HISTORY
 #source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 #source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
 
+if [ -f "$HOME/.cache/zsh/history" ] ;then
+touch "$HOME/.cache/zsh/history"
+fi
