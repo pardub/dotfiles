@@ -1,6 +1,7 @@
 alias cm="chezmoi"
 alias up='sudo dnf up'
-alias ll="ls -alh"
+alias ls="exa"
+alias ll="exa --all --long --classify --header --git --group --modified --acccessed --changed --links --inode --blocks --icons --time-style=long-iso"
 #alias history="history 1"
 alias h="history"
 alias mv="mv -iv"
@@ -14,7 +15,7 @@ alias gpa="git-pull-all"
 alias untar="tar -zxvf"
 alias c="clear"
 alias vim="nvim"
-alias ls="exa"
+
 
 # +-----+
 # | Git |
