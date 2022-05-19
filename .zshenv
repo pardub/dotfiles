@@ -16,6 +16,7 @@ export PATH="${PATH}:${HOME}/.local/bin"
 export EDITOR="nvim"
 export VISUAL="nvim"
 export BROWSER="firefox"
+export PAGER="most"
 
 #export HISTFILE="$ZDOTDIR/.zhistory"          # History filepath
 export HISTSIZE=1000000                          # Maximum events for internal history
