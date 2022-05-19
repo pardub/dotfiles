@@ -54,6 +54,8 @@ sh -c "$(curl -fsLS chezmoi.io/get)"
 ### web console for Linux servers
 #sudo dnf -y install cockpit
 
+# Man page with colors
+sudo dnf -y install most
 # Backup system
 sudo dnf -y install timeshift
 
