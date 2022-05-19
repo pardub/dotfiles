@@ -1,3 +1,4 @@
+alias cm="chezmoi"
 alias up='sudo dnf up'
 alias ll="ls -alh"
 #alias history="history 1"
