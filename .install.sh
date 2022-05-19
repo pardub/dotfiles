@@ -48,6 +48,9 @@ sudo flatpak install -y flathub com.github.tchx84.Flatseal
 
 ############## INSTALL SOFTWARES ##############
 
+# Dotfiles management tool "chezmoi"
+sh -c "$(curl -fsLS chezmoi.io/get)"
+
 ### web console for Linux servers
 #sudo dnf -y install cockpit
 
