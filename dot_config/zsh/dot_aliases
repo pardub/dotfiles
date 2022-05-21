@@ -43,5 +43,5 @@ alias glol='git log --graph --oneline --decorate'
 # +------+
 
 
-abbr ls="exa"
+#abbr ls="exa"
 
