@@ -213,7 +213,8 @@ sudo dnf -y install jami
 sudo dnf -y remove totem
 
 # Create Neovim config file
-mkdir -p $HOME/.config/nvim/init.vim
+mkdir -p $HOME/.config/nvim/
+touch init.vim $HOME/.config/nvim/
 
 # SERVICES ACTIVATION
 
