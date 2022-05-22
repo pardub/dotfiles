@@ -12,7 +12,8 @@ compinit
 # Go directly to folder without typng "cd"
 #setopt autocd
 
-
+zstyle ':completion:*' completer _expand_alias complete_ignored
+bindkey "^a" _expand_alias
 # Colors
 autoload -Uz colors && colors
 
