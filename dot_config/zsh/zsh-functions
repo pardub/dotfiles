@@ -30,9 +30,9 @@ function zsh_add_completion() {
 	if [ "$2" = true ] && compinit "${completion_file:1}"
 }
 
-function zsh_expand_alias(){
-    zle zsh_expand_alias
+function expand-alias(){
+    zle _expand_alias
     zle self-insert
 }
-zle -N zsh_expand_alias
-bindkey -M main ' ' zsh_expand_alias
+zle -N expand-alias
+bindkey -M main ' ' expand-alias
