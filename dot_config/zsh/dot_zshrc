@@ -12,8 +12,6 @@ compinit
 # Go directly to folder without typng "cd"
 #setopt autocd
 
-## zstyle ':completion:*' completer _expand_alias complete_ignored
-## bindkey "^a" _expand_alias
 # Colors
 autoload -Uz colors && colors
 
@@ -23,8 +21,7 @@ source "$ZDOTDIR/zsh-functions"
 # Plugins
 zsh_add_plugin "zsh-users/zsh-autosuggestions"
 zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
-#zsh_add_plugin "olets/zsh-abbr"
-#zsh_add_plugin "twpayne/chezmoi"
+
 # For autocompletion with an arrow-key driven interface
 zstyle ':completion:*' menu select
 zmodload zsh/complist
