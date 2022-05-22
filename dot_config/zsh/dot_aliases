@@ -1,3 +1,4 @@
+alias nc='nc termbin.com 9999'
 alias ll="exa --all --long --classify --header --git --group --modified --accessed --changed --links --inode --icons --time-style=long-iso"
 alias cm="chezmoi"
 alias up='sudo dnf up'
