@@ -31,7 +31,7 @@ function zsh_add_completion() {
 }
 
 function zsh_expand_alias(){
-    zle _expand_alias
+    zle zsh_expand_alias
     zle self-insert
 }
 zle -N zsh_expand_alias
