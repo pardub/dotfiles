@@ -61,8 +61,12 @@ sh -c "$(curl -fsLS chezmoi.io/get)"
 
 # Man page with colors
 sudo dnf -y install most
+
 # Backup system
 sudo dnf -y install timeshift
+
+# Shell script analysis tool
+sudo dnf -y install shellcheck
 
 # distributed version control system
 sudo dnf -y install git
