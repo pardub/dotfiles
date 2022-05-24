@@ -171,7 +171,10 @@ sudo dnf -y install torbrowser-launcher
 ### Checksum verification tool
 sudo dnf -y install gtkhash
 
-# Certificate manager and GUI for OpenPGP 
+# Gnome certificate manager and GUI for OpenPGP 
+sudo dnf -y install seahorse
+
+# Kde certificate manager and GUI for OpenPGP 
 sudo dnf -y install kleopatra
 
 # Collection of libraries and tools to process multimedia content such as audio, video, subtitles and related metadata.
