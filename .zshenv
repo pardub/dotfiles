@@ -21,7 +21,6 @@ export PAGER="most"
 # export HISTFILE="$ZDOTDIR/.zhistory"          # History filepath
 export HISTSIZE=1000000                        # Maximum events for internal history
 export SAVEHIST=1000000                        # Maximum events in history file
-#export HISTFILE=~/.cache/zsh/history
 export HISTFILE="${HOME}/.cache/zsh/history"   # History filepath
 
 # configuring $PATH
