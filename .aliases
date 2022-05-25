@@ -1,3 +1,4 @@
+export EDITOR="$VISUAL"
 alias cm="chezmoi"
 alias up="sudo dnf up#
 alias install="sudo dnf install"
