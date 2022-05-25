@@ -9,7 +9,7 @@ export XDG_STATE_HOME="${HOME}/.local/state"
 export ZDOTDIR="${XDG_CONFIG_HOME}/zsh"
 #export ZPLUGINS="/usr/share/zsh/plugins"
 
-# Add all local binaries to the system path.
+# add all local binaries to the system path.
 export PATH="${PATH}:${HOME}/.local/bin"
 
 # Default programs to run.
@@ -18,13 +18,13 @@ export VISUAL="nvim"
 export BROWSER="firefox"
 export PAGER="most"
 
-#export HISTFILE="$ZDOTDIR/.zhistory"          # History filepath
-export HISTSIZE=1000000                          # Maximum events for internal history
+# export HISTFILE="$ZDOTDIR/.zhistory"          # History filepath
+export HISTSIZE=1000000                        # Maximum events for internal history
 export SAVEHIST=1000000                        # Maximum events in history file
 #export HISTFILE=~/.cache/zsh/history
 export HISTFILE="${HOME}/.cache/zsh/history"   # History filepath
 
-# Configuring $PATH
+# configuring $PATH
 typeset -U path PATH
 path=(~/.local/bin $path)
 export PATH
