@@ -1,9 +1,11 @@
 # To enable autocompletion,
-autoload -Uz compinit
-compinit
+autoload -Uz compinit && compinit
 
 # Colors
 autoload -Uz colors && colors
+
+# Auto correction
+ENABLE_CORRECTION="true"
 
 # Useful Functions
 source "$ZDOTDIR/zsh-functions"
@@ -111,3 +113,10 @@ setopt hist_ignore_all_dups
 setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
+
+# Zsh git completion
+zstyle ':completion:*:*:git:*' script ~/.config/zsh/git-completion.zsh
+fpath=($HOME/.config/zsh $fpath)
+
+# Need to add below Docker completion
+
