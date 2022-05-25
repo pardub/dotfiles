@@ -1,33 +1,6 @@
 # To enable autocompletion,
 autoload -Uz compinit && compinit
 
-# Colors
-autoload -Uz colors && colors
-
-# Auto correction
-ENABLE_CORRECTION="true"
-
-# Commands are added to the history immediately
-setopt INC_APPEND_HISTORY
-export HISTTIMEFORMAT="[%F %T] "
-
-# Add Timestamp to history
-setopt EXTENDED_HISTORY
-
-# Useful Functions
-source "$ZDOTDIR/zsh-functions"
-
-# Plugins
-zsh_add_plugin "zsh-users/zsh-autosuggestions"
-zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
-zsh_add_plugin "ohmyzsh/ohmyzsh/tree/master/plugins/aliases"
-
-# Zsh git completion
-zstyle ':completion:*:*:git:*' script ~/.config/zsh/git-completion.zsh
-fpath=($HOME/.config/zsh $fpath)
-
-# Need to add below Docker completion
-
 # For autocompletion with an arrow-key driven interface
 zstyle ':completion:*' menu select
 zmodload zsh/complist
@@ -37,11 +10,9 @@ _comp_options+=(globdots)		# Include hidden files.
 # For enabling autocompletion of privileged environments in privileged commands (e.g. if you complete a command starting with sudo
 zstyle ':completion::complete:*' gain-privileges 1
 
-
 # Load aliases if they exist.
 [ -f "${XDG_CONFIG_HOME}/zsh/.aliases" ] && . "${XDG_CONFIG_HOME}/zsh/.aliases"
 [ -f "${XDG_CONFIG_HOME}/zsh/.aliases.local" ] && . "${XDG_CONFIG_HOME}/zsh/.aliases.local"
-
 
 bindkey -v
 
@@ -62,6 +33,7 @@ function zle-keymap-select () {
         viins|main) echo -ne '\e[5 q';; # beam
     esac
 }
+
 zle -N zle-keymap-select
 zle-line-init() {
     zle -K viins # initiate `vi insert` as keymap (can be removed if `bindkey -V` has been set elsewhere)
@@ -70,7 +42,6 @@ zle-line-init() {
 zle -N zle-line-init
 echo -ne '\e[5 q' # Use beam shape cursor on startup.
 preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
-
 
 # Use Ranger to switch directories and bind it to ctrl-o
 ranger () {
@@ -99,8 +70,38 @@ bindkey "^[[F" end-of-line
 # Persistent rehash
 zstyle ':completion:*' rehash true
 
+# Auto correction
+ENABLE_CORRECTION="true"
+
 # Open Ranger with CTRL O
 bindkey -s '^o' 'ranger\n'
+
+# Go directly to folder without typng "cd"
+#setopt autocd
+
+# Colors
+autoload -Uz colors && colors
+
+# Commands are added to the history immediately
+setopt INC_APPEND_HISTORY
+export HISTTIMEFORMAT="[%F %T] "
+
+# Add Timestamp to history
+setopt EXTENDED_HISTORY
+
+# Useful Functions
+source "$ZDOTDIR/zsh-functions"
+
+# Plugins
+zsh_add_plugin "zsh-users/zsh-autosuggestions"
+zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
+zsh_add_plugin "ohmyzsh/ohmyzsh/tree/master/plugins/aliases"
+
+# Zsh git completion
+zstyle ':completion:*:*:git:*' script ~/.config/zsh/git-completion.zsh
+fpath=($HOME/.config/zsh $fpath)
+
+# Need to add below Docker completion
 
 # Load zsh-syntax-highlighting; should be last.
 #source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
@@ -117,5 +118,6 @@ setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
 
-
+# Rclone config
+source $HOME/bin/set-rclone-password
 
