@@ -22,6 +22,12 @@ zsh_add_plugin "zsh-users/zsh-autosuggestions"
 zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
 zsh_add_plugin "ohmyzsh/ohmyzsh/tree/master/plugins/aliases"
 
+# Zsh git completion
+zstyle ':completion:*:*:git:*' script ~/.config/zsh/git-completion.zsh
+fpath=($HOME/.config/zsh $fpath)
+
+# Need to add below Docker completion
+
 # For autocompletion with an arrow-key driven interface
 zstyle ':completion:*' menu select
 zmodload zsh/complist
@@ -111,9 +117,5 @@ setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
 
-# Zsh git completion
-zstyle ':completion:*:*:git:*' script ~/.config/zsh/git-completion.zsh
-fpath=($HOME/.config/zsh $fpath)
 
-# Need to add below Docker completion
 
