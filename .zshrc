@@ -1,5 +1,6 @@
 # To enable autocompletion,
-autoload -Uz compinit && compinit
+autoload -Uz compinit
+compinit
 
 # For autocompletion with an arrow-key driven interface
 zstyle ':completion:*' menu select
