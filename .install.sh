@@ -316,13 +316,13 @@ git clone https://github.com/olets/zsh-abbr
 sudo echo "source /usr/share/zsh/plugins/zsh-abbr/zsh-abbr.zsh 2>/dev/null" | sudo tee -a  $ZDOTDIR/.zshr
 
 # Install zsh git-completion
-# Git auto/tab complete only for Git
 mkdir -p ~/config/zsh
 cd ~/zsh
 curl -o _git https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.zsh
-echo "zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.zsh" >> $HOME/config/zsh/.zshrc
-echo 'fpath=(~/.zsh $fpath)'  >> $HOME/config/zsh/.zshrc
+#echo "zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.zsh" >> $HOME/config/zsh/.zshrc
+#echo 'fpath=(~/.zsh $fpath)'  >> $HOME/config/zsh/.zshrc
 rm $HOME/config/zsh/.zcompdump
+cd
 
 
 
