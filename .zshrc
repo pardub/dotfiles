@@ -7,6 +7,13 @@ autoload -Uz colors && colors
 # Auto correction
 ENABLE_CORRECTION="true"
 
+# Commands are added to the history immediately
+setopt INC_APPEND_HISTORY
+export HISTTIMEFORMAT="[%F %T] "
+
+# Add Timestamp to history
+setopt EXTENDED_HISTORY
+
 # Useful Functions
 source "$ZDOTDIR/zsh-functions"
 
@@ -88,13 +95,6 @@ zstyle ':completion:*' rehash true
 
 # Open Ranger with CTRL O
 bindkey -s '^o' 'ranger\n'
-
-# Commands are added to the history immediately
-setopt INC_APPEND_HISTORY
-export HISTTIMEFORMAT="[%F %T] "
-
-# Add Timestamp to history
-setopt EXTENDED_HISTORY
 
 # Load zsh-syntax-highlighting; should be last.
 #source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
