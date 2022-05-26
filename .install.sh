@@ -210,6 +210,9 @@ sudo dnf -y install pass
 # Gui for Pass
 sudo dnf -y install qtpass
 
+# Password Manager
+sudo dnf -y install keepassxc
+
 # Redshift adjusts the color temperature of the screen
 sudo dnf -y install redshift
 
