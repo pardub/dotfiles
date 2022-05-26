@@ -1,8 +1,7 @@
 alias cm="chezmoi"
 alias up="sudo dnf up#
 alias install="sudo dnf install"
-alias ls="exa"
-alias ll="exa --all --long --classify --header --git --group --modified --acccessed --changed --links --inode --blocks --icons --time-style=long-iso"
+alias ll="exa --all --long --classify --header --git --group --modified --links --inode --icons --time-style=long-iso"
 #alias history="history 1"
 alias h="history"
 alias mv="mv -iv"
