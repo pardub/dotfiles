@@ -66,16 +66,16 @@ bindkey -M menuselect 'j' vi-down-line-or-history
 bindkey -v '^?' backward-delete-char
 
 
-# Use Ranger to switch directories and bind it to ctrl-o
-ranger () {
-    tmp="$(mktemp -uq)"
-    trap 'rm -f $tmp >/dev/null 2>&1' HUP INT QUIT TERM PWR EXIT
-    ranger -last-dir-path="$tmp" "$@"
-    if [ -f "$tmp" ]; then
-        dir="$(cat "$tmp")"
-        [ -d "$dir" ] && [ "$dir" != "$(pwd)" ] && cd "$dir"
-    fi
-}
+# Use Ranger to switch directories and bind it to ctrl-o // currently not working
+#ranger () {
+#    tmp="$(mktemp -uq)"
+#    trap 'rm -f $tmp >/dev/null 2>&1' HUP INT QUIT TERM PWR EXIT
+#    ranger -last-dir-path="$tmp" "$@"
+#    if [ -f "$tmp" ]; then
+#        dir="$(cat "$tmp")"
+#        [ -d "$dir" ] && [ "$dir" != "$(pwd)" ] && cd "$dir"
+#    fi
+#}
 
 
 # Go directly to folder without typng "cd"
