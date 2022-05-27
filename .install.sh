@@ -42,6 +42,7 @@ sh -c "$(curl -fsLS chezmoi.io/get)"
 #sudo dnf -y install cockpit
 
 # NextDNS CLI client
+# Config ==> https://github.com/nextdns/nextdns/wiki/RPM-Based-Distribution
 sudo curl -Ls https://repo.nextdns.io/nextdns.repo -o /etc/yum.repos.d/nextdns.repo
 sudo dnf -y install -y nextdns
 
