@@ -23,7 +23,7 @@ alias wget="wget -c"
 alias getpass="openssl rand -base64 20"
 
 # Downloaded a file and need to test the checksum?
-alias sha="shasum -a 256"
+alias sha="sha256sum -c *-CHECKSUM"
 
 # Start a web server in any folder you"d like
 alias www="python -m SimpleHTTPServer 8000"
