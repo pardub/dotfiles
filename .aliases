@@ -11,6 +11,7 @@ alias df="df -h"
 alias du="du -h"
 alias mkdir="mkdir -p"
 alias diffy="diff -y --suppress-common-lines --width=250"
+alias shellcheck="shellcheck -f diff"
 
 alias untar="tar -zxvf"
 alias c="clear"
