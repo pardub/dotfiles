@@ -92,7 +92,7 @@ export HISTTIMEFORMAT="[%F %T] "
 setopt EXTENDED_HISTORY
 
 # Useful Functions
-source "$ZDOTDIR/zsh-functions"
+source "$ZDOTDIR"/zsh-functions
 
 # Plugins
 zsh_add_plugin "zsh-users/zsh-autosuggestions"
