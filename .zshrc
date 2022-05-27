@@ -109,8 +109,8 @@ fpath=($HOME/.config/zsh $fpath)
 #source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 #source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
 
-if [ -f "$HOME/.cache/zsh/history" ] ;then
-touch "$HOME/.cache/zsh/history"
+if [ -f "$HOME"/.cache/zsh/history ] ;then
+touch "$HOME"/.cache/zsh/history
 fi
 
 # Remove duplicates in history
@@ -121,5 +121,5 @@ setopt hist_ignore_dups
 setopt hist_find_no_dups
 
 # Rclone config
-source "$HOME/bin/set-rclone-password"
+source "$HOME"/bin/set-rclone-password
 
