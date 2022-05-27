@@ -22,7 +22,7 @@ alias wget="wget -c"
 # Need to generate a random, 20-character password for a new online account?
 alias getpass="openssl rand -base64 20"
 
-# Downloaded a file and need to test the checksum?
+# Downloaded a file and need to verify the downloads signatures?
 alias sha="sha256sum -c *-CHECKSUM"
 
 # Start a web server in any folder you"d like
