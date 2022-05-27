@@ -1,17 +1,14 @@
 #!/bin/bash -xev
 
-# ADD https://dns.watch/
-echo 'nameserver='84.200.69.80' | sudo tee -a /etc/hosts
-echo 'nameserver='84.200.70.40' | sudo tee -a /etc/hosts
+# +---------+
+# | Install |
+# +---------+
 
-# Create gpg-agent.conf file and caches the password for 1 week
-sudo touch $HOME/.gnupg/gpg-agent.conf
-sudo echo 'default-cache-ttl 604800'             | sudo tee -a $HOME/.gnupg/gpg-agent.conf
-sudo echo 'max-cache-ttl 604800'                 | sudo tee -a $HOME/.gnupg/gpg-agent.conf
-
-# CHANGE HOSTNAME
-sudo hostnamectl set-hostname fedora
-
+# Fastest mirror and Delta RPM
+sudo echo 'fastestmirror=True'             | sudo tee -a /etc/dnf/dnf.conf
+sudo echo 'deltarpm=True'                  | sudo tee -a /etc/dnf/dnf.conf
+sudo echo 'max_parallel_downloads=10'      | sudo tee -a /etc/dnf/dnf.conf
+sudo sudo dnf clean all
 sudo dnf -y update
 
 # INSTALL JETBRAINS MONO FONTS IN ~/.local/share/fonts
@@ -27,31 +24,15 @@ fc-cache -v
 ### Size: 13
 ### Line spacing: 1.2
 
-## Setup Visudo
-echo "$USER ALL=(ALL:ALL) ALL" | sudo EDITOR='tee -a' visudo
-echo "Defaults:$USER timestamp_timeout=60" | sudo EDITOR='tee -a' visudo
-
 # ADD EXTRA REPOS rpm fusion
 sudo dnf -y install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
 sudo dnf -y install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-
-# Fastest mirror and Delta RPM
-sudo echo 'fastestmirror=True'             | sudo tee -a /etc/dnf/dnf.conf
-sudo echo 'deltarpm=True'                  | sudo tee -a /etc/dnf/dnf.conf
-sudo echo 'max_parallel_downloads=10'      | sudo tee -a /etc/dnf/dnf.conf
-sudo sudo dnf clean all
-
-# DISABLING SSH
-sudo systemctl stop sshd
-sudo systemctl disable sshd
 
 # ADD FLATPAK REPO
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 # Manage Flatpak permissions
 sudo flatpak install -y flathub com.github.tchx84.Flatseal
-
-############## INSTALL SOFTWARES ##############
 
 # Dotfiles management tool "chezmoi"
 sh -c "$(curl -fsLS chezmoi.io/get)"
@@ -231,12 +212,6 @@ sudo dnf -y install jami
 # UNINSTALL
 sudo dnf -y remove totem
 
-# Create Neovim config file
-mkdir -p $HOME/.config/nvim/
-touch init.vim $HOME/.config/nvim/
-
-# SERVICES ACTIVATION
-
 # CODECS
 sudo dnf -y install x264
 sudo dnf -y groupupdate Multimedia
@@ -248,56 +223,6 @@ sudo dnf -y group upgrade --with-optional Multimedia
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
 sudo dnf -y check-update && sudo dnf -y  install code
-
-# Disable Firewalld and Setup iptables ####
-
-sudo systemctl stop firewalld
-sudo systemctl disable firewalld
-sudo systemctl mask firewalld
-sudo dnf -y install iptables-services
-sudo touch /etc/sysconfig/iptables
-sudo systemctl enable iptables
-
-### VS CODE INSTALL EXTENSIONS
-code --install-extension ginfuru.ginfuru-better-solarized-dark-theme
-code --install-extension ms-azuretools.vscode-docker	
-code --install-extension dbaeumer.vscode-eslint
-code --install-extension redhat.vscode-yaml
-
-
-
-### FIREWALL SET UP OPEN/CLOSED PORTS
-
-##### SET UP GNOME TERMINAL
-# https://ncona.com/2019/11/configuring-gnome-terminal-programmatically/
-# We will need this value later, so let’s save it in a variable:
-
-# set up minimize/maximize  window
-gsettings set org.gnome.desktop.wm.preferences button-layout ":minimize,maximize,close"
-
-GNOME_TERMINAL_PROFILE=$(gsettings get org.gnome.Terminal.ProfilesList default | awk -F \' '{print $2}')
-#gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:"$GNOME_TERMINAL_PROFILE"/ font 'Monospace 10'
-#gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:"$GNOME_TERMINAL_PROFILE"/ font 'MesloLGS NF 10'
-#gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:"$GNOME_TERMINAL_PROFILE"/ font 'JetBrainsMono NF 10'
-gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:"$GNOME_TERMINAL_PROFILE"/ font 'JetBrainsMonoMedium Nerd Font 10'
-gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:"$GNOME_TERMINAL_PROFILE"/ use-system-font false
-gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:"$GNOME_TERMINAL_PROFILE"/ audible-bell false
-gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:"$GNOME_TERMINAL_PROFILE"/ use-theme-colors false
-gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:"$GNOME_TERMINAL_PROFILE"/ background-color '#000000'
-gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:"$GNOME_TERMINAL_PROFILE"/ foreground-color '#AFAFAF'
-#gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:"$GNOME_TERMINAL_PROFILE"/ cursor-shape 'I-Beam'
-
-
-
-# OPENSNITCH
-sudo mkdir -p /usr/share/opensnitch
-sudo cd /usr/share/opensnitch/
-wget https://github.com/evilsocket/opensnitch/releases/download/v1.5.0/opensnitch-1.5.0-1.x86_64.rpm
-wget https://github.com/evilsocket/opensnitch/releases/download/v1.5.0/opensnitch-ui-1.5.0-1.noarch.f29.rpm
-sudo dnf -y localinstall opensnitch-1*.rpm; sudo dnf -y localinstall opensnitch-ui*.rpm
-sudo systemctl enable --now opensnitch
-sudo systemctl start opensnitch
-cd
 
 # Install pluging zsh-syntax-highlighting
 sudo mkdir -p /usr/share/zsh/plugins
@@ -331,5 +256,76 @@ curl -o _git https://raw.githubusercontent.com/git/git/master/contrib/completion
 rm $HOME/config/zsh/.zcompdump
 cd
 
+# +---------------+
+# | Configuration |
+# +---------------+
 
+# Add dns from https://dns.watch/
+echo 'nameserver='84.200.69.80' | sudo tee -a /etc/hosts
+echo 'nameserver='84.200.70.40' | sudo tee -a /etc/hosts
+
+# Create gpg-agent.conf file and caches the password for 1 week
+sudo touch $HOME/.gnupg/gpg-agent.conf
+sudo echo 'default-cache-ttl 604800'             | sudo tee -a $HOME/.gnupg/gpg-agent.conf
+sudo echo 'max-cache-ttl 604800'                 | sudo tee -a $HOME/.gnupg/gpg-agent.conf
+
+# CHANGE HOSTNAME
+sudo hostnamectl set-hostname fedora
+
+## Setup Visudo
+echo "$USER ALL=(ALL:ALL) ALL" | sudo EDITOR='tee -a' visudo
+echo "Defaults:$USER timestamp_timeout=60" | sudo EDITOR='tee -a' visudo
+
+# DISABLING SSH
+sudo systemctl stop sshd
+sudo systemctl disable sshd
+
+# Disable Firewalld and Setup iptables ####
+sudo systemctl stop firewalld
+sudo systemctl disable firewalld
+sudo systemctl mask firewalld
+sudo dnf -y install iptables-services
+sudo touch /etc/sysconfig/iptables
+sudo systemctl enable iptables
+
+# FIREWALL SET UP OPEN/CLOSED PORTS
+
+# VS CODE INSTALL EXTENSIONS
+code --install-extension ginfuru.ginfuru-better-solarized-dark-theme
+code --install-extension ms-azuretools.vscode-docker	
+code --install-extension dbaeumer.vscode-eslint
+code --install-extension redhat.vscode-yaml
+
+# Create Neovim config file
+mkdir -p $HOME/.config/nvim/
+touch init.vim $HOME/.config/nvim/
+
+# SET UP GNOME TERMINAL
+# https://ncona.com/2019/11/configuring-gnome-terminal-programmatically/
+# We will need this value later, so let’s save it in a variable:
+
+# set up minimize/maximize  window
+gsettings set org.gnome.desktop.wm.preferences button-layout ":minimize,maximize,close"
+
+GNOME_TERMINAL_PROFILE=$(gsettings get org.gnome.Terminal.ProfilesList default | awk -F \' '{print $2}')
+#gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:"$GNOME_TERMINAL_PROFILE"/ font 'Monospace 10'
+#gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:"$GNOME_TERMINAL_PROFILE"/ font 'MesloLGS NF 10'
+#gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:"$GNOME_TERMINAL_PROFILE"/ font 'JetBrainsMono NF 10'
+gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:"$GNOME_TERMINAL_PROFILE"/ font 'JetBrainsMonoMedium Nerd Font 10'
+gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:"$GNOME_TERMINAL_PROFILE"/ use-system-font false
+gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:"$GNOME_TERMINAL_PROFILE"/ audible-bell false
+gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:"$GNOME_TERMINAL_PROFILE"/ use-theme-colors false
+gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:"$GNOME_TERMINAL_PROFILE"/ background-color '#000000'
+gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:"$GNOME_TERMINAL_PROFILE"/ foreground-color '#AFAFAF'
+#gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:"$GNOME_TERMINAL_PROFILE"/ cursor-shape 'I-Beam'
+
+# OPENSNITCH
+sudo mkdir -p /usr/share/opensnitch
+sudo cd /usr/share/opensnitch/
+wget https://github.com/evilsocket/opensnitch/releases/download/v1.5.0/opensnitch-1.5.0-1.x86_64.rpm
+wget https://github.com/evilsocket/opensnitch/releases/download/v1.5.0/opensnitch-ui-1.5.0-1.noarch.f29.rpm
+sudo dnf -y localinstall opensnitch-1*.rpm; sudo dnf -y localinstall opensnitch-ui*.rpm
+sudo systemctl enable --now opensnitch
+sudo systemctl start opensnitch
+cd
 
