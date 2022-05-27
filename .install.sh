@@ -13,7 +13,7 @@ sudo dnf -y update
 
 # INSTALL JETBRAINS MONO FONTS IN ~/.local/share/fonts
 mkdir -p ~/.local/share/fonts/nerd-fonts
-cd ~/.local/share/fonts
+cd ~/.local/share/fonts || exit
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/JetBrainsMono.zip
 unzip JetBrainsMono.zip
 rm JetBrainsMono.zip
@@ -35,7 +35,7 @@ sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub
 sudo flatpak install -y flathub com.github.tchx84.Flatseal
 
 # Dotfiles management tool "chezmoi"
-cd
+cd || exit
 sh -c "$(curl -fsLS chezmoi.io/get)"
 
 ### web console for Linux servers
@@ -234,7 +234,7 @@ sudo echo '# Load zsh-syntax-highlighting; should be last.'   | sudo tee -a  $ZD
 sudo echo "source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null" | sudo tee -a  $ZDOTDIR/.zshr
 
 # Install pluging zsh-autosuggestions
-sudo cd /usr/share/zsh/plugins/
+sudo cd /usr/share/zsh/plugins/ || exit
 git clone https://github.com/zsh-users/zsh-autosuggestions.git
 #sudo echo "# Load zsh-autosuggestions; should be last." >> $ZDOTDIR/.zshrc
 sudo echo "# Load zsh-syntax-autosuggestions; should be last." | sudo tee -a  $ZDOTDIR/.zshr
@@ -242,19 +242,19 @@ sudo echo "# Load zsh-syntax-autosuggestions; should be last." | sudo tee -a  $Z
 sudo echo "source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null" | sudo tee -a  $ZDOTDIR/.zshr
 
 # Install pluging zsh-abbr
-sudo cd /usr/share/zsh/plugins/
+sudo cd /usr/share/zsh/plugins/ || exit
 git clone https://github.com/olets/zsh-abbr
 #sudo echo "source /usr/share/zsh/plugins/zsh-abbr/zsh-abbr.zsh 2>/dev/null" >> $ZDOTDIR/.zshrc
 sudo echo "source /usr/share/zsh/plugins/zsh-abbr/zsh-abbr.zsh 2>/dev/null" | sudo tee -a  $ZDOTDIR/.zshr
 
 # Install zsh git-completion
 mkdir -p ~/config/zsh
-cd ~/zsh
+cd ~/zsh || exit
 curl -o _git https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.zsh
 #echo "zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.zsh" >> $HOME/config/zsh/.zshrc
 #echo 'fpath=(~/.zsh $fpath)'  >> $HOME/config/zsh/.zshrc
 rm $HOME/config/zsh/.zcompdump
-cd
+cd || exit
 
 # +---------------+
 # | Configuration |
@@ -297,8 +297,8 @@ code --install-extension dbaeumer.vscode-eslint
 code --install-extension redhat.vscode-yaml
 
 # Create Neovim config file
-mkdir -p $HOME/.config/nvim/
-touch init.vim $HOME/.config/nvim/
+mkdir -p $HOME/.config/nvim/ || exit
+touch init.vim $HOME/.config/nvim/ || exit
 
 # SET UP GNOME TERMINAL
 # https://ncona.com/2019/11/configuring-gnome-terminal-programmatically/
@@ -320,12 +320,12 @@ gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profi
 #gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:"$GNOME_TERMINAL_PROFILE"/ cursor-shape 'I-Beam'
 
 # OPENSNITCH
-sudo mkdir -p /usr/share/opensnitch
-sudo cd /usr/share/opensnitch/
+sudo mkdir -p /usr/share/opensnitch || exit
+sudo cd /usr/share/opensnitch/ || exit
 wget https://github.com/evilsocket/opensnitch/releases/download/v1.5.0/opensnitch-1.5.0-1.x86_64.rpm
 wget https://github.com/evilsocket/opensnitch/releases/download/v1.5.0/opensnitch-ui-1.5.0-1.noarch.f29.rpm
 sudo dnf -y localinstall opensnitch-1*.rpm; sudo dnf -y localinstall opensnitch-ui*.rpm
-sudo systemctl enable --now opensnitch
-sudo systemctl start opensnitch
-cd
+sudo systemctl enable --now opensnitch || exit
+sudo systemctl start opensnitch || exit
+cd || exit
 
