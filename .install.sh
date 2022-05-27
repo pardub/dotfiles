@@ -35,6 +35,7 @@ sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub
 sudo flatpak install -y flathub com.github.tchx84.Flatseal
 
 # Dotfiles management tool "chezmoi"
+cd
 sh -c "$(curl -fsLS chezmoi.io/get)"
 
 ### web console for Linux servers
@@ -160,7 +161,7 @@ sudo dnf -y install gtkhash
 sudo dnf -y install seahorse
 
 # Kde certificate manager and GUI for OpenPGP 
-sudo dnf -y install kleopatra
+#sudo dnf -y install kleopatra
 
 # Collection of libraries and tools to process multimedia content such as audio, video, subtitles and related metadata.
 sudo dnf -y install ffmpeg
@@ -183,10 +184,8 @@ sudo dnf -y install dconf-editor
 # change MAC addres
 sudo dnf -y install macchanger 
 
-# Etesync repo
+# Etesync repo && Etesync add-on for Evolution
 sudo dnf -y copr enable daftaupe/etesync-rs
-
-# Etesync add-on for Evolution
 sudo dnf -y install evolution-etesync
 
 # Password Manager
