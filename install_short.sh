@@ -59,13 +59,6 @@ sudo dnf -y install dconf-editor
 # UNINSTALL
 sudo dnf -y remove totem
 
-# CODECS
-sudo dnf -y install x264
-sudo dnf -y groupupdate Multimedia
-sudo dnf -y install gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel
-sudo dnf -y install lame\* --exclude=lame-devel
-sudo dnf -y group upgrade --with-optional Multimedia
-
 # +---------------+
 # | Configuration |
 # +---------------+
