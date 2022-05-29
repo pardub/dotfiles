@@ -16,7 +16,7 @@ sudo mkdir -p "$HOME"/.local/share/fonts/nerd-fonts
 cd /tmp
 sudo wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/JetBrainsMono.zip
 sudo unzip /tmp/JetBrainsMono.zip -d ~/.local/share/fonts/nerd-fonts
-fc-cache -v
+fc-cache -f -v
 cd || exit
 
 # ADD EXTRA REPOS rpm fusion
