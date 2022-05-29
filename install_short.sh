@@ -107,12 +107,12 @@ gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profi
 
 # Install pluging zsh-syntax-highlighting
 sudo mkdir -p "$ZDOTDIR"/plugins || exit
-sudo cd "$ZDOTDIR"/plugins || exit
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
+cd "$ZDOTDIR"/plugins || exit
+sudo git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
 
 # Install pluging zsh-autosuggestions
-sudo cd "$ZDOTDIR"/plugins || exit
-git clone https://github.com/zsh-users/zsh-autosuggestions.git
+cd "$ZDOTDIR"/plugins || exit
+sudo git clone https://github.com/zsh-users/zsh-autosuggestions.git
 cd || exit
 
 
