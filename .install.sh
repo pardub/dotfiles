@@ -339,15 +339,21 @@ fi
 curl -LJO https://raw.githubusercontent.com/pardub/dotfiles_test/main/.zshenv
 
 # Download .zshrc
-mkdir -p "$HOME"/.config/zsh  || exit
-cd "$HOME"/.config/zsh  || exit
+mkdir -p "$HOME"/.config/zsh || exit
+cd "$HOME"/.config/zsh || exit
 curl -LJO https://raw.githubusercontent.com/pardub/dotfiles_test/main/.zshrc
 
 # Download .aliases
-cd "$HOME"/.config/zsh  || exit
+cd "$HOME"/.config/zsh || exit
 curl -LJO https://raw.githubusercontent.com/pardub/dotfiles_test/main/.aliases
 
 # Downlaod zsh functions
+cd "$HOME"/.config/zsh || exit
+curl -LJO https://github.com/pardub/dotfiles_test/blob/main/zsh-functions
+
+
+
+
 
 
 
