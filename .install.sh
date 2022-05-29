@@ -20,11 +20,6 @@ rm JetBrainsMono.zip
 fc-cache -v
 cd || exit
 
-### SET UP VS CODE TO USE NEW FONTS
-### RECOMMENDED SETTINGS FOR THE FONT
-### Size: 13
-### Line spacing: 1.2
-
 # ADD EXTRA REPOS rpm fusion
 sudo dnf -y install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
 sudo dnf -y install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
@@ -265,9 +260,15 @@ curl -o _git https://raw.githubusercontent.com/git/git/master/contrib/completion
 rm $HOME/config/zsh/.zcompdump
 cd || exit
 
+
 # +---------------+
 # | Configuration |
 # +---------------+
+
+### SET UP VS CODE TO USE NEW FONTS
+### RECOMMENDED SETTINGS FOR THE FONT
+### Size: 13
+### Line spacing: 1.2
 
 # Add dns from https://dns.watch/
 echo 'nameserver='84.200.69.80' | sudo tee -a /etc/hosts
