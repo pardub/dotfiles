@@ -232,8 +232,8 @@ sudo dnf -y check-update && sudo dnf -y  install code
 
 # Install pluging zsh-syntax-highlighting
 sudo mkdir -p "$ZDOTDIR"/plugins || exit
-sudo cd "$ZDOTDIR"/plugins || exit
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
+cd "$ZDOTDIR"/plugins || exit
+sudo git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
 
 # Install pluging zsh-autosuggestions
 #sudo cd /usr/share/zsh/plugins/ || exit
@@ -244,9 +244,10 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
 #sudo echo "source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null" | sudo tee -a  $ZDOTDIR/.zshrc
 
 # Install pluging zsh-autosuggestions
-sudo cd "$ZDOTDIR"/plugins || exit
-git clone https://github.com/zsh-users/zsh-autosuggestions.git
+cd "$ZDOTDIR"/plugins || exit
+sudo git clone https://github.com/zsh-users/zsh-autosuggestions.git
 cd || exit
+
 # Install pluging zsh-abbr
 #sudo cd /usr/share/zsh/plugins/ || exit
 #git clone https://github.com/olets/zsh-abbr
