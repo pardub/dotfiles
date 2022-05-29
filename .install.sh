@@ -147,7 +147,7 @@ sudo dnf -y install pdfarranger
 sudo dnf -y install bookworm
 
 # flashcard program using spaced repetition
-sudo dnf -y install anki
+#sudo dnf -y install anki
 
 # Anonymizing overlay network for TCP
 sudo dnf -y install tor
