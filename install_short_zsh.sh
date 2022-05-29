@@ -14,19 +14,19 @@ fi
 
 # Download .zshenv
 cd "$HOME" || exit
-wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.zshenv
+sudo wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.zshenv
 
 # Download .zshrc
 cd "$HOME"/.config/zsh || exit
-wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.zshrc
+sudo wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.zshrc
 
 # Download .aliases
 cd "$HOME"/.config/zsh || exit
-wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.aliases
+sudo wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.aliases
 
 # Downlaod zsh-functions
 cd "$HOME"/.config/zsh || exit
-wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/zsh-functions
+sudo wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/zsh-functions
 
 
 # Install pluging zsh-syntax-highlighting
