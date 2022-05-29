@@ -13,21 +13,20 @@ then rm "$HOME"/.zshenv
 fi
 
 # Download .zshenv
-cd "$HOME"/.config/zsh || exit
-curl -LJO https://raw.githubusercontent.com/pardub/dotfiles_test/main/.zshenv
+cd "$HOME" || exit
+wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.zshenv
 
 # Download .zshrc
-mkdir -p "$HOME"/.config/zsh || exit
 cd "$HOME"/.config/zsh || exit
-curl -LJO https://raw.githubusercontent.com/pardub/dotfiles_test/main/.zshrc
+wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.zshrc
 
 # Download .aliases
 cd "$HOME"/.config/zsh || exit
-curl -LJO https://raw.githubusercontent.com/pardub/dotfiles_test/main/.aliases
+wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.aliases
 
 # Downlaod zsh-functions
 cd "$HOME"/.config/zsh || exit
-curl -LJO https://raw.githubusercontent.com/pardub/dotfiles_test/main/zsh-functions
+wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/zsh-functions
 
 
 # Install pluging zsh-syntax-highlighting
