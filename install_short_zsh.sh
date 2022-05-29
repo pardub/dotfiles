@@ -1,3 +1,5 @@
+sudo mkdir -p "$HOME"/.config/zsh
+cd || exit
 
 # Zsh
 sudo dnf -y install zsh
