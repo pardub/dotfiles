@@ -24,12 +24,6 @@ cd || exit
 sudo dnf -y install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
 sudo dnf -y install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
-# Dotfiles management tool "chezmoi"
-sh -c "$(curl -fsLS chezmoi.io/get)"
-
-# Man page with colors
-sudo dnf -y install most
-
 # Backup system
 sudo dnf -y install timeshift
 
@@ -51,22 +45,16 @@ sudo dnf -y install fd-find
 # Collection of Linux utilities
 sudo dnf -y install util-linux-user
 
-# Zsh
-sudo dnf -y install zsh
-
 sudo dnf -y install gnome-tweaks
 sudo dnf -y install gnome-extensions-app
 sudo dnf -y install autoconf 
 sudo dnf -y install automake
 
-
 # A modern replacement for ls
 sudo dnf -y install exa
 
-
 # save workspaces after reboot
 sudo dnf -y install dconf-editor
-
 
 # UNINSTALL
 sudo dnf -y remove totem
@@ -77,43 +65,6 @@ sudo dnf -y groupupdate Multimedia
 sudo dnf -y install gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel
 sudo dnf -y install lame\* --exclude=lame-devel
 sudo dnf -y group upgrade --with-optional Multimedia
-
-# Install pluging zsh-syntax-highlighting
-#sudo mkdir -p /usr/share/zsh/plugins
-#sudo cd /usr/share/zsh/plugins/
-#git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
-# sudo echo "# Load zsh-syntax-highlighting; should be last." >> $ZDOTDIR/.zshrc
-#sudo echo '# Load zsh-syntax-highlighting; should be last.'   | sudo tee -a  $ZDOTDIR/.zshrc
-#sudo echo "source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null" >> $ZDOTDIR/.zshrc
-#sudo echo "source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null" | sudo tee -a  $ZDOTDIR/.zshrc
-
-# Install pluging zsh-syntax-highlighting
-sudo mkdir -p "$ZDOTDIR"/plugins || exit
-sudo cd "$ZDOTDIR"/plugins || exit
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
-
-# Install pluging zsh-autosuggestions
-#sudo cd /usr/share/zsh/plugins/ || exit
-#git clone https://github.com/zsh-users/zsh-autosuggestions.git
-#sudo echo "# Load zsh-autosuggestions; should be last." >> $ZDOTDIR/.zshrc
-#sudo echo "# Load zsh-syntax-autosuggestions; should be last." | sudo tee -a  $ZDOTDIR/.zshrc
-#sudo echo "source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null" >> $ZDOTDIR/.zshrc
-#sudo echo "source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null" | sudo tee -a  $ZDOTDIR/.zshrc
-
-# Install pluging zsh-autosuggestions
-sudo cd "$ZDOTDIR"/plugins || exit
-git clone https://github.com/zsh-users/zsh-autosuggestions.git
-cd || exit
-
-# Install zsh git-completion
-#mkdir -p ~/config/zsh
-#cd ~/zsh || exit
-#curl -LJO https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.zsh
-##echo "zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.zsh" >> $HOME/config/zsh/.zshrc
-##echo 'fpath=(~/.zsh $fpath)'  >> $HOME/config/zsh/.zshrc
-#rm $HOME/config/zsh/.zcompdump
-#cd || exit
-
 
 # +---------------+
 # | Configuration |
@@ -162,27 +113,3 @@ gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profi
 gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:"$GNOME_TERMINAL_PROFILE"/ foreground-color '#AFAFAF'
 #gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:"$GNOME_TERMINAL_PROFILE"/ cursor-shape 'I-Beam'
 
-# zsh default shell
-# sudo chsh -s /bin/zsh marc ## replaced by the command below
-sudo chsh -s $(which zsh) $USER
-cd $HOME
-if [ -e "$HOME"/.zshenv ]
-then rm "$HOME"/.zshenv
-fi
-
-# Download .zshenv
-cd "$HOME"/.config/zsh || exit
-curl -LJO https://raw.githubusercontent.com/pardub/dotfiles_test/main/.zshenv
-
-# Download .zshrc
-mkdir -p "$HOME"/.config/zsh || exit
-cd "$HOME"/.config/zsh || exit
-curl -LJO https://raw.githubusercontent.com/pardub/dotfiles_test/main/.zshrc
-
-# Download .aliases
-cd "$HOME"/.config/zsh || exit
-curl -LJO https://raw.githubusercontent.com/pardub/dotfiles_test/main/.aliases
-
-# Downlaod zsh-functions
-cd "$HOME"/.config/zsh || exit
-curl -LJO https://raw.githubusercontent.com/pardub/dotfiles_test/main/zsh-functions
