@@ -4,6 +4,8 @@
 # | Install |
 # +---------+
 
+sudo mkdir -p "$HOME"/.config/zsh
+cd || exit
 # Fastest mirror and Delta RPM
 sudo echo 'fastestmirror=True'             | sudo tee -a /etc/dnf/dnf.conf
 sudo echo 'deltarpm=True'                  | sudo tee -a /etc/dnf/dnf.conf
