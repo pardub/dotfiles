@@ -18,6 +18,7 @@ wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/JetBrainsM
 unzip JetBrainsMono.zip
 rm JetBrainsMono.zip
 fc-cache -v
+cd || exit
 
 ### SET UP VS CODE TO USE NEW FONTS
 ### RECOMMENDED SETTINGS FOR THE FONT
@@ -35,7 +36,6 @@ sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub
 sudo flatpak install -y flathub com.github.tchx84.Flatseal
 
 # Dotfiles management tool "chezmoi"
-cd || exit
 sh -c "$(curl -fsLS chezmoi.io/get)"
 
 ### web console for Linux servers
