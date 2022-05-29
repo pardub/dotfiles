@@ -345,6 +345,9 @@ cd $HOME
 if [ -e "$HOME"/.zshenv ]
 then rm "$HOME"/.zshenv
 fi
+
+# Download .zshenv
+cd "$HOME"/.config/zsh || exit
 curl -LJO https://raw.githubusercontent.com/pardub/dotfiles_test/main/.zshenv
 
 # Download .zshrc
@@ -356,9 +359,9 @@ curl -LJO https://raw.githubusercontent.com/pardub/dotfiles_test/main/.zshrc
 cd "$HOME"/.config/zsh || exit
 curl -LJO https://raw.githubusercontent.com/pardub/dotfiles_test/main/.aliases
 
-# Downlaod zsh functions
+# Downlaod zsh-functions
 cd "$HOME"/.config/zsh || exit
-curl -LJO https://github.com/pardub/dotfiles_test/blob/main/zsh-functions
+curl -LJO https://raw.githubusercontent.com/pardub/dotfiles_test/main/zsh-functions
 
 
 
