@@ -332,4 +332,22 @@ cd || exit
 # zsh default shell
 # sudo chsh -s /bin/zsh marc ## replaced by the command below
 sudo chsh -s $(which zsh) $USER
+cd $HOME
+if [ -e "$HOME"/.zshenv ]
+then rm "$HOME"/.zshenv
+fi
+curl -LJO https://raw.githubusercontent.com/pardub/dotfiles_test/main/.zshenv
+
+# Download .zshrc
+mkdir -p "$HOME"/.config/zsh  || exit
+cd "$HOME"/.config/zsh  || exit
+curl -LJO https://raw.githubusercontent.com/pardub/dotfiles_test/main/.zshrc
+
+# Download .aliases
+cd "$HOME"/.config/zsh  || exit
+curl -LJO https://raw.githubusercontent.com/pardub/dotfiles_test/main/.aliases
+
+# Downlaod zsh functions
+
+
 
