@@ -80,8 +80,8 @@ sudo systemctl stop sshd
 sudo systemctl disable sshd
 
 # Create Neovim config file
-mkdir -p $HOME/.config/nvim/ || exit
-touch init.vim $HOME/.config/nvim/ || exit
+sudo mkdir -p $HOME/.config/nvim/ || exit
+sudo touch init.vim $HOME/.config/nvim/ || exit
 
 # SET UP GNOME TERMINAL
 # https://ncona.com/2019/11/configuring-gnome-terminal-programmatically/
