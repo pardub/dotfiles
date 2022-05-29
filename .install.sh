@@ -329,3 +329,7 @@ sudo systemctl enable --now opensnitch || exit
 sudo systemctl start opensnitch || exit
 cd || exit
 
+# zsh default shell
+# sudo chsh -s /bin/zsh marc ## replaced by the command below
+sudo chsh -s $(which zsh) $USER
+
