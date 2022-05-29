@@ -105,3 +105,14 @@ gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profi
 gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:"$GNOME_TERMINAL_PROFILE"/ foreground-color '#AFAFAF'
 #gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:"$GNOME_TERMINAL_PROFILE"/ cursor-shape 'I-Beam'
 
+# Install pluging zsh-syntax-highlighting
+sudo mkdir -p "$ZDOTDIR"/plugins || exit
+sudo cd "$ZDOTDIR"/plugins || exit
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
+
+# Install pluging zsh-autosuggestions
+sudo cd "$ZDOTDIR"/plugins || exit
+git clone https://github.com/zsh-users/zsh-autosuggestions.git
+cd || exit
+
+
