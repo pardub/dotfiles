@@ -303,14 +303,14 @@ sudo systemctl enable iptables
 # FIREWALL SET UP OPEN/CLOSED PORTS
 
 # VS CODE INSTALL EXTENSIONS
-code --install-extension ginfuru.ginfuru-better-solarized-dark-theme
-code --install-extension ms-azuretools.vscode-docker	
-code --install-extension dbaeumer.vscode-eslint
-code --install-extension redhat.vscode-yaml
+sudo code --install-extension ginfuru.ginfuru-better-solarized-dark-theme
+sudo code --install-extension ms-azuretools.vscode-docker	
+sudo code --install-extension dbaeumer.vscode-eslint
+sudo code --install-extension redhat.vscode-yaml
 
 # Create Neovim config file
-mkdir -p $HOME/.config/nvim/ || exit
-touch init.vim $HOME/.config/nvim/ || exit
+sudo  mkdir -p $HOME/.config/nvim/ || exit
+sudo  touch init.vim $HOME/.config/nvim/ || exit
 
 # SET UP GNOME TERMINAL
 # https://ncona.com/2019/11/configuring-gnome-terminal-programmatically/
@@ -334,8 +334,8 @@ gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profi
 # OPENSNITCH
 sudo mkdir -p /usr/share/opensnitch || exit
 sudo cd /usr/share/opensnitch/ || exit
-wget https://github.com/evilsocket/opensnitch/releases/download/v1.5.0/opensnitch-1.5.0-1.x86_64.rpm
-wget https://github.com/evilsocket/opensnitch/releases/download/v1.5.0/opensnitch-ui-1.5.0-1.noarch.f29.rpm
+sudo wget https://github.com/evilsocket/opensnitch/releases/download/v1.5.0/opensnitch-1.5.0-1.x86_64.rpm
+sudo wget https://github.com/evilsocket/opensnitch/releases/download/v1.5.0/opensnitch-ui-1.5.0-1.noarch.f29.rpm
 sudo dnf -y localinstall opensnitch-1*.rpm; sudo dnf -y localinstall opensnitch-ui*.rpm
 sudo systemctl enable --now opensnitch || exit
 sudo systemctl start opensnitch || exit
@@ -350,21 +350,20 @@ then rm "$HOME"/.zshenv
 fi
 
 # Download .zshenv
-cd "$HOME"/.config/zsh || exit
-curl -LJO https://raw.githubusercontent.com/pardub/dotfiles_test/main/.zshenv
+cd "$HOME" || exit
+sudo wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.zshenv
 
 # Download .zshrc
-mkdir -p "$HOME"/.config/zsh || exit
 cd "$HOME"/.config/zsh || exit
-curl -LJO https://raw.githubusercontent.com/pardub/dotfiles_test/main/.zshrc
+sudo wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.zshrc
 
 # Download .aliases
 cd "$HOME"/.config/zsh || exit
-curl -LJO https://raw.githubusercontent.com/pardub/dotfiles_test/main/.aliases
+sudo wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.aliases
 
 # Downlaod zsh-functions
 cd "$HOME"/.config/zsh || exit
-curl -LJO https://raw.githubusercontent.com/pardub/dotfiles_test/main/zsh-functions
+sudo wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/zsh-functions
 
 
 
