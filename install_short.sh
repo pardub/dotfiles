@@ -55,9 +55,6 @@ sudo dnf -y install dconf-editor
 # Rclone
 sudo dnf -y install rclone
 
-# UNINSTALL
-sudo dnf -y remove totem
-
 # +---------------+
 # | Configuration |
 # +---------------+
