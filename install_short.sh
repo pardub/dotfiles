@@ -24,14 +24,8 @@ cd || exit
 sudo dnf -y install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
 sudo dnf -y install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
-# Backup system
-sudo dnf -y install timeshift
-
 # Shell script analysis tool
 sudo dnf -y install ShellCheck
-
-# distributed version control system
-sudo dnf -y install git
 
 # Vim-fork
 sudo dnf -y install neovim
