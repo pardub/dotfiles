@@ -28,5 +28,5 @@ sudo wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.aliases
 cd "$HOME"/.config/zsh || exit
 sudo wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/zsh-functions
 
-
+sudo reboot
 
