@@ -275,6 +275,7 @@ echo 'nameserver='84.200.69.80' | sudo tee -a /etc/hosts
 echo 'nameserver='84.200.70.40' | sudo tee -a /etc/hosts
 
 # Create gpg-agent.conf file and caches the password for 1 week
+gpg --list-keys
 sudo touch $HOME/.gnupg/gpg-agent.conf
 sudo echo 'default-cache-ttl 604800'             | sudo tee -a $HOME/.gnupg/gpg-agent.conf
 sudo echo 'max-cache-ttl 604800'                 | sudo tee -a $HOME/.gnupg/gpg-agent.conf
