@@ -19,12 +19,11 @@ sudo sudo dnf clean all
 sudo dnf -y update
 
 # INSTALL JETBRAINS MONO FONTS IN ~/.local/share/fonts
-sudo mkdir -p "$HOME"/.local/share/fonts/nerd-fonts
-sudo cd "$HOME"/.local/share/fonts/nerd-fonts || exit
+mkdir -p "$HOME"/.local/share/fonts/nerd-fonts
+cd /tmp
 sudo wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/JetBrainsMono.zip
-sudo unzip JetBrainsMono.zip
-sudo rm JetBrainsMono.zip
-sudo fc-cache -f -v
+sudo unzip /tmp/JetBrainsMono.zip -d ~/.local/share/fonts/nerd-fonts
+fc-cache -f -v
 cd || exit
 
 # ADD EXTRA REPOS rpm fusion
