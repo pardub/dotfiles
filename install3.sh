@@ -126,7 +126,7 @@ if [ -e "$HOME"/.zshenv ]
 then rm "$HOME"/.zshenv
 fi
 
-#exec zsh
+exec zsh
 
 # Download .zshenv
 cd "$HOME" || exit
@@ -144,7 +144,7 @@ sudo wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.aliases
 cd "$HOME"/.config/zsh || exit
 sudo wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/zsh-functions
 
-#exec zsh
+exec zsh
 
 # Install pluging zsh-syntax-highlighting
 sudo mkdir -p "$ZDOTDIR"/plugins || exit
@@ -156,4 +156,4 @@ cd "$ZDOTDIR"/plugins || exit
 sudo git clone https://github.com/zsh-users/zsh-autosuggestions.git
 cd || exit
 
-sudo reboot
+#sudo reboot
