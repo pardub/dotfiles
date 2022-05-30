@@ -41,7 +41,7 @@ function expand-alias() {
 }
 
 
-globalias() {
+function globalias() {
    # Get last word to the left of the cursor:
    # (z) splits into words using shell parsing
    # (A) makes it an array even if there's only one element
