@@ -112,4 +112,6 @@ gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profi
 #sudo git clone https://github.com/zsh-users/zsh-autosuggestions.git
 #cd || exit
 
+sudo reboot
+
 
