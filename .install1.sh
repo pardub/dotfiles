@@ -4,6 +4,11 @@
 # | Install |
 # +---------+
 
+# Setup Visudo
+echo "$USER ALL=(ALL:ALL) ALL" | sudo EDITOR='tee -a' visudo
+echo "Defaults:$USER timestamp_timeout=60" | sudo EDITOR='tee -a' visudo
+
+
 sudo mkdir -p "$HOME"/.config/zsh
 cd || exit
 # Fastest mirror and Delta RPM
@@ -276,10 +281,6 @@ sudo echo 'max-cache-ttl 604800'                 | sudo tee -a $HOME/.gnupg/gpg-
 
 # CHANGE HOSTNAME
 sudo hostnamectl set-hostname fedora
-
-## Setup Visudo
-echo "$USER ALL=(ALL:ALL) ALL" | sudo EDITOR='tee -a' visudo
-echo "Defaults:$USER timestamp_timeout=60" | sudo EDITOR='tee -a' visudo
 
 # DISABLING SSH
 sudo systemctl stop sshd
