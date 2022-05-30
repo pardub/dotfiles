@@ -300,7 +300,7 @@ sudo systemctl enable iptables
 # FIREWALL SET UP OPEN/CLOSED PORTS
 
 # VS CODE INSTALL EXTENSIONS
-#code --install-extension ginfuru.ginfuru-better-solarized-dark-theme
+code --install-extension ginfuru.ginfuru-better-solarized-dark-theme-0.9.5
 #code --install-extension ms-azuretools.vscode-docker	
 #code --install-extension dbaeumer.vscode-eslint
 #code --install-extension redhat.vscode-yaml
