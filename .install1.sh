@@ -300,10 +300,10 @@ sudo systemctl enable iptables
 # FIREWALL SET UP OPEN/CLOSED PORTS
 
 # VS CODE INSTALL EXTENSIONS
-sudo code --install-extension ginfuru.ginfuru-better-solarized-dark-theme
-sudo code --install-extension ms-azuretools.vscode-docker	
-sudo code --install-extension dbaeumer.vscode-eslint
-sudo code --install-extension redhat.vscode-yaml
+code --install-extension ginfuru.ginfuru-better-solarized-dark-theme
+code --install-extension ms-azuretools.vscode-docker	
+code --install-extension dbaeumer.vscode-eslint
+code --install-extension redhat.vscode-yaml
 
 # Create Neovim config file
 sudo  mkdir -p $HOME/.config/nvim/ || exit
