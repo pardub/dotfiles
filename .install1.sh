@@ -9,7 +9,7 @@ echo "$USER ALL=(ALL:ALL) ALL" | sudo EDITOR='tee -a' visudo
 echo "Defaults:$USER timestamp_timeout=60" | sudo EDITOR='tee -a' visudo
 
 
-sudo mkdir -p "$HOME"/.config/zsh
+mkdir -p "$HOME"/.config/zsh
 cd || exit
 # Fastest mirror and Delta RPM
 sudo echo 'fastestmirror=True'             | sudo tee -a /etc/dnf/dnf.conf
