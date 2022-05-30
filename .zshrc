@@ -123,3 +123,7 @@ setopt hist_find_no_dups
 # Rclone config
 #source "$HOME"/bin/set-rclone-password
 
+zle -N expand-alias
+bindkey -M main ' ' expand-alias
+
+
