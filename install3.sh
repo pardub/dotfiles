@@ -126,8 +126,6 @@ if [ -e "$HOME"/.zshenv ]
 then rm "$HOME"/.zshenv
 fi
 
-exec zsh
-
 # Download .zshenv
 cd "$HOME" || exit
 sudo wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.zshenv
