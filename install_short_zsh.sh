@@ -39,8 +39,8 @@ sudo wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/zsh-functi
 #sudo echo "source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null" | sudo tee -a  $ZDOTDIR/.zshrc
 
 # Install pluging zsh-syntax-highlighting
-sudo mkdir -p "$ZDOTDIR"/plugins || exit
-sudo cd "$ZDOTDIR"/plugins || exit
+mkdir -p "$ZDOTDIR"/plugins || exit
+cd "$ZDOTDIR"/plugins || exit
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
 
 # Install pluging zsh-autosuggestions
@@ -52,7 +52,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
 #sudo echo "source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null" | sudo tee -a  $ZDOTDIR/.zshrc
 
 # Install pluging zsh-autosuggestions
-sudo cd "$ZDOTDIR"/plugins || exit
+cd "$ZDOTDIR"/plugins || exit
 git clone https://github.com/zsh-users/zsh-autosuggestions.git
 cd || exit
 
