@@ -15,7 +15,7 @@ sudo sudo dnf clean all
 sudo dnf -y update
 
 # INSTALL JETBRAINS MONO FONTS IN ~/.local/share/fonts
-sudo mkdir -p "$HOME"/.local/share/fonts/nerd-fonts
+mkdir -p "$HOME"/.local/share/fonts/nerd-fonts
 cd /tmp
 sudo wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/JetBrainsMono.zip
 sudo unzip /tmp/JetBrainsMono.zip -d ~/.local/share/fonts/nerd-fonts
@@ -80,7 +80,7 @@ sudo systemctl stop sshd
 sudo systemctl disable sshd
 
 # Create Neovim config file
-sudo mkdir -p $HOME/.config/nvim/ || exit
+mkdir -p $HOME/.config/nvim/ || exit
 sudo touch init.vim $HOME/.config/nvim/ || exit
 
 # SET UP GNOME TERMINAL
@@ -103,13 +103,13 @@ gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profi
 #gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:"$GNOME_TERMINAL_PROFILE"/ cursor-shape 'I-Beam'
 
 # Install pluging zsh-syntax-highlighting
-sudo mkdir -p "$ZDOTDIR"/plugins || exit
-cd "$ZDOTDIR"/plugins || exit
-sudo git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
+#mkdir -p "$ZDOTDIR"/plugins || exit
+#cd "$ZDOTDIR"/plugins || exit
+#sudo git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
 
 # Install pluging zsh-autosuggestions
-cd "$ZDOTDIR"/plugins || exit
-sudo git clone https://github.com/zsh-users/zsh-autosuggestions.git
-cd || exit
+#cd "$ZDOTDIR"/plugins || exit
+#sudo git clone https://github.com/zsh-users/zsh-autosuggestions.git
+#cd || exit
 
 
