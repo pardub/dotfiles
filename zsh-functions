@@ -35,4 +35,10 @@ function gpg_encryption(){
 
 }
 
+function expand-alias() {
+	zle _expand_alias
+	zle self-insert
+}
+
+
 
