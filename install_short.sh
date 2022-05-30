@@ -54,6 +54,7 @@ sudo dnf -y install dconf-editor
 
 # Rclone
 sudo dnf -y install rclone
+touch "$HOME"/bin/set-rclone-password
 
 # +---------------+
 # | Configuration |
