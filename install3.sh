@@ -143,6 +143,14 @@ sudo wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.aliases
 cd "$HOME"/.config/zsh || exit
 sudo wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/zsh-functions
 
+# Install pluging zsh-syntax-highlighting
+sudo mkdir -p "$ZDOTDIR"/plugins || exit
+cd "$ZDOTDIR"/plugins || exit
+sudo git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
+
+# Install pluging zsh-autosuggestions
+cd "$ZDOTDIR"/plugins || exit
+sudo git clone https://github.com/zsh-users/zsh-autosuggestions.git
+cd || exit
+
 sudo reboot
-
-
