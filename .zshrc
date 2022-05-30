@@ -123,6 +123,7 @@ setopt hist_find_no_dups
 # Rclone config
 #source "$HOME"/bin/set-rclone-password
 
+# expand alias with function associated in zsh-functions file
 zle -N expand-alias
 bindkey -M main ' ' expand-alias
 
