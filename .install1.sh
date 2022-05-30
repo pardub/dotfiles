@@ -230,10 +230,6 @@ sudo dnf -y check-update && sudo dnf -y  install code
 #sudo echo "source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null" >> $ZDOTDIR/.zshrc
 #sudo echo "source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null" | sudo tee -a  $ZDOTDIR/.zshrc
 
-# Install pluging zsh-syntax-highlighting
-sudo mkdir -p "$ZDOTDIR"/plugins || exit
-cd "$ZDOTDIR"/plugins || exit
-sudo git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
 
 # Install pluging zsh-autosuggestions
 #sudo cd /usr/share/zsh/plugins/ || exit
@@ -243,10 +239,6 @@ sudo git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
 #sudo echo "source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null" >> $ZDOTDIR/.zshrc
 #sudo echo "source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null" | sudo tee -a  $ZDOTDIR/.zshrc
 
-# Install pluging zsh-autosuggestions
-cd "$ZDOTDIR"/plugins || exit
-sudo git clone https://github.com/zsh-users/zsh-autosuggestions.git
-cd || exit
 
 # Install pluging zsh-abbr
 #sudo cd /usr/share/zsh/plugins/ || exit
@@ -342,30 +334,7 @@ sudo systemctl enable --now opensnitch || exit
 sudo systemctl start opensnitch || exit
 cd || exit
 
-# zsh default shell
-# sudo chsh -s /bin/zsh marc ## replaced by the command below
-sudo chsh -s $(which zsh) $USER
-cd $HOME
-if [ -e "$HOME"/.zshenv ]
-then rm "$HOME"/.zshenv
-fi
-
-# Download .zshenv
-cd "$HOME" || exit
-sudo wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.zshenv
-
-# Download .zshrc
-cd "$HOME"/.config/zsh || exit
-sudo wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.zshrc
-
-# Download .aliases
-cd "$HOME"/.config/zsh || exit
-sudo wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.aliases
-
-# Downlaod zsh-functions
-cd "$HOME"/.config/zsh || exit
-sudo wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/zsh-functions
-
+sudo reboot
 
 
 
