@@ -121,5 +121,5 @@ setopt hist_ignore_dups
 setopt hist_find_no_dups
 
 # Rclone config
-source "$HOME"/bin/set-rclone-password
+#source "$HOME"/bin/set-rclone-password
 
