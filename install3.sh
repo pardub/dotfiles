@@ -126,6 +126,23 @@ if [ -e "$HOME"/.zshenv ]
 then rm "$HOME"/.zshenv
 fi
 
+
+# Download .zshenv
+cd "$HOME" || exit
+sudo wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.zshenv
+
+# Download .zshrc
+cd "$HOME"/.config/zsh || exit
+sudo wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.zshrc
+
+# Download .aliases
+cd "$HOME"/.config/zsh || exit
+sudo wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.aliases
+
+# Downlaod zsh-functions
+cd "$HOME"/.config/zsh || exit
+sudo wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/zsh-functions
+
 sudo reboot
 
 
