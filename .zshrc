@@ -22,6 +22,14 @@ zstyle ':completion::complete:*' gain-privileges 1
 zstyle ':completion:*:*:git:*' script ~/.config/zsh/git-completion.zsh
 fpath=($HOME/.config/zsh $fpath)
 
+# +---------+
+# | Plugins |
+# +---------+
+zsh_add_plugin "zsh-users/zsh-autosuggestions"
+zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
+
+
+
 # +--------+
 # | Config |
 # +--------+
@@ -131,11 +139,7 @@ setopt hist_find_no_dups
 #zle -N expand-alias
 #bindkey -M main ' ' expand-alias
 
-# +---------+
-# | Plugins |
-# +---------+
-zsh_add_plugin "zsh-users/zsh-autosuggestions"
-zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
+
  
 # +------------------+
 # | Functions config |
