@@ -21,8 +21,8 @@ sudo dnf -y update
 # INSTALL JETBRAINS MONO FONTS IN ~/.local/share/fonts
 mkdir -p "$HOME"/.local/share/fonts/nerd-fonts
 cd /tmp
-#sudo wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/JetBrainsMono.zip
-sudo wget https://github.com/ryanoasis/nerd-fonts/releases/download/2.2.0-RC/JetBrainsMono.zip
+sudo wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/JetBrainsMono.zip
+#sudo wget https://github.com/ryanoasis/nerd-fonts/releases/download/2.2.0-RC/JetBrainsMono.zip
 sudo unzip /tmp/JetBrainsMono.zip -d ~/.local/share/fonts/nerd-fonts
 fc-cache -f -v
 cd || exit
