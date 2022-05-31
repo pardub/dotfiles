@@ -1,3 +1,10 @@
+if [ -f "$HOME"/.cache/zsh/history ] ;then
+touch "$HOME"/.cache/zsh/history
+fi
+# +------------+
+# | Completion |
+# +------------+
+
 # To enable autocompletion,
 autoload -Uz compinit
 compinit
@@ -10,6 +17,14 @@ _comp_options+=(globdots)		# Include hidden files.
 
 # For enabling autocompletion of privileged environments in privileged commands (e.g. if you complete a command starting with sudo
 zstyle ':completion::complete:*' gain-privileges 1
+
+# Zsh git completion
+zstyle ':completion:*:*:git:*' script ~/.config/zsh/git-completion.zsh
+fpath=($HOME/.config/zsh $fpath)
+
+# +--------+
+# | Config |
+# +--------+
 
 # Load aliases if they exist.
 [ -f "${XDG_CONFIG_HOME}/zsh/.aliases" ] && . "${XDG_CONFIG_HOME}/zsh/.aliases"
@@ -84,34 +99,17 @@ bindkey -v '^?' backward-delete-char
 # Colors
 autoload -Uz colors && colors
 
+
+# +---------+
+# | History |
+# +---------+
+
 # Commands are added to the history immediately
 setopt INC_APPEND_HISTORY
 export HISTTIMEFORMAT="[%F %T] "
 
 # Add Timestamp to history
 setopt EXTENDED_HISTORY
-
-# Useful Functions
-source "$ZDOTDIR"/zsh-functions
-
-# Plugins
-zsh_add_plugin "zsh-users/zsh-autosuggestions"
-zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
-#zsh_add_plugin "ohmyzsh/ohmyzsh/tree/master/plugins/aliases"
-
-# Zsh git completion
-zstyle ':completion:*:*:git:*' script ~/.config/zsh/git-completion.zsh
-fpath=($HOME/.config/zsh $fpath)
-
-# Need to add below Docker completion
-
-# Load zsh-syntax-highlighting; should be last.
-#source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
-#source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
-
-if [ -f "$HOME"/.cache/zsh/history ] ;then
-touch "$HOME"/.cache/zsh/history
-fi
 
 # Remove duplicates in history
 setopt incappendhistory
@@ -120,6 +118,12 @@ setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
 
+# Need to add below Docker completion
+
+# Load zsh-syntax-highlighting; should be last.
+#source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
+#source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
+
 # Rclone config
 #source "$HOME"/bin/set-rclone-password
 
@@ -127,11 +131,18 @@ setopt hist_find_no_dups
 #zle -N expand-alias
 #bindkey -M main ' ' expand-alias
 
-
+# +---------+
+# | Plugins |
+# +---------+
+zsh_add_plugin "zsh-users/zsh-autosuggestions"
+zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
  
 # +------------------+
 # | Functions config |
 # +------------------+
+
+# Useful Functions
+source "$ZDOTDIR"/zsh-functions
 
 # globalias function settings defined in file zsh-function
  zle -N globalias
