@@ -35,10 +35,10 @@ function gpg_encryption(){
 
 }
 
-#function expand-alias() {
-#	zle _expand_alias
-#	zle self-insert
-#}
+function expand-alias() {
+	zle _expand_alias
+	zle self-insert
+}
 
 
 function globalias() {
@@ -52,5 +52,4 @@ function globalias() {
    fi
    zle self-insert
 }
-
 
