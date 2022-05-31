@@ -124,19 +124,25 @@ setopt hist_find_no_dups
 #source "$HOME"/bin/set-rclone-password
 
 # expand alias with function associated in zsh-functions file
-zle -N expand-alias
-bindkey -M main ' ' expand-alias
+#zle -N expand-alias
+#bindkey -M main ' ' expand-alias
+
+
+ 
+# +------------------+
+# | Functions config |
+# +------------------+
 
 # globalias function settings defined in file zsh-function
  zle -N globalias
 
- # space expands all aliases, including global
- bindkey -M emacs " " globalias
- bindkey -M viins " " globalias
+    # space expands all aliases, including global
+     bindkey -M emacs " " globalias
+     bindkey -M viins " " globalias
 
- # control-space to make a normal space
- bindkey -M emacs "^ " magic-space
- bindkey -M viins "^ " magic-space
+     # control-space to make a normal space
+     bindkey -M emacs "^ " magic-space
+     bindkey -M viins "^ " magic-space
 
- # normal space during searches
- bindkey -M isearch " " magic-space
+     # normal space during searches
+     bindkey -M isearch " " magic-space
