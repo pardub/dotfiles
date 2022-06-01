@@ -58,7 +58,7 @@ sudo dnf -y install timeshift
 sudo dnf -y install ShellCheck
 
 # Create containers
-sudo dnf -y install toolbox
+sudo dnf -y install distrobox
 
 # distributed version control system
 sudo dnf -y install git
