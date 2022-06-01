@@ -57,6 +57,9 @@ sudo dnf -y install timeshift
 # Shell script analysis tool
 sudo dnf -y install ShellCheck
 
+# Create containers
+sudo dnf -y install toolbox
+
 # distributed version control system
 sudo dnf -y install git
 
