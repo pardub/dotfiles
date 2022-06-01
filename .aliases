@@ -1,5 +1,7 @@
 alias cm="chezmoi"
 alias up="sudo dnf up"
+alias secu="sudo dnf update --security --bugfix"
+alias listsecu="sudo dnf updateinfo list --security --bugfix"
 alias install="sudo dnf install"
 alias ll="exa --all --long --classify --header --git --group --modified --links --inode --icons --time-style=long-iso"
 #alias history="history 1"
