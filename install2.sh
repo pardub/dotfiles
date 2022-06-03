@@ -14,8 +14,8 @@ fi
 
 if [ !-e "$HOME"/.cache/zsh/history ]
 then 
-sudo mkdir -p "$HOME"/.cache/zsh
-sudo touch"$HOME"/.cache/zsh/history
+mkdir -p "$HOME"/.cache/zsh
+touch"$HOME"/.cache/zsh/history
 fi
 
 # Download .zshenv
