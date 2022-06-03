@@ -11,10 +11,9 @@ if [ -e "$HOME"/.zshenv ]
 then rm "$HOME"/.zshenv
 fi
 
-
 if [ ! -e "$HOME"/.cache/zsh/history ]
 then 
-mkdir -p "$HOME"/.cache/zsh
+mkdir -p "$HOME"/.cache/zsh || exit
 touch"$HOME"/.cache/zsh/history
 fi
 
