@@ -11,8 +11,11 @@ if [ -e "$HOME"/.zshenv ]
 then rm "$HOME"/.zshenv
 fi
 
+
 if [ !-e "$HOME"/.cache/zsh/history ]
-then sudo touch"$HOME"/.cache/zsh/history
+then 
+sudo mkdir -p "$HOME"/.cache/zsh
+sudo touch"$HOME"/.cache/zsh/history
 fi
 
 # Download .zshenv
