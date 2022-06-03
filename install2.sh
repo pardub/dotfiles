@@ -17,7 +17,7 @@ fi
 #touch "$HOME"/.cache/zsh/history
 #fi
 
-[ ! -f "$HOME"/.cache/zsh/history ] || mkdir -p "$HOME"/.cache/zsh
+[ ! -e "$HOME"/.cache/zsh/history ] && mkdir -p "$HOME"/.cache/zsh
 touch "$HOME"/.cache/zsh/history
 fi
 
