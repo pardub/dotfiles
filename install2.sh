@@ -12,7 +12,7 @@ then rm "$HOME"/.zshenv
 fi
 
 
-if [ !-e "$HOME"/.cache/zsh/history ]
+if [ ! -e "$HOME"/.cache/zsh/history ]
 then 
 mkdir -p "$HOME"/.cache/zsh
 touch"$HOME"/.cache/zsh/history
