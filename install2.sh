@@ -27,4 +27,8 @@ sudo wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.aliases
 cd "$HOME"/.config/zsh || exit
 sudo wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/zsh-functions
 
+# Downlaod init.viv
+cd "$HOME"/.config/nvim || exit
+sudo wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/init.vim
+
 sudo reboot
