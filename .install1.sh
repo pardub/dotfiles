@@ -274,8 +274,8 @@ sudo dnf -y check-update && sudo dnf -y  install code
 ### Line spacing: 1.2
 
 # Add dns from https://dns.watch/
-echo 'nameserver='84.200.69.80' | sudo tee -a /etc/hosts
-echo 'nameserver='84.200.70.40' | sudo tee -a /etc/hosts
+echo 'nameserver=84.200.69.80' | sudo tee -a /etc/hosts
+echo 'nameserver=84.200.70.40' | sudo tee -a /etc/hosts
 
 # need to list the keys to create the .gnupg directory
 gpg --list-keys
@@ -309,8 +309,8 @@ sudo systemctl enable iptables
 #code --install-extension redhat.vscode-yaml
 
 # Create Neovim config file
-sudo  mkdir -p $HOME/.config/nvim/ || exit
-sudo  touch init.vim $HOME/.config/nvim/ || exit
+mkdir -p $HOME/.config/nvim/ || exit
+touch init.vim $HOME/.config/nvim/ || exit
 
 # SET UP GNOME TERMINAL
 # https://ncona.com/2019/11/configuring-gnome-terminal-programmatically/
