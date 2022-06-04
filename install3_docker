@@ -20,4 +20,7 @@ sudo dnf -y install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 
 sudo systemctl start docker && sudo systemctl enable docker
 
+# To activate Docker completion
+sudo mv /usr/share/zsh/vendor-completions/_docker /usr/share/zsh/site-functions
+
 
