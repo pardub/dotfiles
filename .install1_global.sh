@@ -274,8 +274,8 @@ sudo dnf -y check-update && sudo dnf -y  install code
 ### Line spacing: 1.2
 
 # Add dns from https://dns.watch/
-echo 'nameserver=84.200.69.80' | sudo tee -a /etc/hosts
-echo 'nameserver=84.200.70.40' | sudo tee -a /etc/hosts
+sudo echo 'nameserver=84.200.69.80' | sudo tee -a /etc/hosts
+sudo echo 'nameserver=84.200.70.40' | sudo tee -a /etc/hosts
 
 # need to list the keys to create the .gnupg directory
 gpg --list-keys
