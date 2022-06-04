@@ -2,6 +2,7 @@
 
 # Zsh
 sudo dnf -y install zsh
+sudo dnf -y install util-linux-user
 
 # zsh default shell
 # sudo chsh -s /bin/zsh marc ## replaced by the command below
