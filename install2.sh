@@ -38,4 +38,18 @@ sudo wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/zsh-functi
 cd "$HOME"/.config/nvim || exit
 sudo wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/init.vim
 
-sudo reboot
+#sudo reboot
+
+
+############## script 3 ##############
+
+# Install pluging zsh-syntax-highlighting
+#mkdir -p "$ZDOTDIR/plugins" || exit
+#cd "$ZDOTDIR/plugins" || exit
+#sudo git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
+
+# Install pluging zsh-autosuggestions
+#cd "$ZDOTDIR/plugins" || exit
+#sudo git clone https://github.com/zsh-users/zsh-autosuggestions.git
+
+#sudo reboot
