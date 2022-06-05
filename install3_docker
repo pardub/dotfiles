@@ -25,4 +25,7 @@ sudo dnf -y install docker-compose
 # To activate Docker completion
 sudo mv /usr/share/zsh/vendor-completions/_docker /usr/share/zsh/site-functions
 
+# Delete .zcompdump
+rm $HOME"/.config/zsh/.zcompdump
+
 
