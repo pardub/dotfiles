@@ -118,6 +118,13 @@ sudo dnf -y install filezilla
 # Tools for configuring WireGuard
 sudo dnf -y install wireguard-tools
 
+# To enable the Wireguard connection
+# sudo su
+# cd /etc/wireguard# add Windscribe conf file here like Tokyo.conf
+# exit sudo and back to user mode
+# nmcli connection up Tokyo
+# nmcli connection doww Tokyo
+
 # A cat(1) clone with syntax highlighting and Git integration.
 sudo dnf -y install bat
 
