@@ -339,6 +339,11 @@ gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profi
 #gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:"$GNOME_TERMINAL_PROFILE"/ cursor-shape 'I-Beam'
 
 # OPENSNITCH
+pip3 install grpcio-tools
+pip3 install unicode_slugify
+#python3 -m pip install qt-material
+pip3 install qt-material
+
 sudo mkdir -p /opt/opensnitch || exit
 cd /opt/opensnitch || exit
 #sudo wget https://github.com/evilsocket/opensnitch/releases/download/v1.5.0/opensnitch-1.5.0-1.x86_64.rpm
@@ -351,11 +356,11 @@ sudo systemctl start opensnitch || exit
 cd || exit
 
 # Opensnitch dark mode
-sudo dnf -y install pip
-sudo dnf -y install python3-grpcio
-sudo dnf -y install python3-protobuf
-sudo dnf -y install python3-slugify
-python3 -m pip install qt-material
+#sudo dnf -y install pip
+#sudo dnf -y install python3-grpcio
+#sudo dnf -y install python3-protobuf
+#sudo dnf -y install python3-slugify
+
 
 
 # sudo reboot
