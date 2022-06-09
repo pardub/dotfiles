@@ -344,7 +344,7 @@ cd /opt/opensnitch || exit
 #sudo wget https://github.com/evilsocket/opensnitch/releases/download/v1.5.0/opensnitch-1.5.0-1.x86_64.rpm
 #sudo wget https://github.com/evilsocket/opensnitch/releases/download/v1.5.0/opensnitch-ui-1.5.0-1.noarch.f29.rpm
 sudo wget https://github.com/evilsocket/opensnitch/releases/download/v1.5.1/opensnitch-1.5.1-1.x86_64.rpm
-sudo wget https://github.com/evilsocket/opensnitch/releases/download/v1.5.1/opensnitch-ui-1.5.1-1.noarch.f29.rpm
+sudo wget https://github.com/evilsocket/opensnitch/releases/download/v1.5.1/opensnitch-ui-1.5.1-1.noarch.rpm
 sudo dnf -y localinstall opensnitch-1*.rpm; sudo dnf -y localinstall opensnitch-ui*.rpm
 sudo systemctl enable --now opensnitch || exit
 sudo systemctl start opensnitch || exit
