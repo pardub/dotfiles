@@ -306,6 +306,7 @@ sudo systemctl mask firewalld
 sudo dnf -y install iptables-services
 sudo touch /etc/sysconfig/iptables
 sudo systemctl enable iptables
+sudo systemctl start iptables
 
 # FIREWALL SET UP OPEN/CLOSED PORTS
 
