@@ -339,6 +339,20 @@ gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profi
 gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:"$GNOME_TERMINAL_PROFILE"/ foreground-color '#AFAFAF'
 #gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:"$GNOME_TERMINAL_PROFILE"/ cursor-shape 'I-Beam'
 
+
+# Disable updates and upgrades in GNOME Software
+gsettings set org.gnome.software allow-updates false
+
+# Disable automatically download and install updates
+gsettings set org.gnome.software download-updates false
+
+# Disable notifications about software updated in the background
+gsettings set  org.gnome.software download-updates-notify false
+
+# Disable check of the very first run of GNOME Software
+gsettings set org.gnome.software first-run false
+
+
 # OPENSNITCH
 sudo mkdir -p /opt/opensnitch || exit
 cd /opt/opensnitch || exit
