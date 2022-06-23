@@ -377,5 +377,22 @@ pip3 install unicode_slugify
 #python3 -m pip install qt-material
 pip3 install qt-material
 
+
+# +-------------------+
+# | Firefox hardening |
+# +-------------------+
+
+firefox -CreateProfile Arkenfox
+cd $HOME/.mozilla/firefox
+cd *.Arkenfox
+wget https://raw.githubusercontent.com/arkenfox/user.js/master/updater.sh
+wget https://raw.githubusercontent.com/arkenfox/user.js/master/prefsCleaner.sh
+touch user-overrides.js
+chmod a+x updater.sh
+chmod a+x prefsCleaner.sh
+./updater -s
+
+
+
 # sudo reboot
 
