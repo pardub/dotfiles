@@ -300,6 +300,7 @@ sudo systemctl stop sshd
 sudo systemctl disable sshd
 
 # Disable Firewalld and Setup iptables ####
+cd
 sudo systemctl stop firewalld
 sudo systemctl disable firewalld
 sudo systemctl mask firewalld
@@ -307,6 +308,11 @@ sudo dnf -y install iptables-services
 sudo touch /etc/sysconfig/iptables
 sudo systemctl enable iptables
 sudo systemctl start iptables
+wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/firewall.sh
+chmod a+x firewall.sh
+sudo ./firewall.sh
+sudo service iptables save
+
 
 # FIREWALL SET UP OPEN/CLOSED PORTS
 
