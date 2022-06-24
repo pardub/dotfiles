@@ -74,4 +74,11 @@ user_pref("media.videocontrols.picture-in-picture.video-toggle.enabled", false);
 user_pref("extensions.pocket.enabled", false);
 user_pref("extensions.pocket.showHome", false);
 
+//* UPDATES ***/
+user_pref("app.update.auto", false);
+
+
+
+
+
 
