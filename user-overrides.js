@@ -66,3 +66,7 @@ user_pref("signon.rememberSignons", false);
 
 //* 5010: disable location bar suggestion types
 // * [SETTING] Privacy & Security>Address Bar>When using the address bar, suggest ***/
+
+// disabling picture in picture
+user_pref("media.videocontrols.picture-in-picture.video-toggle.enabled", false);
+
