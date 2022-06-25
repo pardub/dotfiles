@@ -81,5 +81,21 @@ user_pref("extensions.pocket.showHome", false);
 //* UPDATES ***/
 user_pref("app.update.auto", false);
 
+// Restore session
+// https://github.com/arkenfox/user.js/issues/1080
+user_pref("browser.startup.page", 3);
+user_pref("privacy.clearOnShutdown.history", false);
+
+//*** [SECTION 0100]: STARTUP ***/
+//user_pref("browser.startup.page", 1);
+
+//* 0103: set HOME+NEWWINDOW page
+user_pref("browser.startup.homepage", "https://search.dr460nf1r3.org/");
+
+//* 0104: set NEWTAB page
+
+//user_pref("browser.newtabpage.enabled", true);
+//user_pref("browser.newtab.preload", true);
+
 
 
