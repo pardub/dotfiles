@@ -1,12 +1,21 @@
-//*** [SECTION 0400]: SAFE BROWSING (SB)
+// [SECTION 0400]: SAFE BROWSING (SB)
+// 0401: disable SB (Safe Browsing)
 
-//* 0401: disable SB (Safe Browsing)
-
-user_pref("browser.safebrowsing.malware.enabled", false);
-user_pref("browser.safebrowsing.phishing.enabled", false);
+//user_pref("browser.safebrowsing.malware.enabled", false);
+//user_pref("browser.safebrowsing.phishing.enabled", false);
 
 //* 0402: disable SB checks for downloads (both local lookups + remote)
-user_pref("browser.safebrowsing.downloads.enabled", false);
+//user_pref("browser.safebrowsing.downloads.enabled", false);
+
+//* 0403: disable SB checks for downloads (remote)
+
+user_pref("browser.safebrowsing.downloads.remote.enabled", false);
+
+//* 0404: disable SB checks for unwanted software
+//user_pref("browser.safebrowsing.downloads.remote.block_potentially_unwanted", false);
+//user_pref("browser.safebrowsing.downloads.remote.block_uncommon", false);
+
+
 
 //*** [SECTION 0600]: BLOCK IMPLICIT OUTBOUND [not explicitly asked for - e.g. clicked on] ***/
 
@@ -36,12 +45,7 @@ user_pref("media.gmp-provider.enabled", false);
 user_pref("media.eme.enabled", false);
 user_pref("browser.eme.ui.enabled", false);
 
-//* 0402: disable SB checks for downloads (both local lookups + remote)
-user_pref("browser.safebrowsing.downloads.enabled", false);
 
-//* 0404: disable SB checks for unwanted software
-user_pref("browser.safebrowsing.downloads.remote.block_potentially_unwanted", false);
-user_pref("browser.safebrowsing.downloads.remote.block_uncommon", false);
 
 /*** [SECTION 2000]: PLUGINS / MEDIA / WEBRTC ***/
 
@@ -76,9 +80,6 @@ user_pref("extensions.pocket.showHome", false);
 
 //* UPDATES ***/
 user_pref("app.update.auto", false);
-
-
-
 
 
 
