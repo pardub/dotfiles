@@ -392,6 +392,13 @@ chmod a+x updater.sh
 chmod a+x prefsCleaner.sh
 ./updater -s
 
+# +-------------------+
+# | Wireguard Config |
+# +-------------------+
+
+# Autostart Wireguard using Systemd after reboot
+# sudo systemctl enable wg-quick@tokyo.conf
+
 
 
 # sudo reboot
