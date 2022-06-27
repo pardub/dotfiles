@@ -396,8 +396,14 @@ chmod a+x prefsCleaner.sh
 # | Wireguard Config |
 # +-------------------+
 
-# Autostart Wireguard using Systemd after reboot
-# sudo systemctl enable wg-quick@tokyo.conf
+# 1- Download config file
+# 2- Rename config file to Tokyo.conf
+# 3- Move file to roo/etc/wireguard
+ # sudo cp $HOME/Downloads/*.conf /etc/wireguard
+# 5- Activate Wireguard tunnel
+ # sudo wg-quick up /etc/wireguard/Tokyo.conf
+# 6- Autostart Wireguard using Systemd after reboot
+ # sudo systemctl enable wg-quick@Tokyo
 
 
 
