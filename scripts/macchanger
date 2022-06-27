@@ -1,0 +1,5 @@
+#!/bin/zsh
+
+sudo systemctl stop NetworkManager
+sudo macchanger -r wlp2s0
+sudo systemctl start NetworkManager
