@@ -120,7 +120,7 @@ alias iptlist="sudo /sbin/iptables -L -n -v --line-numbers"
 alias iptlistin="sudo /sbin/iptables -L INPUT -n -v --line-numbers"
 alias iptlistout="sudo /sbin/iptables -L OUTPUT -n -v --line-numbers"
 alias iptlistfw="sudo /sbin/iptables -L FORWARD -n -v --line-numbers"
-alias firewall=iptlist
+alias firewall="iptlist"
 
 # +--------+
 # | System |
@@ -144,7 +144,7 @@ alias cpuinfo="lscpu"
 # | Wireguard |
 # +-----------+
 
-wgup="wg-quick up "$HOME"/Documents/wireguard "
-wgdo="wg-quick down "$HOME"/Documents/wireguard "
+wgup="sudo wg-quick up /etc/wireguard "
+wgdo="sudo wg-quick down /etc/wireguard "
 wgcities="sudo ls -ll /etc/wireguard" 
 
