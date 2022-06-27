@@ -53,3 +53,7 @@ function globalias() {
    zle self-insert
 }
 
+# Switch between 2 locations with Wireguard
+wgswitch() {
+   sudo wg-quick down /etc/wireguard/$1.conf && sudo wg-quick up /etc/wireguard/$2.conf
+    }
