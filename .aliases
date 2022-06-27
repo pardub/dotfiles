@@ -1,4 +1,5 @@
 alias cm="chezmoi"
+alias cat="bat"
 alias up="sudo dnf up"
 alias secu="sudo dnf update --security --bugfix"
 alias listsecu="sudo dnf updateinfo list --security --bugfix"
