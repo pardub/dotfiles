@@ -146,5 +146,5 @@ alias cpuinfo="lscpu"
 
 wgup="wg-quick up "$HOME"/Documents/wireguard "
 wgdo="wg-quick down "$HOME"/Documents/wireguard "
-
+wgcities="sudo ls -ll /etc/wireguard" 
 
