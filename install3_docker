@@ -23,6 +23,9 @@ sudo systemctl enable docker
 # Docker-compose install
 sudo dnf -y install docker-compose
 
+# Add USER to docker group
+sudo usermod -aG docker ${USER}
+
 # To activate Docker completion
 sudo mv /usr/share/zsh/vendor-completions/_docker /usr/share/zsh/site-functions
 
