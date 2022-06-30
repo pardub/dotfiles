@@ -63,6 +63,10 @@ sudo dnf -y install distrobox
 # distributed version control system
 sudo dnf -y install git
 
+# Disk Usage User-friendly, colorful output
+# https://github.com/muesli/duf
+
+
 # Vim-fork
 sudo dnf -y install neovim
 
