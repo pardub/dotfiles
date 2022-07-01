@@ -45,8 +45,8 @@ sh -c "$(curl -fsLS chezmoi.io/get)"
 
 # NextDNS CLI client
 # Config ==> https://github.com/nextdns/nextdns/wiki/RPM-Based-Distribution
-sudo curl -Ls https://repo.nextdns.io/nextdns.repo -o /etc/yum.repos.d/nextdns.repo
-sudo dnf -y install -y nextdns
+#sudo curl -Ls https://repo.nextdns.io/nextdns.repo -o /etc/yum.repos.d/nextdns.repo
+#sudo dnf -y install -y nextdns
 
 # Man page with colors
 sudo dnf -y install most
@@ -58,7 +58,7 @@ sudo dnf -y install timeshift
 sudo dnf -y install ShellCheck
 
 # Create containers
-sudo dnf -y install distrobox
+#sudo dnf -y install distrobox
 
 # distributed version control system
 sudo dnf -y install git
