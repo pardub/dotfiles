@@ -37,6 +37,9 @@ sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub
 # Manage Flatpak permissions
 sudo flatpak install -y flathub com.github.tchx84.Flatseal
 
+# Metadata Cleaner - View and clean metadata in files
+flatpak install -y flathub fr.romainvigier.MetadataCleaner
+
 # Dotfiles management tool "chezmoi"
 sh -c "$(curl -fsLS chezmoi.io/get)"
 
@@ -224,6 +227,7 @@ sudo dnf -y install vorta
 # Download Jami Voip client
 sudo dnf -y config-manager --add-repo https://dl.jami.net/nightly/fedora_34/jami-nightly.repo
 sudo dnf -y install jami
+
 
 # UNINSTALL
 sudo dnf -y remove totem
