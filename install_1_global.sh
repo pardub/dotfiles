@@ -432,7 +432,9 @@ chmod a+x prefsCleaner.sh
 # 6- Autostart Wireguard using Systemd after reboot
  # sudo systemctl enable wg-quick@Tokyo
 # 7- to switch betwween tunnels
- # sudo wg-quick down /etc/wireguard/Tokyo.conf && sudo wg-quick up /etc/wireguard/London.conf
+ # wgswitch Tokyo London
+ ## See wgswitch function in zsh-functions
+
 
 # sudo reboot
 
