@@ -425,7 +425,7 @@ chmod a+x prefsCleaner.sh
 
 # 1- Download config file
 # 2- Rename config file to Tokyo.conf
-# 3- Move file to roo/etc/wireguard
+# 3- Move file to root/etc/wireguard
  # sudo cp $HOME/Downloads/*.conf /etc/wireguard
 # 5- Activate Wireguard tunnel
  # sudo wg-quick up /etc/wireguard/Tokyo.conf
