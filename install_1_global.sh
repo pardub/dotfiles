@@ -104,6 +104,10 @@ sudo dnf -y install autoconf
 sudo dnf -y install automake
 sudo dnf -y install ansible
 
+# TeamViewer alternative
+# https://github.com/rustdesk/rustdesk
+
+
 # Deduplicating backup program
 sudo dnf -y install borgbackup
 
