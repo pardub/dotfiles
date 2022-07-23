@@ -41,7 +41,7 @@ sudo flatpak install -y flathub com.github.tchx84.Flatseal
 flatpak install -y flathub fr.romainvigier.MetadataCleaner
 
 # Dotfiles management tool "chezmoi"
-sh -c "$(curl -fsLS chezmoi.io/get)"
+# sh -c "$(curl -fsLS chezmoi.io/get)"
 
 ### web console for Linux servers
 #sudo dnf -y install cockpit
@@ -421,7 +421,7 @@ wget https://raw.githubusercontent.com/arkenfox/user.js/master/prefsCleaner.sh
 touch user-overrides.js
 chmod a+x updater.sh
 chmod a+x prefsCleaner.sh
-./updater -s
+$HOME/.mozilla/firefox/*.Arkenfox/./updater -s
 
 # +-------------------+
 # | Wireguard Config |
