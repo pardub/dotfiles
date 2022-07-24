@@ -421,8 +421,8 @@ wget https://raw.githubusercontent.com/arkenfox/user.js/master/prefsCleaner.sh
 touch user-overrides.js
 chmod a+x updater.sh
 chmod a+x prefsCleaner.sh
-cd $HOME/.mozilla/firefox/*.Arkenfox/
-./updater -s
+# cd $HOME/.mozilla/firefox/*.Arkenfox/
+./updater.sh  -s
 
 # +-------------------+
 # | Wireguard Config |
