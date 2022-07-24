@@ -36,7 +36,7 @@ alias www="python -m SimpleHTTPServer 8000"
 alias speedtest='wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test100.zip'
 
 # Need to know your local IP address?
-# alias ip="curl ipinfo.io/ip/"
+# alias ipad="curl ipinfo.io/ip/"
 
 # Show open ports
 alias ports="netstat -tulanp"
