@@ -57,7 +57,7 @@ alias diff="colordiff"
 
 alias j="jobs -l"
 
-alias re="sudo !!"
+alias re='sudo $(history -p !!)'
 
 # +-----+
 # | Git |
