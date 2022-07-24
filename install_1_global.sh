@@ -424,6 +424,14 @@ chmod a+x prefsCleaner.sh
 # cd $HOME/.mozilla/firefox/*.Arkenfox/
 ./updater.sh  -s
 
+# +--------+
+# | Rclone |
+# +---------+
+
+sudo mkdir -p /mnt/rclone
+sudo chown $USER:$USER /mnt/rclone
+
+
 # +-------------------+
 # | Wireguard Config |
 # +-------------------+
