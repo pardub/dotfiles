@@ -55,7 +55,7 @@ flatpak install -y flathub fr.romainvigier.MetadataCleaner
 sudo dnf -y install most
 
 # Backup system
-sudo dnf -y install timeshift
+#sudo dnf -y install timeshift
 
 # Shell script analysis tool
 sudo dnf -y install ShellCheck
