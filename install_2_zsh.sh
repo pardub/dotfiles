@@ -6,8 +6,8 @@ sudo dnf -y install util-linux-user
 
 # zsh default shell
 # sudo chsh -s /bin/zsh marc ## replaced by the command below
-#sudo chsh -s $(which zsh) $USER
-chsh -s $(which zsh) $USER
+sudo chsh -s $(which zsh) $USER
+
 cd $HOME
 if [ -e "$HOME"/.zshenv ]
 then rm "$HOME"/.zshenv
