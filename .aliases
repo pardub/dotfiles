@@ -33,7 +33,7 @@ alias sha="sha256sum -c *-CHECKSUM"
 alias www="python -m SimpleHTTPServer 8000"
 
 # speed test
-alias speed="speedtest-cli --server XYZ --simple"
+alias speedtest='wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test100.zip'
 
 # Need to know your local IP address?
 # alias ip="curl ipinfo.io/ip/"
@@ -56,6 +56,8 @@ alias fgrep="fgrep --color=auto"
 alias diff="colordiff"
 
 alias j="jobs -l"
+
+alias re="sudo !!"
 
 # +-----+
 # | Git |
