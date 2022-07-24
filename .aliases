@@ -59,6 +59,14 @@ alias j="jobs -l"
 
 alias re='sudo $(history -p !!)'
 
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+alias ......='cd ../../../../..'
+alias .......='cd ../../../../../..'
+alias ........='cd ../../../../../../..'
+
 # +-----+
 # | Git |
 # +-----+
