@@ -235,6 +235,8 @@ sudo dnf -y install jami
 
 # UNINSTALL
 sudo dnf -y remove totem
+sudo dnf -y remove gnome-weather
+
 
 # CODECS
 sudo dnf -y install x264
