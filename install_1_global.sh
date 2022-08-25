@@ -392,6 +392,9 @@ gsettings set  org.gnome.software download-updates-notify false
 # Disable check of the very first run of GNOME Software
 gsettings set org.gnome.software first-run false
 
+# Disable Remember recent files
+gsettings set org.gnome.desktop.privacy remember-recent-files false
+
 
 # OPENSNITCH
 sudo mkdir -p /opt/opensnitch || exit
