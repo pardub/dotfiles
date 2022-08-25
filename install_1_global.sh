@@ -259,6 +259,9 @@ sudo systemctl start libvirtd
 sudo systemctl enable libvirtd
 sudo dnf -y install gnome-boxes
 
+sudo systemctl start libvirtd
+sudo systemctl enable libvirtd
+
 # +-------------------------------+
 # | Manual install - Intellj Idea |
 # +-------------------------------+
