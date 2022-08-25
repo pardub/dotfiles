@@ -395,6 +395,10 @@ gsettings set org.gnome.software first-run false
 # Disable Remember recent files
 gsettings set org.gnome.desktop.privacy remember-recent-files false
 
+# Disable audible bell
+gsettings set org.gnome.desktop.wm.preferences audible-bell false
+
+
 
 # OPENSNITCH
 sudo mkdir -p /opt/opensnitch || exit
