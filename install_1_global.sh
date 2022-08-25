@@ -257,6 +257,7 @@ sudo dnf -y check-update && sudo dnf -y  install code
 sudo dnf -y install @virtualization
 sudo systemctl start libvirtd
 sudo systemctl enable libvirtd
+sudo dnf -y install gnome-boxes
 
 # +-------------------------------+
 # | Manual install - Intellj Idea |
