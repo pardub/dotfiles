@@ -315,8 +315,8 @@ sudo dnf -y install gnome-boxes
 ### Line spacing: 1.2
 
 # Add dns from https://dns.watch/
-sudo echo 'nameserver=84.200.69.80' | sudo tee -a /etc/hosts
-sudo echo 'nameserver=84.200.70.40' | sudo tee -a /etc/hosts
+sudo echo 'nameserver 84.200.69.80' | sudo tee -a /etc/resolv.conf
+sudo echo 'nameserver 84.200.70.40' | sudo tee -a /etc/resolv.conf
 
 # need to list the keys to create the .gnupg directory
 gpg --list-keys
