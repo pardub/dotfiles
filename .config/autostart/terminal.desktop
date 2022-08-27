@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=Terminal
+Exec=sh -c "/usr/bin/gnome-terminal"
+Terminal=false
+Type=Application 
