@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=Firefox
+Exec=sh -c "/usr/bin/firefox"
+Terminal=false
+Type=Application
