@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=Evolution
+Exec=sh -c "/usr/bin/evolution"
+Terminal=false
+Type=Application
