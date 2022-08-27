@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=Keepassxc
+Exec=sh -c "/usr/bin/keepassxc"
+Terminal=false
+Type=Application
