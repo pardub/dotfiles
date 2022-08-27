@@ -1,0 +1,9 @@
+#!/bin/zsh -xev
+
+# Download ~/.config/autostart
+cd "$HOME"/.config/autostart || exit
+wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.config/autostart/evolution.desktop
+wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.config/autostart/firefox.desktop
+wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.config/autostart/gedit.desktop
+wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.config/autostart/rclone.desktop
+wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.config/autostart/standard_notes.desktop
