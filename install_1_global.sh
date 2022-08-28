@@ -458,6 +458,15 @@ sudo chown $USER:$USER /mnt/rclone
  # wgswitch Tokyo London
  ## See wgswitch function in zsh-functions
 
+# Firefox extensions to be installed
+
+# https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/
+# https://addons.mozilla.org/en-US/firefox/addon/i-dont-care-about-cookies/
+# https://addons.mozilla.org/en-US/firefox/addon/gnome-shell-integration/
+# https://addons.mozilla.org/en-US/firefox/addon/skip-redirect/
+# https://addons.mozilla.org/en-US/firefox/addon/traduzir-paginas-web/
+# https://addons.mozilla.org/en-US/firefox/addon/keepassxc-browser/
+
 
 # sudo reboot
 
