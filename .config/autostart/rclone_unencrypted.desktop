@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=Rclone_unencrypted
+Exec=sh -c "rclone mount --daemon Hetzner:Storage /mnt/rclone_unencrypted"
+Terminal=false
+Type=Application
