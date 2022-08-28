@@ -466,6 +466,8 @@ sudo chown $USER:$USER /mnt/rclone
 # https://addons.mozilla.org/en-US/firefox/addon/skip-redirect/
 # https://addons.mozilla.org/en-US/firefox/addon/traduzir-paginas-web/
 # https://addons.mozilla.org/en-US/firefox/addon/keepassxc-browser/
+# https://addons.mozilla.org/en-US/firefox/addon/keepa/
+
 
 
 # sudo reboot
