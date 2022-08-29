@@ -69,6 +69,8 @@ sudo dnf -y install git
 # Disk Usage User-friendly, colorful output
 # https://github.com/muesli/duf
 
+# Log processing
+sudo dnf -y install rsyslog
 
 # Vim-fork
 sudo dnf -y install neovim
