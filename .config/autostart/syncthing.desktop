@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=Syncthing
+Exec=sh -c "/usr/bin/syncthing"
+Terminal=false
+Type=Application
