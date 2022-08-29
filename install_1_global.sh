@@ -263,7 +263,7 @@ sudo dnf -y install gnome-boxes
 # | Manual install - Intellj Idea |
 # +-------------------------------+
 
-# ttps://www.jetbrains.com/toolbox-app/
+# https://www.jetbrains.com/toolbox-app/
 # https://download.jetbrains.com/toolbox/jetbrains-toolbox-1.24.12080.tar.gz
 #  /opt/
 # do tar -xvzf ~/Downloads/jetbrains-toolbox-1.20.8804.tar.gz
