@@ -8,3 +8,4 @@ wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.config/autosta
 wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.config/autostart/rclone.desktop
 wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.config/autostart/standard_notes.desktop
 wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.config/autostart/rclone_unencrypted.desktop
+wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.config/autostart/syncthing.desktop
