@@ -157,6 +157,9 @@ sudo dnf -y install rclone
 # Gui for rclone
 sudo dnf -y install rclone-browser
 
+# Open Source Continuous File Synchronization
+sudo dnf -y install syncthing
+
 # audio editor and recorder
 #sudo dnf -y install audacity-3.0.2
 
@@ -468,6 +471,7 @@ sudo chown $USER:$USER /mnt/rclone
 # https://addons.mozilla.org/en-US/firefox/addon/keepassxc-browser/
 # https://addons.mozilla.org/en-US/firefox/addon/keepa/
 
+# Folder for sharing content between the laptop and the mobile phone
 mkdir -p "$HOME"/Documents/share_laptop_android
 
 # sudo reboot
