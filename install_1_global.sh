@@ -476,5 +476,8 @@ sudo chown $USER:$USER /mnt/rclone
 # Folder for sharing content between the laptop and the mobile phone
 mkdir -p "$HOME"/Documents/share_laptop_android
 
+# Enabling Selinux enforcing
+sudo sed -i 's/SELINUX=disabled/SELINUX=enforcing/' /etc/selinux/config
+
 # sudo reboot
 
