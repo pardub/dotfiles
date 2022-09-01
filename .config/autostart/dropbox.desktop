@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=Dropbox
+Exec=sh -c "rclone mount --daemon HetznerCR: /mnt/Dropbox"
+Terminal=false
+Type=Application
