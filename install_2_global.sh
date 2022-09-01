@@ -88,7 +88,7 @@ sudo dnf -y install nnn
 sudo dnf -y install ranger 
 
 # Browser
-sudo dnf -y install chromium-browser-privacy
+# sudo dnf -y install chromium-browser-privacy
 
 sudo dnf -y groupinstall "Development Tools"
 sudo dnf -y install gnome-tweaks
@@ -154,7 +154,7 @@ sudo dnf -y install rclone-browser
 sudo dnf -y install syncthing
 
 # audio editor and recorder
-#sudo dnf -y install audacity-3.0.2
+sudo dnf -y install audacity
 
 #sudo dnf -y install dropbox
 #sudo dnf -y install chrome-remote-desktop
@@ -218,7 +218,7 @@ sudo dnf -y install qtpass
 sudo dnf -y install keepassxc
 
 # Redshift adjusts the color temperature of the screen
-sudo dnf -y install redshift
+# sudo dnf -y install redshift
 
 # Download Vorta backup
 sudo dnf -y copr enable luminoso/vorta
@@ -309,10 +309,6 @@ sudo dnf -y install gnome-boxes
 ### RECOMMENDED SETTINGS FOR THE FONT
 ### Size: 13
 ### Line spacing: 1.2
-
-# Add dns from https://dns.watch/
-sudo echo 'nameserver 84.200.69.80' | sudo tee -a /etc/resolv.conf
-sudo echo 'nameserver 84.200.70.40' | sudo tee -a /etc/resolv.conf
 
 # need to list the keys to create the .gnupg directory
 gpg --list-keys
