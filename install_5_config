@@ -2,10 +2,10 @@
 
 # Download ~/.config/autostart
 cd "$HOME"/.config/autostart || exit
-wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.config/autostart/evolution.desktop
-wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.config/autostart/firefox.desktop
-wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.config/autostart/gedit.desktop
-wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.config/autostart/rclone.desktop
-wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.config/autostart/standard_notes.desktop
-wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.config/autostart/rclone_unencrypted.desktop
-wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.config/autostart/syncthing.desktop
+sudo wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.config/autostart/evolution.desktop
+sudo wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.config/autostart/firefox.desktop
+sudo wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.config/autostart/gedit.desktop
+sudo wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.config/autostart/rclone.desktop
+sudo wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.config/autostart/standard_notes.desktop
+sudo wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.config/autostart/rclone_unencrypted.desktop
+sudo wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.config/autostart/syncthing.desktop
