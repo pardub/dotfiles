@@ -434,8 +434,10 @@ chmod a+x prefsCleaner.sh
 
 sudo mkdir -p /mnt/rclone
 sudo mkdir -p /mnt/rclone_unencrypted
+sudo mkdir -p /mnt/Dropbox
 sudo chown $USER:$USER /mnt/rclone
 sudo chown $USER:$USER /mnt/rclone_unencrypted
+sudo chown $USER:$USER /mnt/Dropbox
 
 
 # +-------------------+
