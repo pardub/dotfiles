@@ -390,6 +390,8 @@ gsettings set org.gnome.desktop.privacy remember-recent-files false
 # Disable audible bell
 gsettings set org.gnome.desktop.wm.preferences audible-bell false
 
+# Show weekday on Gnome
+gsettings set org.gnome.desktop.interface clock-show-weekday true
 
 
 # OPENSNITCH
