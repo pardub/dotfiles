@@ -1,5 +1,5 @@
 [Desktop Entry]
 Name=Standard Notes
-Exec=sh -c "/opt/standard-notes*"
+Exec=sh -c "flatpak run org.standardnotes.standardnotes"
 Terminal=false
 Type=Application
