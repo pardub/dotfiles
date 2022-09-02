@@ -56,23 +56,26 @@ function globalias() {
    zle self-insert
 }
 
-# Switch between 2 locations with Wireguard
-wgswitch() {
-   sudo wg-quick down /etc/wireguard/$1.conf && sudo wg-quick up /etc/wireguard/$2.conf
-    }
-
 # Create directory and switch to this directory
 mkcd() { 
    mkdir -p "$1" && cd "$1"; 
 }
 
+# +-----------+
+# | Wireguard |
+# +-----------+
+
+# Switch between 2 locations with Wireguard
+wgswitch() {
+   sudo wg-quick down /etc/wireguard/$1.conf && sudo wg-quick up /etc/wireguard/$2.conf
+    }
+
 # Bring up Wireguard interface
 wgup() {
-   sudo wg-quick up /etc/wireguard/	
+   sudo wg-quick up /etc/wireguard/$1.conf	
 }
 
 # Bring down Wireguard interface
 wgdo() {
-   sudo wg-quick down /etc/wireguard/	
+   sudo wg-quick down /etc/wireguard/$1.conf	
 }
-
