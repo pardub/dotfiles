@@ -63,6 +63,16 @@ wgswitch() {
 
 # Create directory and switch to this directory
 mkcd() { 
-mkdir -p "$1" && cd "$1"; 
+   mkdir -p "$1" && cd "$1"; 
+}
+
+# Bring up Wireguard interface
+wgup() {
+   sudo wg-quick up /etc/wireguard/	
+}
+
+# Bring down Wireguard interface
+wgdo() {
+   sudo wg-quick down /etc/wireguard/	
 }
 
