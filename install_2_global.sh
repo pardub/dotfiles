@@ -26,6 +26,9 @@ sudo flatpak install -y flathub com.github.tchx84.Flatseal
 # Metadata Cleaner - View and clean metadata in files
 flatpak install -y flathub fr.romainvigier.MetadataCleaner
 
+# Standard Notes flatpak install
+flatpak install flathub org.standardnotes.standardnotes
+
 # Dotfiles management tool "chezmoi"
 # sh -c "$(curl -fsLS chezmoi.io/get)"
 
