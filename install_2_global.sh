@@ -55,7 +55,7 @@ sudo dnf -y install git
 # Disk Usage User-friendly, colorful output
 # https://github.com/muesli/duf
 cd /opt || exit
-sudo wget ttps://github.com/muesli/duf/releases/download/v0.8.1/duf_0.8.1_linux_amd64.rpm
+sudo wget https://github.com/muesli/duf/releases/download/v0.8.1/duf_0.8.1_linux_amd64.rpm
 sudo dnf install -y /opt/duf_0.8.1_linux_amd64.rpm
 sudo rm -f duf_0.8.1_linux_amd64.rpm
 cd || exit
