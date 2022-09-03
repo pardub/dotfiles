@@ -13,6 +13,12 @@ sudo unzip /tmp/JetBrainsMono.zip -d ~/.local/share/fonts/nerd-fonts
 fc-cache -v
 cd || exit
 
+
+# UNINSTALL
+sudo dnf -y remove totem
+sudo dnf -y remove gnome-weather
+sudo dnf remove "libreoffice-*"
+
 # ADD EXTRA REPOS rpm fusion
 sudo dnf -y install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
 sudo dnf -y install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
@@ -20,15 +26,15 @@ sudo dnf -y install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-non
 # ADD FLATPAK REPO
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
+# +--------------+
+# | Flatpak apps |
+# +--------------+
+
 # Manage Flatpak permissions
 sudo flatpak install -y flathub com.github.tchx84.Flatseal
 
 # Metadata Cleaner - View and clean metadata in files
 flatpak install -y flathub fr.romainvigier.MetadataCleaner
-
-# +--------------+
-# | Flatpak apps |
-# +--------------+
 
 # Standard Notes flatpak install
 flatpak install -y flathub org.standardnotes.standardnotes
@@ -54,13 +60,14 @@ flatpak install -y flathub org.telegram.desktop
 # Viber Desktop
 flatpak install -y flathub com.viber.Viber
 
+# Libre Office
+flatpak install -y fedora org.libreoffice.LibreOffice
+
 # Dotfiles management tool "chezmoi"
 # sh -c "$(curl -fsLS chezmoi.io/get)"
 
 ### web console for Linux servers
 #sudo dnf -y install cockpit
-
-
 
 
 # NextDNS CLI client
@@ -258,11 +265,6 @@ sudo dnf -y install vorta
 # Download Jami Voip client
 sudo dnf -y config-manager --add-repo https://dl.jami.net/nightly/fedora_34/jami-nightly.repo
 sudo dnf -y install jami
-
-
-# UNINSTALL
-sudo dnf -y remove totem
-sudo dnf -y remove gnome-weather
 
 
 # CODECS
