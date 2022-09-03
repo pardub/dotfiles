@@ -26,14 +26,42 @@ sudo flatpak install -y flathub com.github.tchx84.Flatseal
 # Metadata Cleaner - View and clean metadata in files
 flatpak install -y flathub fr.romainvigier.MetadataCleaner
 
+# +--------------+
+# | Flatpak apps |
+# +--------------+
+
 # Standard Notes flatpak install
-flatpak install flathub org.standardnotes.standardnotes
+flatpak install -y flathub org.standardnotes.standardnotes
+
+# Evolution mail
+flatpak install -y fedora org.gnome.evolution
+
+# Transmission Torrent
+flatpak install -y fedora transmissionbt.Transmission
+
+# Remotely manage the Transmission BitTorrent client
+flatpak install -y fedora TransmissionRemoteGtk
+
+# Record and edit audio files
+flatpak install -y fedora audacity
+
+# A utility for browsing and installing GNOME Shell Extensions
+flatpak install -y flathub com.mattjakeman.ExtensionManager
+
+# Telegram Desktop
+flatpak install -y flathub org.telegram.desktop
+
+# Viber Desktop
+flatpak install -y flathub com.viber.Viber
 
 # Dotfiles management tool "chezmoi"
 # sh -c "$(curl -fsLS chezmoi.io/get)"
 
 ### web console for Linux servers
 #sudo dnf -y install cockpit
+
+
+
 
 # NextDNS CLI client
 # Config ==> https://github.com/nextdns/nextdns/wiki/RPM-Based-Distribution
