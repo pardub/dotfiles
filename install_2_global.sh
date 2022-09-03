@@ -15,6 +15,7 @@ cd || exit
 
 
 # UNINSTALL
+sudo dnf -y remove firefox
 sudo dnf -y remove totem
 sudo dnf -y remove gnome-weather
 sudo dnf remove "libreoffice-*"
@@ -31,7 +32,10 @@ sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub
 # +--------------+
 
 # Manage Flatpak permissions
-sudo flatpak install -y flathub com.github.tchx84.Flatseal
+flatpak install -y flathub com.github.tchx84.Flatseal
+
+# Firefox
+flatpak install -y fedora org.mozilla.firefox
 
 # Metadata Cleaner - View and clean metadata in files
 flatpak install -y flathub fr.romainvigier.MetadataCleaner
@@ -62,6 +66,58 @@ flatpak install -y flathub com.viber.Viber
 
 # Libre Office
 flatpak install -y fedora org.libreoffice.LibreOffice
+
+# Document viewer
+flatpak install -y flathub org.kde.okular
+
+# SFTP application
+flatpak install -y fedora org.filezillaproject.Filezilla
+
+# PDF Merging, Rearranging, Splitting, Rotating and Cropping
+flatpak install -y flathub com.github.jeromerobert.pdfarranger
+
+# Ebook reader
+flatpak install -y flathub com.github.babluboy.bookworm
+
+# flashcard program using spaced repetition
+flatpak install -y flathub net.ankiweb.Anki
+
+# Mail Client Evolution
+flatpak install  -y fedora org.gnome.Evolution
+
+# Streaming with rclone
+flatpak install -y flathub io.mpv.Mpv
+
+# Tor browser launcher
+flatpak install -y flathub com.github.micahflee.torbrowser-launcher
+
+### Checksum verification tool
+flatpak install -y flathub org.gtkhash.gtkhash
+
+# save workspaces after reboot
+flatpak install -y fedora ca.desrt.dconf-editor
+
+# Gnome certificate manager and GUI for OpenPGP 
+flatpak install -y flathub org.gnome.seahorse.Application
+
+# Password Manager
+flatpak install -y flathub org.keepassxc.KeePassXC
+
+# Download Vorta backup
+flatpak install -y flathub com.borgbase.Vorta
+
+# Download Jami Voip client
+#sudo dnf -y config-manager --add-repo https://dl.jami.net/nightly/fedora_34/jami-nightly.repo
+flatpak install -y flathub net.jami.Jami
+
+# Virtualization made simple
+flatpak install -y flathub org.gnome.Boxes
+
+# Intellij Idea Community
+flatpak install -y flathub com.jetbrains.IntelliJ-IDEA-Community
+
+# IRC Client
+flatpak install -y flathub io.github.Hexchat
 
 # Dotfiles management tool "chezmoi"
 # sh -c "$(curl -fsLS chezmoi.io/get)"
@@ -145,17 +201,11 @@ sudo dnf -y install borgbackup
 # Simple, configuration-driven backup software for servers and workstations.
 sudo dnf -y install borgmatic
 
-# Document viewer
-sudo dnf -y install okular
-
 # Collaborative cheatsheets for console commands
 sudo dnf -y install tldr
 
 # IRC client
-sudo dnf -y install weechat
-
-# SFTP application
-sudo dnf -y install filezilla
+# sudo dnf -y install weechat
 
 # Tools for configuring WireGuard
 sudo dnf -y install wireguard-tools
@@ -191,32 +241,10 @@ sudo dnf -y install rclone-browser
 # Open Source Continuous File Synchronization
 sudo dnf -y install syncthing
 
-# audio editor and recorder
-sudo dnf -y install audacity
-
 #sudo dnf -y install dropbox
 #sudo dnf -y install chrome-remote-desktop
 
 sudo dnf -y install fuse
-
-sudo dnf -y install pdfarranger
-
-sudo dnf -y install bookworm
-
-# flashcard program using spaced repetition
-#sudo dnf -y install anki
-
-# Anonymizing overlay network for TCP
-sudo dnf -y install tor
-
-# Tor browser launcher
-sudo dnf -y install torbrowser-launcher
-
-### Checksum verification tool
-sudo dnf -y install gtkhash
-
-# Gnome certificate manager and GUI for OpenPGP 
-sudo dnf -y install seahorse
 
 # Kde certificate manager and GUI for OpenPGP 
 #sudo dnf -y install kleopatra
@@ -227,17 +255,8 @@ sudo dnf -y install ffmpeg
 # GnuPG Made Easy
 sudo dnf -y install gpgme
 
-# Mail Client Evolution
-sudo dnf -y install evolution
-
 # Lynis - Security auditing and hardening tool, for UNIX-based systems
 sudo dnf -y install lynis
-
-# Streaming with rclone
-sudo dnf -y install mpv 
-
-# save workspaces after reboot
-sudo dnf -y install dconf-editor
 
 # change MAC addres
 sudo dnf -y install macchanger 
@@ -252,19 +271,8 @@ sudo dnf -y install pass
 # Gui for Pass
 sudo dnf -y install qtpass
 
-# Password Manager
-sudo dnf -y install keepassxc
-
 # Redshift adjusts the color temperature of the screen
 # sudo dnf -y install redshift
-
-# Download Vorta backup
-sudo dnf -y copr enable luminoso/vorta
-sudo dnf -y install vorta
-
-# Download Jami Voip client
-sudo dnf -y config-manager --add-repo https://dl.jami.net/nightly/fedora_34/jami-nightly.repo
-sudo dnf -y install jami
 
 
 # CODECS
@@ -286,7 +294,7 @@ sudo dnf -y check-update && sudo dnf -y  install code
 sudo dnf -y install @virtualization
 sudo systemctl start libvirtd
 sudo systemctl enable libvirtd
-sudo dnf -y install gnome-boxes
+# sudo dnf -y install gnome-boxes ## replaced par flatpak app
 
 # +-------------------------------+
 # | Manual install - Intellj Idea |
