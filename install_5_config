@@ -15,7 +15,9 @@ sudo wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.config/au
 sudo wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.config/autostart/org.gnome.Evolution.desktop
 sudo wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.config/autostart/org.gnome.Evolution-alarm-notify.desktop
 sudo wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.config/autostart/org.standardnotes.standardnotes.desktop
+sudo wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.config/autostart/org.mozilla.Firefox.desktop
 sudo chmod 755 org.gnome.Evolution.desktop
 sudo chmod 755 org.gnome.Evolution-alarm-notify.desktop
 sudo chmod 755 org.standardnotes.standardnotes.desktop
+sudo chmod 755 org.org.mozilla.Firefox.desktop
 cd || exit
