@@ -12,3 +12,5 @@ sudo wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.config/au
 sudo wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.config/autostart/syncthing.desktop
 sudo wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.config/autostart/dropbox.desktop
 sudo wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.config/autostart/org.gnome.Evolution.desktop
+sudo chmod 755 org.gnome.Evolution.desktop
+cd || exit
