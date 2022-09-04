@@ -434,6 +434,10 @@ gsettings set org.gnome.desktop.wm.preferences audible-bell false
 # Show weekday on Gnome
 gsettings set org.gnome.desktop.interface clock-show-weekday true
 
+# Show hidden files in files manager
+gsettings set org.gtk.Settings.FileChooser show-hidden true
+
+
 
 # OPENSNITCH
 sudo mkdir -p /opt/opensnitch || exit
