@@ -4,7 +4,8 @@
 cd "$HOME"/.config/autostart || exit
 # Evolution.desktop is not needed as Evolution as bee installed as a Flatpak app
 # sudo wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.config/autostart/evolution.desktop
-sudo wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.config/autostart/firefox.desktop
+# Firefox .desktop is not needed as Firefox as bee installed as a Flatpak app
+#sudo wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.config/autostart/firefox.desktop
 sudo wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.config/autostart/gedit.desktop
 sudo wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.config/autostart/rclone.desktop
 # standard_notes.desktop is not needed as standard_notes as bee installed as a Flatpak app
