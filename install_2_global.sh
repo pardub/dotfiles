@@ -31,29 +31,41 @@ sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub
 # | Flatpak apps |
 # +--------------+
 
+        # +--------------+
+        # | Fedora apps |
+        # +--------------+
+
+# Mail Client Evolution
+flatpak install -y fedora org.gnome.evolution
+# Transmission Torrent
+flatpak install -y fedora transmissionbt.Transmission
+# Remotely manage the Transmission BitTorrent client
+flatpak install -y fedora TransmissionRemoteGtk
+# Record and edit audio files
+flatpak install -y fedora audacity
+# Libre Office
+flatpak install -y fedora org.libreoffice.LibreOffice
+# SFTP application
+flatpak install -y fedora org.filezillaproject.Filezilla
+# save workspaces after reboot
+flatpak install -y fedora ca.desrt.dconf-editor
+
+
+        # +--------------+
+        # | Flathub apps |
+        # +--------------+
+
 # Manage Flatpak permissions
 flatpak install -y flathub com.github.tchx84.Flatseal
 
 # Firefox
-flatpak install -y fedora org.mozilla.firefox
+flatpak install flathub org.mozilla.firefox
 
 # Metadata Cleaner - View and clean metadata in files
 flatpak install -y flathub fr.romainvigier.MetadataCleaner
 
 # Standard Notes flatpak install
 flatpak install -y flathub org.standardnotes.standardnotes
-
-# Evolution mail
-flatpak install -y fedora org.gnome.evolution
-
-# Transmission Torrent
-flatpak install -y fedora transmissionbt.Transmission
-
-# Remotely manage the Transmission BitTorrent client
-flatpak install -y fedora TransmissionRemoteGtk
-
-# Record and edit audio files
-flatpak install -y fedora audacity
 
 # A utility for browsing and installing GNOME Shell Extensions
 flatpak install -y flathub com.mattjakeman.ExtensionManager
@@ -64,14 +76,8 @@ flatpak install -y flathub org.telegram.desktop
 # Viber Desktop
 flatpak install -y flathub com.viber.Viber
 
-# Libre Office
-flatpak install -y fedora org.libreoffice.LibreOffice
-
 # Document viewer
 flatpak install -y flathub org.kde.okular
-
-# SFTP application
-flatpak install -y fedora org.filezillaproject.Filezilla
 
 # PDF Merging, Rearranging, Splitting, Rotating and Cropping
 flatpak install -y flathub com.github.jeromerobert.pdfarranger
@@ -82,9 +88,6 @@ flatpak install -y flathub com.github.babluboy.bookworm
 # flashcard program using spaced repetition
 flatpak install -y flathub net.ankiweb.Anki
 
-# Mail Client Evolution
-flatpak install  -y fedora org.gnome.Evolution
-
 # Streaming with rclone
 flatpak install -y flathub io.mpv.Mpv
 
@@ -93,9 +96,6 @@ flatpak install -y flathub com.github.micahflee.torbrowser-launcher
 
 ### Checksum verification tool
 flatpak install -y flathub org.gtkhash.gtkhash
-
-# save workspaces after reboot
-flatpak install -y fedora ca.desrt.dconf-editor
 
 # Gnome certificate manager and GUI for OpenPGP 
 flatpak install -y flathub org.gnome.seahorse.Application
@@ -118,6 +118,8 @@ flatpak install -y flathub com.jetbrains.IntelliJ-IDEA-Community
 
 # IRC Client
 flatpak install -y flathub io.github.Hexchat
+
+
 
 # Dotfiles management tool "chezmoi"
 # sh -c "$(curl -fsLS chezmoi.io/get)"
