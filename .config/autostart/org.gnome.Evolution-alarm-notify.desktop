@@ -1,0 +1,15 @@
+[Desktop Entry]
+Type=Application
+Name=Evolution Alarm Notify
+Icon=appointment-soon
+Exec=/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=/app/libexec/evolution-data-server/evolution-alarm-notify org.gnome.Evolution
+Terminal=false
+Categories=
+NoDisplay=true
+X-Meego-Priority=Low
+X-GNOME-Bugzilla-Bugzilla=GNOME
+X-GNOME-Bugzilla-Product=evolution-data-server
+X-GNOME-Bugzilla-Component=calendar
+X-GNOME-Bugzilla-Version=3.42.x
+X-GNOME-UsesNotifications=true
+X-Flatpak=org.gnome.Evolution
