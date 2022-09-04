@@ -1,0 +1,45 @@
+[Desktop Entry]
+Name=Evolution
+GenericName=Groupware Suite
+X-GNOME-FullName=Evolution Mail and Calendar
+Comment=Manage your email, contacts and schedule
+Actions=new-window;compose;contacts;calendar;mail;memos;tasks;
+Exec=/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=evolution --file-forwarding org.gnome.Evolution @@u %U @@
+Icon=org.gnome.Evolution
+Terminal=false
+Type=Application
+Categories=GNOME;GTK;Office;Email;Calendar;ContactManagement;X-Red-Hat-Base;
+StartupNotify=true
+X-GNOME-UsesNotifications=true
+X-Flatpak-RenamedFrom=evolution;
+MimeType=text/calendar;text/x-vcard;text/directory;application/mbox;message/rfc822;x-scheme-handler/mailto;x-scheme-handler/webcal;x-scheme-handler/calendar;x-scheme-handler/task;x-scheme-handler/memo;
+StartupWMClass=evolution.bin
+X-Flatpak=org.gnome.Evolution
+
+[Desktop Action new-window]
+Name=New Window
+Exec=/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=evolution org.gnome.Evolution -c current
+
+[Desktop Action compose]
+Name=Compose a Message
+Exec=/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=evolution org.gnome.Evolution mailto:
+
+[Desktop Action contacts]
+Name=Contacts
+Exec=/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=evolution org.gnome.Evolution -c contacts
+
+[Desktop Action calendar]
+Name=Calendar
+Exec=/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=evolution org.gnome.Evolution -c calendar
+
+[Desktop Action mail]
+Name=Mail
+Exec=/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=evolution org.gnome.Evolution -c mail
+
+[Desktop Action memos]
+Name=Memos
+Exec=/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=evolution org.gnome.Evolution -c memos
+
+[Desktop Action tasks]
+Name=Tasks
+Exec=/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=evolution org.gnome.Evolution -c tasks
