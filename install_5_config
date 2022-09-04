@@ -2,7 +2,8 @@
 
 # Download ~/.config/autostart
 cd "$HOME"/.config/autostart || exit
-sudo wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.config/autostart/evolution.desktop
+# Evolution.desktop is not needed as Evolution as bee installed as a Flatpak app
+# sudo wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.config/autostart/evolution.desktop
 sudo wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.config/autostart/firefox.desktop
 sudo wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.config/autostart/gedit.desktop
 sudo wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.config/autostart/rclone.desktop
@@ -10,3 +11,4 @@ sudo wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.config/au
 sudo wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.config/autostart/rclone_unencrypted.desktop
 sudo wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.config/autostart/syncthing.desktop
 sudo wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.config/autostart/dropbox.desktop
+sudo wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.config/autostart/org.gnome.Evolution.desktop
