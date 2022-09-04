@@ -20,11 +20,11 @@ sudo dnf -y remove totem
 sudo dnf -y remove gnome-weather
 sudo dnf -y remove "libreoffice-*"
 
-# ADD EXTRA REPOS rpm fusion
+# Add extra repos rpm fusion
 sudo dnf -y install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
 sudo dnf -y install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
-# ADD FLATPAK REPO
+# ADd Flatpak repo
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 # +--------------+
