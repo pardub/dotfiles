@@ -7,7 +7,8 @@ cd "$HOME"/.config/autostart || exit
 sudo wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.config/autostart/firefox.desktop
 sudo wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.config/autostart/gedit.desktop
 sudo wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.config/autostart/rclone.desktop
-sudo wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.config/autostart/standard_notes.desktop
+# standard_notes.desktop is not needed as standard_notes as bee installed as a Flatpak app
+# sudo wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.config/autostart/standard_notes.desktop
 sudo wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.config/autostart/rclone_unencrypted.desktop
 sudo wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.config/autostart/syncthing.desktop
 sudo wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.config/autostart/dropbox.desktop
