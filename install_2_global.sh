@@ -18,7 +18,7 @@ cd || exit
 sudo dnf -y remove firefox
 sudo dnf -y remove totem
 sudo dnf -y remove gnome-weather
-sudo dnf remove "libreoffice-*"
+sudo dnf -y remove "libreoffice-*"
 
 # ADD EXTRA REPOS rpm fusion
 sudo dnf -y install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
