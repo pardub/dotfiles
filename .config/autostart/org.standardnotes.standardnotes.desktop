@@ -1,0 +1,12 @@
+[Desktop Entry]
+Categories=Utility;TextTools;
+Exec=/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=start-standardnotes --file-forwarding org.standardnotes.standardnotes @@u %U @@
+GenericName=Encrypted Notes App
+Icon=org.standardnotes.standardnotes
+Keywords=encryption;notes;privacy;
+Name=Standard Notes
+StartupNotify=true
+StartupWMClass=Standard Notes
+Terminal=false
+Type=Application
+X-Flatpak=org.standardnotes.standardnotes
