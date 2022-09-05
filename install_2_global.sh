@@ -312,16 +312,27 @@ sudo dnf install java-11-openjdk-devel.x86_64
 # cd /opt/
 # sudo tar -xvzf ~/Downloads/jetbrains-toolbox-1.20.8804.tar.gz
 # sudo mv jetbrains-toolbox-1.20.8804 jetbrains
+#cd || exit
+#wget  https://download.jetbrains.com/toolbox/jetbrains-toolbox-1.25.12627.tar.gz
+#cd /opt
+#sudo tar -xvzf ~/jetbrains-toolbox-1.25.12627.tar.gz
+#cd jetbrains-toolbox-1.25.12627
+#./jetbrains-toolbox
+#cd || exit
+#rm -rf jetbrains-toolbox-1.25.12627.tar.gz
+
 cd || exit
-wget  https://download.jetbrains.com/toolbox/jetbrains-toolbox-1.25.12627.tar.gz
+tb_releases_url='https://data.services.jetbrains.com/products/releases?code=TBA&latest=true&type=release'
+download_url=$(curl --silent $tb_releases_url | jq --raw-output '.TBA[0].downloads.linux.link')
+curl --output jetbrains-toolbox.tgz --progress-bar --location $download_url
 cd /opt
-sudo tar -xvzf ~/jetbrains-toolbox-1.25.12627.tar.gz
-cd jetbrains-toolbox-1.25.12627
+sudo tar -xvzf ~/jetbrains-toolbox.tgz
+cd /opt/jetbrains-toolbox-*
 ./jetbrains-toolbox
 cd || exit
-rm -rf jetbrains-toolbox-1.25.12627.tar.gz
+rm -rf jetbrains-toolbox.tgz
 
-
+########################################
 
 
 # Install pluging zsh-syntax-highlighting
