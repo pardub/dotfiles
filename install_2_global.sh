@@ -454,6 +454,12 @@ gsettings set org.gnome.desktop.interface clock-show-weekday true
 # Show hidden files in files manager
 gsettings set org.gtk.Settings.FileChooser show-hidden true
 
+# Send reports of technical problems to the vendor
+gsettings set org.gnome.desktop.privacy report-technical-problems false
+
+# Geolocation services are disabled
+gsettings set org.gnome.system.location enabled false
+
 
 
 # OPENSNITCH
