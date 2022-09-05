@@ -298,15 +298,25 @@ sudo systemctl start libvirtd
 sudo systemctl enable libvirtd
 # sudo dnf -y install gnome-boxes ## replaced par flatpak app
 
-# +-------------------------------+
-# | Manual install - Intellj Idea |
-# +-------------------------------+
+# +---------------------------------------+
+# | Manual install - Intellj Idea Toolbox |
+# +---------------------------------------+
 
 # https://www.jetbrains.com/toolbox-app/
 # https://download.jetbrains.com/toolbox/jetbrains-toolbox-1.24.12080.tar.gz
 # cd /opt/
 # sudo tar -xvzf ~/Downloads/jetbrains-toolbox-1.20.8804.tar.gz
 # sudo mv jetbrains-toolbox-1.20.8804 jetbrains
+cd || exit
+wget  https://download.jetbrains.com/toolbox/jetbrains-toolbox-1.25.12627.tar.gz
+cd /opt
+sudo tar -xvzf ~/jetbrains-toolbox-1.25.12627.tar.gz
+cd jetbrains-toolbox-1.25.12627
+./jetbrains-toolbox
+cd || exit
+rm -rf jetbrains-toolbox-1.25.12627.tar.gz
+
+
 
 
 # Install pluging zsh-syntax-highlighting
