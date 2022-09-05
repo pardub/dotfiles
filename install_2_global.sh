@@ -114,7 +114,7 @@ flatpak install -y flathub net.jami.Jami
 flatpak install -y flathub org.gnome.Boxes
 
 # Intellij Idea Community
-flatpak install -y flathub com.jetbrains.IntelliJ-IDEA-Community
+#flatpak install -y flathub com.jetbrains.IntelliJ-IDEA-Community
 
 # IRC Client
 flatpak install -y flathub io.github.Hexchat
