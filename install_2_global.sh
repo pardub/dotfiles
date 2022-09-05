@@ -298,6 +298,11 @@ sudo systemctl start libvirtd
 sudo systemctl enable libvirtd
 # sudo dnf -y install gnome-boxes ## replaced par flatpak app
 
+
+# Install OpenJdk 11
+sudo dnf install java-11-openjdk-devel.x86_64 
+
+
 # +---------------------------------------+
 # | Manual install - Intellj Idea Toolbox |
 # +---------------------------------------+
