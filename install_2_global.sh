@@ -58,7 +58,7 @@ flatpak install -y flathub fr.romainvigier.MetadataCleaner
 # Standard Notes flatpak install
 flatpak install -y flathub org.standardnotes.standardnotes
 
-# A utility for browsing and installing GNOME Shell Extensions
+# Extensions Manager
 flatpak install -y flathub com.mattjakeman.ExtensionManager
 
 # Telegram Desktop
