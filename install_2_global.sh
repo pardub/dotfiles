@@ -325,6 +325,7 @@ rm -rf jetbrains-toolbox.tgz
 
 ########################################
 
+# Netbeans
 
 # Install pluging zsh-syntax-highlighting
 #sudo mkdir -p /usr/share/zsh/plugins
@@ -505,10 +506,11 @@ chmod a+x prefsCleaner.sh
 sudo mkdir -p /mnt/rclone
 sudo mkdir -p /mnt/rclone_unencrypted
 sudo mkdir -p /mnt/Dropbox
+sudo mkdir -p /mnt/Onedrive
 sudo chown $USER:$USER /mnt/rclone
 sudo chown $USER:$USER /mnt/rclone_unencrypted
 sudo chown $USER:$USER /mnt/Dropbox
-
+sudo chown $USER:$USER /mnt/Onedrive
 
 # +-------------------+
 # | Wireguard Config |
