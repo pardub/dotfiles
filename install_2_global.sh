@@ -50,7 +50,7 @@ flatpak install -y fedora ca.desrt.dconf-editor
 flatpak install -y flathub com.github.tchx84.Flatseal
 
 # Firefox
-flatpak install flathub org.mozilla.firefox
+flatpak install -y flathub org.mozilla.firefox
 
 # Metadata Cleaner - View and clean metadata in files
 flatpak install -y flathub fr.romainvigier.MetadataCleaner
@@ -291,7 +291,7 @@ sudo systemctl enable libvirtd
 
 
 # Install OpenJdk 11
-sudo dnf install java-11-openjdk-devel.x86_64 
+sudo dnf install -y java-11-openjdk-devel.x86_64 
 
 
 # +---------------------------------------+
@@ -492,7 +492,7 @@ pip3 install qt-material
 # | Firefox hardening |
 # +-------------------+
 
-firefox -CreateProfile Arkenfox
+flatpak run org.mozilla.firefox -CreateProfile Arkenfox
 cd $HOME/.mozilla/firefox
 cd *.Arkenfox
 wget https://raw.githubusercontent.com/arkenfox/user.js/master/updater.sh
@@ -510,11 +510,11 @@ chmod a+x prefsCleaner.sh
 sudo mkdir -p /mnt/rclone
 sudo mkdir -p /mnt/rclone_unencrypted
 sudo mkdir -p /mnt/Dropbox
-sudo mkdir -p /mnt/Onedrive
+#sudo mkdir -p /mnt/Onedrive
 sudo chown $USER:$USER /mnt/rclone
 sudo chown $USER:$USER /mnt/rclone_unencrypted
 sudo chown $USER:$USER /mnt/Dropbox
-sudo chown $USER:$USER /mnt/Onedrive
+#sudo chown $USER:$USER /mnt/Onedrive
 
 # +-------------------+
 # | Wireguard Config |
