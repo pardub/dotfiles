@@ -26,8 +26,7 @@ sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub
         # | Fedora apps |
         # +--------------+
 
-# Mail Client Evolution
-flatpak install -y fedora org.gnome.evolution
+
 # Transmission Torrent
 flatpak install -y fedora transmissionbt.Transmission
 # Remotely manage the Transmission BitTorrent client
@@ -51,6 +50,9 @@ flatpak install -y flathub com.github.tchx84.Flatseal
 
 # Firefox
 flatpak install -y flathub org.mozilla.firefox
+
+# Mail Client Evolution ##Need flatub version to get Etesync ( Not available in Fedora flatpak repo)
+flatpak install -y flathub org.gnome.evolution
 
 # Metadata Cleaner - View and clean metadata in files
 flatpak install -y flathub fr.romainvigier.MetadataCleaner
