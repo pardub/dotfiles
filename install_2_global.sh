@@ -463,6 +463,10 @@ gsettings set org.gnome.desktop.privacy report-technical-problems false
 # Geolocation services are disabled
 gsettings set org.gnome.system.location enabled false
 
+# Mouse : Focus on Hover
+# https://askubuntu.com/questions/64605/how-do-i-set-focus-follows-mouse
+gsettings set org.gnome.desktop.wm.preferences focus-mode 'sloppy'
+
 
 
 # OPENSNITCH
