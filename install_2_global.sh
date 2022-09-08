@@ -96,6 +96,9 @@ flatpak install -y flathub org.gnome.seahorse.Application
 # Password Manager
 flatpak install -y flathub org.keepassxc.KeePassXC
 
+# Bitwarden
+flatpak install -y flathub com.bitwarden.desktop
+
 # Download Vorta backup
 flatpak install -y flathub com.borgbase.Vorta
 
