@@ -112,6 +112,9 @@ flatpak install -y flathub org.gnome.Boxes
 # IRC Client
 flatpak install -y flathub io.github.Hexchat
 
+# Emacs
+flatpak install -y flathub org.gnu.emacs
+
 
 
 # Dotfiles management tool "chezmoi"
