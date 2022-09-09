@@ -1,0 +1,170 @@
+alias cm="chezmoi"
+alias cat="bat"
+alias up="sudo dnf up"
+alias secu="sudo dnf update --security --bugfix"
+alias listsecu="sudo dnf updateinfo list --security --bugfix"
+alias install="sudo dnf install"
+alias ll="exa --all --long --classify --header --git --group --modified --links --inode --icons --time-style=long-iso"
+alias history="history -E 1"
+alias h="history -E"
+alias mv="mv -iv"
+alias cp="cp -iv"
+alias rm="rm -iv"
+alias df="df -h"
+alias du="du -h"
+alias mkd="mkdir -p"
+alias diffy="diff -y --suppress-common-lines --width=250"
+#alias shellcheck="shellcheck -f diff"
+
+alias untar="tar -zxvf"
+alias c="clear"
+alias vim="nvim"
+
+# Want to download something but be able to resume if something goes wrong?
+alias wget="wget -c"
+
+# Need to generate a random, 20-character password for a new online account?
+alias getpass="openssl rand -base64 20"
+
+# Downloaded a file and need to verify the downloads signatures?
+alias sha="sha256sum -c *-CHECKSUM"
+
+# Start a web server in any folder you"d like
+alias www="python -m SimpleHTTPServer 8000"
+
+# speed test
+alias speedtest='wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test100.zip'
+
+# Need to know your local IP address?
+# alias ipad="curl ipinfo.io/ip/"
+
+# Show open ports
+alias ports="netstat -tulanp"
+
+# limit to 5 pings.
+alias ping="ping -c 5"
+
+# Do not wait interval 1 second, go fast #
+alias fastping="ping -c 100 -s.2"
+
+# Colorize the grep command output for ease of use (good for log files)
+alias grep="grep --color=auto"
+alias egrep="egrep --color=auto"
+alias fgrep="fgrep --color=auto"
+
+# install  colordiff package :)
+alias diff="colordiff"
+
+alias j="jobs -l"
+
+alias re='sudo $(history -p !!)'
+
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+alias ......='cd ../../../../..'
+alias .......='cd ../../../../../..'
+alias ........='cd ../../../../../../..'
+
+# +-----+
+# | Git |
+# +-----+
+
+alias gst='git status'
+alias ga='git add'
+alias gaa="git add ."
+alias gau="git add -u"
+alias gps='git push'
+alias gpso='git push origin'
+alias gpl="git pull"
+alias gpla="git-pull-all"
+alias gplo='git pull origin'
+alias gtd='git tag --delete'
+alias gtdr='git tag --delete origin'
+alias gb="git branch"
+alias gbd="git branch -d"
+alias gbr='git branch -r'
+alias gst="git stash"
+alias gsta="git stash apply"
+alias gm="git merge"
+alias gr="git rebase"
+alias gs="git show"
+alias gc="git commit"
+alias gcm="git commit -m"
+alias gcam="git commit -am"
+alias gbl="git blame"
+alias gd="git diff --color --color-words --abbrev"
+alias gdc="git diff --cached"
+alias gco="git checkout"
+alias gcob="git checkout -b"
+alias gl="git log --oneline --decorate --graph"
+alias glog="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --"
+alias glga="git log --graph --oneline --all --decorate"
+alias gr='git remote'
+alias grs='git remote show'
+alias glo='git log --pretty="oneline"'
+alias glol='git log --graph --oneline --decorate'
+alias ghist="log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short"
+alias gtype="bat-file -t"
+alias gdump="bat-file -p"
+alias gk="gitk --all&"
+alias gx="gitx --all"
+
+# show ignored files by git
+alias gx="ign = ls-files -o -i --exclude-standard"
+
+# Untrack Files without deleting them
+alias grmc="git rm -r --cached"
+
+
+# +----------+
+# | Firewall |
+# +----------+
+
+# shortcut  for iptables and pass it via sudo
+alias ipt="sudo /sbin/iptables"
+ 
+# display all rules #
+alias iptlist="sudo /sbin/iptables -L -n -v --line-numbers"
+alias iptlistin="sudo /sbin/iptables -L INPUT -n -v --line-numbers"
+alias iptlistout="sudo /sbin/iptables -L OUTPUT -n -v --line-numbers"
+alias iptlistfw="sudo /sbin/iptables -L FORWARD -n -v --line-numbers"
+alias firewall="iptlist"
+
+# +--------+
+# | System |
+# +--------+
+
+# pass options to free
+alias meminfo="free -m -l -t -h"
+ 
+# get top process eating memory
+alias psmem="ps auxf | sort -nr -k 4"
+alias psmem10="ps auxf | sort -nr -k 4 | head -10"
+ 
+# get top process eating cpu
+alias pscpu="ps auxf | sort -nr -k 3"
+alias pscpu10="ps auxf | sort -nr -k 3 | head -10"
+ 
+# Get server cpu info
+alias cpuinfo="lscpu"
+
+# +-----------+
+# | Wireguard |
+# +-----------+
+
+#alias wgup="sudo wg-quick up /etc/wireguard/"
+#alias wgdo="sudo wg-quick down /etc/wireguard/"
+alias wgcities="sudo ls -ll /etc/wireguard" 
+
+alias rcvideos="rclone mount onedrive: /mnt/rclone --user-agent=1000 --dir-cache-time 1000h --poll-interval 15s --umask 000 --cache-dir=/home/m/cache --vfs-cache-mode full --vfs-cache-max-size 30G --vfs-cache-max-age=1h --buffer-size 256M --daemon"
+
+
+# +-----------+
+# | Firefox |
+# +-----------+
+# Start Firefox default profile
+alias udemy='flatpak run org.mozilla.firefox -P "default" &'
+
+
