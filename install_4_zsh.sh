@@ -21,23 +21,23 @@ fi
 
 # Download .zshenv
 cd "$HOME" || exit
-wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.zshenv
+wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/dotfiles/.zshenv
 
 # Download .zshrc
 cd "$HOME"/.config/zsh || exit
-wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.zshrc
+wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/dotfiles/.zshrc
 
 # Download .aliases
 cd "$HOME"/.config/zsh || exit
-wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.aliases
+wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/dotfiles/.aliases
 
 # Downlaod zsh-functions
 cd "$HOME"/.config/zsh || exit
-wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/zsh-functions
+wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/dotfiles/zsh-functions
 
 # Downlaod init.viv
 cd "$HOME"/.config/nvim || exit
-wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/init.vim
+wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/dotfiles/init.vim
 
 #sudo reboot
 
