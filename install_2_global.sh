@@ -6,7 +6,7 @@
 
 
 # UNINSTALL
-sudo dnf -y remove firefox
+# sudo dnf -y remove firefox
 sudo dnf -y remove totem
 sudo dnf -y remove gnome-weather
 sudo dnf -y remove "libreoffice-*"
@@ -49,7 +49,7 @@ flatpak install -y fedora ca.desrt.dconf-editor
 flatpak install -y flathub com.github.tchx84.Flatseal
 
 # Firefox
-flatpak install -y flathub org.mozilla.firefox
+# flatpak install -y flathub org.mozilla.firefox
 
 # Mail Client Evolution ##Need flatub version to get Etesync ( Not available in Fedora flatpak repo)
 flatpak install -y flathub org.gnome.evolution
@@ -117,6 +117,9 @@ flatpak install -y flathub io.github.Hexchat
 
 # Emacs
 flatpak install -y flathub org.gnu.emacs
+
+# An Open Source YouTube app for privacy
+flatpak install -y flathub io.freetubeapp.FreeTube
 
 
 
