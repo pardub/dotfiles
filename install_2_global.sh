@@ -122,6 +122,8 @@ flatpak install -y flathub org.gnu.emacs
 flatpak install -y flathub io.freetubeapp.FreeTube
 
 # Add languages pack for Flatpak apps
+# https://www.noulakaz.net/2020/05/09/libreoffice-with-flatpak-adding-dictionaries-for-other-languages/
+# https://www.ctrl.blog/entry/flatpak-locale-dictionaries.html
 flatpak install -y  --reinstall flathub org.freedesktop.Platform.Locale/x86_64/22.08
 flatpak config languages --set "en;fr"
 flatpak -y update
