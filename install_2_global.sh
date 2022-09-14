@@ -121,7 +121,10 @@ flatpak install -y flathub org.gnu.emacs
 # An Open Source YouTube app for privacy
 flatpak install -y flathub io.freetubeapp.FreeTube
 
-
+# Add languages pack for Flatpak apps
+flatpak install -y  --reinstall flathub org.freedesktop.Platform.Locale/x86_64/22.08
+flatpak config languages --set "en;fr"
+flatpak -y update
 
 # Dotfiles management tool "chezmoi"
 # sh -c "$(curl -fsLS chezmoi.io/get)"
