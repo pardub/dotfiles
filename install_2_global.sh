@@ -10,6 +10,7 @@
 sudo dnf -y remove totem
 sudo dnf -y remove gnome-weather
 sudo dnf -y remove "libreoffice-*"
+sudo dnf -y remove evolution
 
 # Add extra repos rpm fusion
 sudo dnf -y install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
