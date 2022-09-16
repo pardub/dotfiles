@@ -271,9 +271,10 @@ sudo dnf -y install lynis
 # change MAC addres
 sudo dnf -y install macchanger 
 
-# Etesync repo && Etesync add-on for Evolution
-sudo dnf -y copr enable daftaupe/etesync-rs
-sudo dnf -y install evolution-etesync
+# Etesync repo && Etesync add-on for Evolution #
+# Not necessary as it is integrated in the Flatpak Evolution
+# sudo dnf -y copr enable daftaupe/etesync-rs
+# sudo dnf -y install evolution-etesync
 
 # Password Manager
 sudo dnf -y install pass
