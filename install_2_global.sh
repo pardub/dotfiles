@@ -572,6 +572,8 @@ sudo unzip /tmp/JetBrainsMono.zip -d ~/.local/share/fonts/nerd-fonts
 fc-cache -v
 cd || exit
 
+# Papirus icon
+wget -qO- https://git.io/papirus-icon-theme-install | DESTDIR="/usr/share/icons" sh
 
 # sudo reboot
 
