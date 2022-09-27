@@ -18,7 +18,7 @@ cd || exit
 sudo echo 'fastestmirror=True'             | sudo tee -a /etc/dnf/dnf.conf
 sudo echo 'deltarpm=True'                  | sudo tee -a /etc/dnf/dnf.conf
 sudo echo 'max_parallel_downloads=10'      | sudo tee -a /etc/dnf/dnf.conf
-sudo sudo dnf clean all
+sudo dnf clean all
 sudo dnf -y update
 
 
