@@ -144,6 +144,9 @@ flatpak -y update
 # Man page with colors
 sudo dnf -y install most
 
+# network scanner 
+sudo dnf -y install nmap
+
 # Backup system
 #sudo dnf -y install timeshift
 
