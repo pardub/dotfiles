@@ -27,20 +27,20 @@ sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub
         # | Fedora apps |
         # +--------------+
 
-
 # Transmission Torrent
 flatpak install -y fedora transmissionbt.Transmission
+
 # Remotely manage the Transmission BitTorrent client
 flatpak install -y fedora TransmissionRemoteGtk
+
 # Record and edit audio files
 flatpak install -y fedora audacity
-# Libre Office
-flatpak install -y fedora org.libreoffice.LibreOffice
+
 # SFTP application
 flatpak install -y fedora org.filezillaproject.Filezilla
+
 # save workspaces after reboot
 flatpak install -y fedora ca.desrt.dconf-editor
-
 
         # +--------------+
         # | Flathub apps |
@@ -121,6 +121,9 @@ flatpak install -y flathub org.gnu.emacs
 
 # An Open Source YouTube app for privacy
 flatpak install -y flathub io.freetubeapp.FreeTube
+
+# Libre Office
+flatpak install -y flathub org.libreoffice.LibreOffice
 
 # Add languages pack for Flatpak apps
 # https://www.noulakaz.net/2020/05/09/libreoffice-with-flatpak-adding-dictionaries-for-other-languages/
