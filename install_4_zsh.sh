@@ -31,11 +31,11 @@ wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/dotfiles/.zshrc
 cd "$HOME"/.config/zsh || exit
 wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/dotfiles/.aliases
 
-# Downlaod zsh-functions
+# Download zsh-functions
 cd "$HOME"/.config/zsh || exit
 wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/dotfiles/zsh-functions
 
-# Downlaod init.vim
+# Download init.vim
 cd "$HOME"/.config/nvim || exit
 wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/dotfiles/init.vim
 
