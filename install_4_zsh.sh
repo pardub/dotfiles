@@ -35,7 +35,7 @@ wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/dotfiles/.alias
 cd "$HOME"/.config/zsh || exit
 wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/dotfiles/zsh-functions
 
-# Downlaod init.viv
+# Downlaod init.vim
 cd "$HOME"/.config/nvim || exit
 wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/dotfiles/init.vim
 
