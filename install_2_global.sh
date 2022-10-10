@@ -185,6 +185,9 @@ sudo dnf -y install fd-find
 # Gparted is the GNOME Partition Editor
 sudo dnf -y install gparted
 
+# VOIP 
+sudo dnf -y install linphone
+
 # Collection of Linux utilities
 sudo dnf -y install util-linux-user
 
