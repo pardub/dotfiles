@@ -246,7 +246,7 @@ sudo dnf -y install exa
 sudo dnf -y install fzf
 
 # youtube -cli
-sudo dnf -y install youtube-dl
+sudo dnf -y install yt-dlp
 
 # Text Calendar
 sudo dnf -y install calcurse
