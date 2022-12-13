@@ -131,6 +131,9 @@ flatpak install -y flathub org.nmap.Zenmap
 # Edit screenshots
 flatpak install -y flathub com.github.maoschanz.drawing
 
+# A simple and modern eBook viewer
+flatpak install -y flathub com.github.johnfactotum.Foliate
+
 
 # Add languages pack for Flatpak apps
 # https://www.noulakaz.net/2020/05/09/libreoffice-with-flatpak-adding-dictionaries-for-other-languages/
