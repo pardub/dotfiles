@@ -125,6 +125,13 @@ flatpak install -y flathub io.freetubeapp.FreeTube
 # Libre Office
 flatpak install -y flathub org.libreoffice.LibreOffice
 
+# nmap security scanner
+flatpak install -y flathub org.nmap.Zenmap
+
+# Edit screenshots
+flatpak install -y flathub com.github.maoschanz.drawing
+
+
 # Add languages pack for Flatpak apps
 # https://www.noulakaz.net/2020/05/09/libreoffice-with-flatpak-adding-dictionaries-for-other-languages/
 # https://www.ctrl.blog/entry/flatpak-locale-dictionaries.html
