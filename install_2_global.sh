@@ -105,7 +105,7 @@ flatpak install -y flathub com.borgbase.Vorta
 
 # Download Jami Voip client
 #sudo dnf -y config-manager --add-repo https://dl.jami.net/nightly/fedora_34/jami-nightly.repo
-flatpak install -y flathub net.jami.Jami
+#flatpak install -y flathub net.jami.Jami
 
 # Virtualization made simple
 flatpak install -y flathub org.gnome.Boxes
@@ -125,6 +125,9 @@ flatpak install -y flathub io.freetubeapp.FreeTube
 # Libre Office
 flatpak install -y flathub org.libreoffice.LibreOffice
 
+# Open Office
+flatpak install -y flathub org.onlyoffice.desktopeditors
+
 # nmap security scanner
 flatpak install -y flathub org.nmap.Zenmap
 
@@ -134,13 +137,16 @@ flatpak install -y flathub com.github.maoschanz.drawing
 # A simple and modern eBook viewer
 flatpak install -y flathub com.github.johnfactotum.Foliate
 
+# Chromium Web Browser
+flatpak install -y flathub org.chromium.Chromium
+
 
 # Add languages pack for Flatpak apps
 # https://www.noulakaz.net/2020/05/09/libreoffice-with-flatpak-adding-dictionaries-for-other-languages/
 # https://www.ctrl.blog/entry/flatpak-locale-dictionaries.html
-flatpak install -y  --reinstall flathub org.freedesktop.Platform.Locale/x86_64/22.08
-flatpak config languages --set "en;fr"
-flatpak -y update
+#flatpak install -y  --reinstall flathub org.freedesktop.Platform.Locale/x86_64/22.08
+#flatpak config languages --set "en;fr"
+#flatpak -y update
 
 # Dotfiles management tool "chezmoi"
 # sh -c "$(curl -fsLS chezmoi.io/get)"
@@ -174,10 +180,7 @@ sudo dnf -y install git
 
 # Disk Usage User-friendly, colorful output
 # https://github.com/muesli/duf
-cd /opt || exit
-sudo wget https://github.com/muesli/duf/releases/download/v0.8.1/duf_0.8.1_linux_amd64.rpm
-sudo dnf install -y /opt/duf_0.8.1_linux_amd64.rpm
-sudo rm -f duf_0.8.1_linux_amd64.rpm
+sudo dnf -y install duf
 cd || exit
 
 # Log processing
