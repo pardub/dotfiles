@@ -65,10 +65,10 @@ flatpak install -y flathub org.standardnotes.standardnotes
 flatpak install -y flathub com.mattjakeman.ExtensionManager
 
 # Telegram Desktop
-flatpak install -y flathub org.telegram.desktop
+# flatpak install -y flathub org.telegram.desktop
 
 # Viber Desktop
-flatpak install -y flathub com.viber.Viber
+# flatpak install -y flathub com.viber.Viber
 
 # Document viewer
 flatpak install -y flathub org.kde.okular
