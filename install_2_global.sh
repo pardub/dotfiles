@@ -39,7 +39,7 @@ flatpak install -y fedora audacity
 # SFTP application
 flatpak install -y fedora org.filezillaproject.Filezilla
 
-# Saving workspaces after reboot
+# Editing  dconf configuration database
 flatpak install -y fedora ca.desrt.dconf-editor
 
         # +--------------+
