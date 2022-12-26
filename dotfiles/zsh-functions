@@ -90,3 +90,4 @@ sudo wg-quick down /etc/wireguard/$current_vpn.conf && sudo wg-quick up /etc/wir
 # Disconnecting current vpn
 wgstop() {
 sudo wg-quick down /etc/wireguard/$(ifconfig | grep POINTOPOINT | cut -d: -f1).conf
+
