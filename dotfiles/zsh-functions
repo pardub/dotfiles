@@ -34,9 +34,8 @@ function zsh_add_completion() {
 
 
 function gpg_encryption(){
-
-
 }
+
 
 function expand-alias() {
 	zle _expand_alias
@@ -86,11 +85,15 @@ wgnew() {
 current_vpn=$(ifconfig | grep POINTOPOINT | cut -d: -f1)
 # current_vpn=$(ip --json link show | jq ".[5].ifname" | tr -d '"')
 sudo wg-quick down /etc/wireguard/$current_vpn.conf && sudo wg-quick up /etc/wireguard/$1.conf
-
 }
+
 # Disconnecting current vpn
 wgstop() {
 sudo wg-quick down /etc/wireguard/$(ifconfig | grep POINTOPOINT | cut -d: -f1).conf
+}
 
+# fzf research
+fzfs() {
+fzf --query $1
 }
 
