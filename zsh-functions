@@ -88,4 +88,16 @@ current_vpn=$(ifconfig | grep POINTOPOINT | cut -d: -f1)
 sudo wg-quick down /etc/wireguard/$current_vpn.conf && sudo wg-quick up /etc/wireguard/$1.conf
 
 }
+ # Emacs
+ 
+function myemacs() {
+	emacs --with-profile=myemacs &
+  } 
+  
+function spacemacs() {
+	emacs --with-profile=spacemacs &
+}
 
+function doomemacs() {
+	emacs --with-profile=doomemacs &
+}
