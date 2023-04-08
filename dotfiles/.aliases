@@ -163,12 +163,4 @@ alias rcvideos="rclone mount onedrive: /mnt/rclone --user-agent=1000 --dir-cache
 # Start Firefox default profile
 alias udemy='flatpak run org.mozilla.firefox -P "default" &'
 
-# +-----------+
-# |   Emacs   |
-# +-----------+
-alias emacs='emacs --with-profile=myemacs &'
-alias doomemacs='emacs --with-profile=doomemacs &'
-alias spacemacs='emacs --with-profile=spacemacs &'
-
-
 
