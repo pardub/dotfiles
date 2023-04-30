@@ -17,10 +17,12 @@ sudo wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.config/au
 sudo wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.config/autostart/org.gnome.Evolution-alarm-notify.desktop
 sudo wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.config/autostart/org.standardnotes.standardnotes.desktop
 sudo wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.config/autostart/org.mozilla.Firefox.desktop
-sudo wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.config/autostart/org.keepassxc.KeePassXC.desktop
+sudo wget sudo wget https://raw.githubusercontent.com/pardub/dotfiles_test/main/.config/autostart/org.keepassxc.KeePassXC.desktop
+https://raw.githubusercontent.com/pardub/dotfiles/main/.config/autostart/vorta_flatpak.desktop
 sudo chmod 755 org.gnome.Evolution.desktop
 sudo chmod 755 org.gnome.Evolution-alarm-notify.desktop
 sudo chmod 755 org.standardnotes.standardnotes.desktop
 sudo chmod 755 org.mozilla.Firefox.desktop
 sudo chmod 755 org.keepassxc.KeePassXC.desktop
+sudo chmod 755 vorta_flatpak.desktop
 cd || exit
