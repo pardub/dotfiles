@@ -164,3 +164,18 @@ alias rcvideos="rclone mount onedrive: /mnt/rclone --user-agent=1000 --dir-cache
 alias udemy='flatpak run org.mozilla.firefox -P "default" &'
 
 
+ # +-----------+
+ # | Emacs     |
+ # +-----------+
+ # alias emacs="emacs --with-profile=myemacs &"
+ # alias doomemacs="emacs --with-profile=doomemacs &"
+ # alias spacemacs="emacs --with-profile=spacemacs &"
+
+
+# +-----------+   
+# | NextDns   |    
+# +-----------+        
+alias nextdnsstop='sudo systemctl stop systemd-resolved.service'
+alias nextdnsstart='sudo systemctl start systemd-resolved.service'
+
+
