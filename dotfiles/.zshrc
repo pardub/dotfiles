@@ -45,6 +45,33 @@ bindkey '^[[C' forward-char
 bindkey "^[[H" beginning-of-line
 bindkey "^[[F" end-of-line
 
+# Move cursor to the beginning of the line
+bindkey '^A' beginning-of-line
+
+# Move cursor to the end of the line
+bindkey '^E' end-of-line
+
+# Move cursor left (backward) one position
+bindkey '^B' backward-char
+
+# Move cursor right (forward) one position
+bindkey '^F' forward-char
+
+# Move cursor right (forward) one word
+bindkey '^[f' forward-word
+bindkey '^[F' forward-word  # Some terminal configurations require capital F
+
+# Move cursor left (backward) one word
+bindkey '^[b' backward-word
+bindkey '^[B' backward-word  # Some terminal configurations require capital B
+
+# Delete from cursor to end of the line
+bindkey '^K' kill-line
+
+# Delete from the cursor to the beginning of the line
+bindkey '^U' kill-whole-line
+
+
 # Persistent rehash
 zstyle ':completion:*' rehash true
 
