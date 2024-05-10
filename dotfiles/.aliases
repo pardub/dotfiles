@@ -1,10 +1,10 @@
 alias cm="chezmoi"
-alias cat="bat"
-alias up="sudo dnf up"
+alias cat="batcat --style plain"
+alias up="sudo apt update -y && sudo apt upgrade -y && flatpak update -y"
 alias secu="sudo dnf update --security --bugfix"
 alias listsecu="sudo dnf updateinfo list --security --bugfix"
 alias install="sudo dnf install"
-alias ll="exa --all --long --classify --header --group --modified --links --inode --icons --time-style=long-iso"
+alias ll="eza --all --long --classify --header --group --modified --links --inode --icons --time-style=long-iso"
 alias history="history -E 1"
 alias h="history -E"
 alias mv="mv -iv"
@@ -67,6 +67,38 @@ alias ......='cd ../../../../..'
 alias .......='cd ../../../../../..'
 alias ........='cd ../../../../../../..'
 
+
+# +-----------+
+# | Emacs     |
+# +-----------+
+
+alias emacs="emacsclient -c -a 'emacs'" # GUI versions of Emacs
+alias em="/usr/bin/emacs -nw" # Terminal version of Emacs
+alias rem="killall emacs || echo 'Emacs server not running'; /usr/bin/emacs --daemon" # Kill Emacs and restart daemon..
+# alias emacs="emacs --with-profile=myemacs &"
+# alias doomemacs="emacs --with-profile=doomemacs &"
+# alias spacemacs="emacs --with-profile=spacemacs &"
+
+# +-----------+
+# | Firefox |
+# +-----------+
+# Start Firefox default profile
+alias udemy='flatpak run org.mozilla.firefox -P "default" &'
+
+# +----------+
+# | Firewall |
+# +----------+
+
+# shortcut  for iptables and pass it via sudo
+alias ipt="sudo /sbin/iptables"
+ 
+# display all rules #
+alias iptlist="sudo /sbin/iptables -L -n -v --line-numbers"
+alias iptlistin="sudo /sbin/iptables -L INPUT -n -v --line-numbers"
+alias iptlistout="sudo /sbin/iptables -L OUTPUT -n -v --line-numbers"
+alias iptlistfw="sudo /sbin/iptables -L FORWARD -n -v --line-numbers"
+alias firewall="iptlist"
+
 # +-----+
 # | Git |
 # +-----+
@@ -117,20 +149,12 @@ alias gx="ign = ls-files -o -i --exclude-standard"
 # Untrack Files without deleting them
 alias grmc="git rm -r --cached"
 
+# +-----------+
+# | NextDns   |
+# +-----------+
 
-# +----------+
-# | Firewall |
-# +----------+
-
-# shortcut  for iptables and pass it via sudo
-alias ipt="sudo /sbin/iptables"
- 
-# display all rules #
-alias iptlist="sudo /sbin/iptables -L -n -v --line-numbers"
-alias iptlistin="sudo /sbin/iptables -L INPUT -n -v --line-numbers"
-alias iptlistout="sudo /sbin/iptables -L OUTPUT -n -v --line-numbers"
-alias iptlistfw="sudo /sbin/iptables -L FORWARD -n -v --line-numbers"
-alias firewall="iptlist"
+alias nextdnsstop='sudo systemctl stop systemd-resolved.service'
+alias nextdnsstart='sudo systemctl start systemd-resolved.service'
 
 # +--------+
 # | System |
@@ -150,32 +174,15 @@ alias pscpu10="ps auxf | sort -nr -k 3 | head -10"
 # Get server cpu info
 alias cpuinfo="lscpu"
 
+alias space='sudo du -d 1 -h | sort -rh' 
+
 # +-----------+
 # | Wireguard |
 # +-----------+
 
 alias wgcities="sudo ls -ll /etc/wireguard" 
+
 alias rcvideos="rclone mount onedrive: /mnt/rclone --user-agent=1000 --dir-cache-time 1000h --poll-interval 15s --umask 000 --cache-dir=/home/m/cache --vfs-cache-mode full --vfs-cache-max-size 30G --vfs-cache-max-age=1h --buffer-size 256M --daemon"
 
-# +-----------+
-# |  Firefox  |
-# +-----------+
-# Start Firefox default profile
-alias udemy='flatpak run org.mozilla.firefox -P "default" &'
-
-
- # +-----------+
- # | Emacs     |
- # +-----------+
- # alias emacs="emacs --with-profile=myemacs &"
- # alias doomemacs="emacs --with-profile=doomemacs &"
- # alias spacemacs="emacs --with-profile=spacemacs &"
-
-
-# +-----------+   
-# | NextDns   |    
-# +-----------+        
-alias nextdnsstop='sudo systemctl stop systemd-resolved.service'
-alias nextdnsstart='sudo systemctl start systemd-resolved.service'
 
 
