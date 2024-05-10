@@ -1,3 +1,19 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.config/zsh/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+### EXPORT
+export TERM="xterm-256color"                      # getting proper colors
+export HISTORY_IGNORE="(ls|cd|pwd|exit|sudo reboot|history|cd -|cd ..)"
+export EDITOR="emacsclient -t -a ''"              # $EDITOR use Emacs in terminal
+export VISUAL="emacsclient -c -a 'emacs'"         # $VISUAL use Emacs in GUI mode
+export PATH="/usr/bin/rg:$PATH"
+
+export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+
 # To enable autocompletion,
 autoload -Uz compinit
 compinit
@@ -15,7 +31,8 @@ zstyle ':completion::complete:*' gain-privileges 1
 [ -f "${XDG_CONFIG_HOME}/zsh/.aliases" ] && . "${XDG_CONFIG_HOME}/zsh/.aliases"
 [ -f "${XDG_CONFIG_HOME}/zsh/.aliases.local" ] && . "${XDG_CONFIG_HOME}/zsh/.aliases.local"
 
-bindkey -v
+# option tells Zsh to use vi mode for key bindings.
+# bindkey -v
 
 # Change cursor shape for different vi modes.
 function zle-keymap-select () {
@@ -33,6 +50,8 @@ zle -N zle-line-init
 echo -ne '\e[5 q' # Use beam shape cursor on startup.
 preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 
+
+# Basic key bindings
 typeset -g -A key
 bindkey '^?' backward-delete-char
 bindkey '^[[5~' up-line-or-history
@@ -41,7 +60,7 @@ bindkey '^[[6~' down-line-or-history
 bindkey '^[[A' up-line-or-search
 bindkey '^[[D' backward-char
 bindkey '^[[B' down-line-or-search
-bindkey '^[[C' forward-char 
+bindkey '^[[C' forward-char
 bindkey "^[[H" beginning-of-line
 bindkey "^[[F" end-of-line
 
@@ -71,45 +90,27 @@ bindkey '^K' kill-line
 # Delete from the cursor to the beginning of the line
 bindkey '^U' kill-whole-line
 
+# use Ctrl-P to accept suggestion
+bindkey '^P' autosuggest-accept
 
-# Persistent rehash
+# Ensure the completion system is aware of new commands or scripts added to $PATH during the session
 zstyle ':completion:*' rehash true
 
 # Auto correction
 ENABLE_CORRECTION="true"
 
-# Open Ranger with CTRL O
-bindkey -s '^o' 'ranger\n'
-#bindkey -s '^o' '^uranger\n'
-
-# use Ctrl-P to accept suggestion
-bindkey '^P' autosuggest-accept
-
 # Use vim keys in tab complete menu:
-bindkey -M menuselect 'h' vi-backward-char
-bindkey -M menuselect 'k' vi-up-line-or-history
-bindkey -M menuselect 'l' vi-forward-char
-bindkey -M menuselect 'j' vi-down-line-or-history
-bindkey -v '^?' backward-delete-char
+#bindkey -M menuselect 'h' vi-backward-char
+#bindkey -M menuselect 'k' vi-up-line-or-history
+#bindkey -M menuselect 'l' vi-forward-char
+#bindkey -M menuselect 'j' vi-down-line-or-history
+#bindkey -v '^?' backward-delete-char
 
-
-# Use Ranger to switch directories and bind it to ctrl-o // currently not working
-#ranger () {
-#    tmp="$(mktemp -uq)"
-#    trap 'rm -f $tmp >/dev/null 2>&1' HUP INT QUIT TERM PWR EXIT
-#    ranger -last-dir-path="$tmp" "$@"
-#    if [ -f "$tmp" ]; then
-#        dir="$(cat "$tmp")"
-#        [ -d "$dir" ] && [ "$dir" != "$(pwd)" ] && cd "$dir"
-#    fi
-#}
-
-
-# Go directly to folder without typng "cd"
-#setopt autocd
-
-# Colors
+# Autoload the colors module if not already loaded, and then enable color support
 autoload -Uz colors && colors
+
+
+### HISTORY
 
 # Commands are added to the history immediately
 setopt INC_APPEND_HISTORY
@@ -118,13 +119,21 @@ export HISTTIMEFORMAT="[%F %T] "
 # Add Timestamp to history
 setopt EXTENDED_HISTORY
 
-# Useful Functions
+# Remove duplicates in history
+setopt incappendhistory
+setopt hist_ignore_all_dups
+setopt hist_save_no_dups
+setopt hist_ignore_dups
+setopt hist_find_no_dups
+
+
+
+# Load Functions
 source "$ZDOTDIR"/zsh-functions
 
 # Plugins
 zsh_add_plugin "zsh-users/zsh-autosuggestions"
 zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
-#zsh_add_plugin "ohmyzsh/ohmyzsh/tree/master/plugins/aliases"
 
 # Zsh git completion
 zstyle ':completion:*:*:git:*' script ~/.config/zsh/git-completion.zsh
@@ -140,12 +149,6 @@ fpath=($HOME/.config/zsh $fpath)
 #touch "$HOME"/.cache/zsh/history
 #fi
 
-# Remove duplicates in history
-setopt incappendhistory
-setopt hist_ignore_all_dups
-setopt hist_save_no_dups
-setopt hist_ignore_dups
-setopt hist_find_no_dups
 
 # Rclone config
 #source "$HOME"/bin/set-rclone-password
@@ -162,8 +165,49 @@ bindkey -M main ' ' expand-alias
  bindkey -M viins " " globalias
 
  # control-space to make a normal space
- bindkey -M emacs "^ " magic-space
- bindkey -M viins "^ " magic-space
+ #ibindkey -M emacs "^ " magic-space
+ #bindkey -M viins "^ " magic-space
 
  # normal space during searches
  bindkey -M isearch " " magic-space
+
+source ~/powerlevel10k/powerlevel10k.zsh-theme
+
+# Adb fastboot
+if [ -d "$HOME/adb-fastboot/platform-tools" ] ; then
+ export PATH="$HOME/adb-fastboot/platform-tools:$PATH"
+fi
+
+# To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
+[[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# API KEY Anonaddy
+export ANONADDY_API_KEY='addy_io_K3yQMgUo3oMWihDBQj9ni7BHdYPUXtoGogB2oj45cced98ff'
+
+# Google Cloud computing api key
+export GOOGLE_CREDENTIALS="home/alien/Documents/terraform/keys/my-creds.json"
+export GOOGLE_CREDENTIALS=$(cat /home/alien/Documents/terraform/gcp_infrastructure/keys/my-creds.json)
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/alien/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/alien/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/alien/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/alien/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+# Export Cargo path for Rust apps
+#export PATH="$HOME/.cargo/bin"
+
+#export PATH="/home/alien/.cargo/bin"
+
+eval "$(atuin init zsh)"
