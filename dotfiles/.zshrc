@@ -186,8 +186,8 @@ fi
 # API KEY Anonaddy
 
 # Google Cloud computing api key
-export GOOGLE_CREDENTIALS="home/alien/Documents/terraform/keys/my-creds.json"
-export GOOGLE_CREDENTIALS=$(cat /home/alien/Documents/terraform/gcp_infrastructure/keys/my-creds.json)
+export GOOGLE_CREDENTIALS="$HOME/Documents/terraform/keys/my-creds.json"
+export GOOGLE_CREDENTIALS=$(cat $HOME/Documents/terraform/gcp_infrastructure/keys/my-creds.json)
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -195,8 +195,8 @@ __conda_setup="$('/home/alien/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/n
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/alien/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/alien/miniconda3/etc/profile.d/conda.sh"
+    if [ -f "$HOME/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "$HOME/miniconda3/etc/profile.d/conda.sh"
     else
         export PATH="/home/alien/miniconda3/bin:$PATH"
     fi
