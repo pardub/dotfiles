@@ -184,7 +184,6 @@ fi
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # API KEY Anonaddy
-export ANONADDY_API_KEY='addy_io_K3yQMgUo3oMWihDBQj9ni7BHdYPUXtoGogB2oj45cced98ff'
 
 # Google Cloud computing api key
 export GOOGLE_CREDENTIALS="home/alien/Documents/terraform/keys/my-creds.json"
