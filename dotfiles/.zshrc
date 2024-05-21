@@ -18,6 +18,10 @@ export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 autoload -Uz compinit
 compinit
 
+# Cargo path
+source $HOME/.cargo/env
+
+
 # For autocompletion with an arrow-key driven interface
 zstyle ':completion:*' menu select
 zmodload zsh/complist
