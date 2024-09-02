@@ -190,8 +190,6 @@ fi
 # API KEY Anonaddy
 
 # Google Cloud computing api key
-export GOOGLE_CREDENTIALS="$HOME/Documents/terraform/keys/my-creds.json"
-export GOOGLE_CREDENTIALS=$(cat $HOME/Documents/terraform/gcp_infrastructure/keys/my-creds.json)
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
