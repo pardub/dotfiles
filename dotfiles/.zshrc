@@ -1,3 +1,14 @@
+# Enable global virtual env
+
+if [ -d "$HOME/global_env" ]; then
+	echo "Activating global_env..."
+	. "$HOME/global_env/bin/activate"
+	echo "global_env activated!"
+else
+	echo "global_env not found"
+fi
+
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.config/zsh/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
