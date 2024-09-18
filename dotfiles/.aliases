@@ -184,5 +184,11 @@ alias wgcities="sudo ls -ll /etc/wireguard"
 
 alias rcvideos="rclone mount onedrive: /mnt/rclone --user-agent=1000 --dir-cache-time 1000h --poll-interval 15s --umask 000 --cache-dir=/home/m/cache --vfs-cache-mode full --vfs-cache-max-size 30G --vfs-cache-max-age=1h --buffer-size 256M --daemon"
 
+# +-------------+
+# | Screen Size |
+# +-------------+
+
+alias small='dconf write /org/cinnamon/desktop/interface/text-scaling-factor 1.0'
+alias big='dconf write /org/cinnamon/desktop/interface/text-scaling-factor 1.3'
 
 
